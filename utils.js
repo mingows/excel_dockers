@@ -44,10 +44,12 @@ function writeLog(message, level, globalConfig) {
         } else {
             logMessage = `${timestamp}[${callerModule}.${callerFunction}][${level}] ${message}`;
         }
-        fs.appendFileSync(globalConfig.workingPath + '/logs/log.txt', logMessage + '\n');
+        fs.appendFileSync(path.join(globalConfig.workingPath, "logs", "log.txt"), logMessage + '\n');
+        //fs.appendFileSync(globalConfig.workingPath + '/logs/log.txt', logMessage + '\n');
         // Rotamos los logs si el archivo supera el límite de tamaño
-        if (fs.existsSync(globalConfig.workingPath + '/logs/log.txt') && fs.statSync(globalConfig.workingPath + '/logs/log.txt').size >= LOG_FILE_SIZE_LIMIT) {
-            rotateFile(globalConfig.workingPath + '/logs', "log", "txt");
+        if (fs.existsSync(path.join(globalConfig.workingPath, "logs", "log.txt")) && fs.statSync(path.join(globalConfig.workingPath, "logs", "log.txt")).size >= LOG_FILE_SIZE_LIMIT) {
+        //if (fs.existsSync(globalConfig.workingPath + '/logs/log.txt') && fs.statSync(globalConfig.workingPath + '/logs/log.txt').size >= LOG_FILE_SIZE_LIMIT) {
+            rotateFile(path.join(globalConfig.workingPath, "logs"), "log", "txt");
         }
         if (CONSOLE_LOG) {
             console.log(logMessage);
@@ -56,40 +58,29 @@ function writeLog(message, level, globalConfig) {
     }
 }
 
-// function rotateLogs(logPath) {
-//     for (let i = MAX_LOG_FILES - 1; i > 0; i--) {
-//         const currentLog = `${logPath}/log${i}.txt`;
-//         const nextLog = `${logPath}/log${i + 1}.txt`;
-//         if (fs.existsSync(currentLog)) {
-//             fs.renameSync(currentLog, nextLog);
-//         }
-//     }
-//     const firstLog = `${logPath}/log.txt`;
-//     const secondLog = `${logPath}/log1.txt`;
-//     if (fs.existsSync(firstLog)) {
-//         fs.renameSync(firstLog, secondLog);
-//     }
-// }
-
 function rotateFile(logPath,fileName,fileExtenesion) {
     for (let i = MAX_LOG_FILES - 1; i > 0; i--) {
-        const currentLog = `${logPath}/${fileName}${i}.${fileExtenesion}`;
-        const nextLog = `${logPath}/${fileName}${i + 1}.${fileExtenesion}`;
+        const currentLog = path.join(logPath, fileName)+fileExtenesion;
+        const nextLog = path.join(logPath, fileName+(i+1))+fileExtenesion;
+        // const currentLog = `${logPath}/${fileName}${i}.${fileExtenesion}`;
+        // const nextLog = `${logPath}/${fileName}${i + 1}.${fileExtenesion}`;
         if (fs.existsSync(currentLog)) {
             fs.renameSync(currentLog, nextLog);
         }
     }
-    const firstLog = `${logPath}/${fileName}.${fileExtenesion}`;
-    const secondLog = `${logPath}/${fileName}1.${fileExtenesion}`;
+    const firstLog = path.join(logPath, fileName)+fileExtenesion;
+    const secondLog = path.join(logPath, fileName+"1")+fileExtenesion;
+    // const firstLog = `${logPath}/${fileName}.${fileExtenesion}`;
+    // const secondLog = `${logPath}/${fileName}1.${fileExtenesion}`;
     if (fs.existsSync(firstLog)) {
         fs.renameSync(firstLog, secondLog);
     }
 }
 
 function writeFile(path, content, globalConfig) {
-    //writeLog(`Escribiendo en el archivo: ${path}`,"DEBUG",globalConfig);
+    writeLog(`Escribiendo en el archivo: ${path}`,"DEBUG",globalConfig);
     fs.writeFileSync(path, content, { encoding: 'utf8' });
-    //writeLog(`Escritura finalizada`,"DEBUG",globalConfig);
+    writeLog(`Escritura finalizada`,"DEBUG",globalConfig);
 }
 
 /**
@@ -209,7 +200,7 @@ function setEnvironment(env) {
 
 function getEnvironment(env) {
     var CONST = {
-        workingPath: 'C:/00_API_Govern/GitHub/API Connect Tools/execution',
+        workingPath: 'C://00_API_Govern//GitHub//API Connect Tools//execution',
         environment: 'DEV',
         apiBasePath: 'https://api-manager.scib.dev.corp/api',
         clientId: '09390a65-b121-4cd3-bbc4-bebe7a6500d0',

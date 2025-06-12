@@ -95,7 +95,8 @@ function getCmeGroupChicago(date, globalConfig) {
         result.data.lineInfo = dataLineInfo;
         result.data.lineTmp = dataLineTmp;
         result.data.resume = dataLineResume;
-        writeFile(__dirname + "\\tmp\\cmegroup-chicago-cu.json", JSON.stringify(result.data, null, 2), globalConfig);
+        writeFile(path.join(__dirname, "tmp", "cmegroup-chicago-cu.json"), JSON.stringify(result.data, null, 2), globalConfig);
+        //writeFile(__dirname + "\\tmp\\cmegroup-chicago-cu.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     } catch (error) {
         writeLog(`Error on the CMEGroup-Chicago request: ${error}`, "ERROR", globalConfig);
@@ -118,7 +119,8 @@ function getCmeGroupChicago(date, globalConfig) {
         result.data.lineInfo = [];
         result.data.lineTmp = [];
         result.data.resume = dataLineResume;
-        writeFile(__dirname + "\\tmp\\cmegroup-chicago-cu.json", JSON.stringify(result.data, null, 2), globalConfig);
+        writeFile(path.join(__dirname, "tmp", "cmegroup-chicago-cu.json"), JSON.stringify(result.data, null, 2), globalConfig);
+        //writeFile(__dirname + "\\tmp\\cmegroup-chicago-cu.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     }
 }
@@ -213,7 +215,8 @@ function getCmeGroupNY(date, globalConfig) {
         result.data.lineInfo = dataLineInfo;
         result.data.lineTmp = dataLineTmp;
         result.data.resume = dataLineResume;
-        writeFile(__dirname + "\\tmp\\cmegroup-new-york-nyh.json", JSON.stringify(result.data, null, 2), globalConfig);
+        writeFile(path.join(__dirname, "tmp", "cmegroup-new-york-nyh.json"), JSON.stringify(result.data, null, 2), globalConfig);
+        //writeFile(__dirname + "\\tmp\\cmegroup-new-york-nyh.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     } catch (error) {
         writeLog(`Error on the CMEGroup-New York NYH request: ${error}`, "ERROR", globalConfig);
@@ -236,7 +239,8 @@ function getCmeGroupNY(date, globalConfig) {
         result.data.lineInfo = [];
         result.data.lineTmp = [];
         result.data.resume = dataLineResume;
-        writeFile(__dirname + "\\tmp\\cmegroup-new-york-nyh.json", JSON.stringify(result.data, null, 2), globalConfig);
+        writeFile(path.join(__dirname, "tmp", "cmegroup-new-york-nyh.json"), JSON.stringify(result.data, null, 2), globalConfig);
+        //writeFile(__dirname + "\\tmp\\cmegroup-new-york-nyh.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     }
 }
@@ -331,7 +335,8 @@ function getCmeGroupT2(date, globalConfig) {
         result.data.lineInfo = dataLineInfo;
         result.data.lineTmp = dataLineTmp;
         result.data.resume = dataLineResume;
-        writeFile(__dirname + "\\tmp\\cmegroup-t2.json", JSON.stringify(result.data, null, 2), globalConfig);
+        writeFile(path.join(__dirname, "tmp", "cmegroup-t2.json"), JSON.stringify(result.data, null, 2), globalConfig);
+        //writeFile(__dirname + "\\tmp\\cmegroup-t2.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     } catch (error) {
         writeLog(`Error on the CMEGroup-t2 request: ${error}`, "ERROR", globalConfig);
@@ -354,7 +359,8 @@ function getCmeGroupT2(date, globalConfig) {
         result.data.lineInfo = [];
         result.data.lineTmp = [];
         result.data.resume = dataLineResume;
-        writeFile(__dirname + "\\tmp\\cmegroup-t2.json", JSON.stringify(result.data, null, 2), globalConfig);
+        writeFile(path.join(__dirname, "tmp", "cmegroup-t2.json"), JSON.stringify(result.data, null, 2), globalConfig);
+        //writeFile(__dirname + "\\tmp\\cmegroup-t2.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     }
 }
@@ -449,7 +455,8 @@ function getCmeGroupCorn(date, globalConfig) {
         result.data.lineInfo = dataLineInfo;
         result.data.lineTmp = dataLineTmp;
         result.data.resume = dataLineResume;
-        writeFile(__dirname + "\\tmp\\cmegroup-corn.json", JSON.stringify(result.data, null, 2), globalConfig);
+        writeFile(path.join(__dirname, "tmp", "cmegroup-corn.json"), JSON.stringify(result.data, null, 2), globalConfig);
+        //writeFile(__dirname + "\\tmp\\cmegroup-corn.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     } catch (error) {
         writeLog(`Error on the CMEGroup-Corn request: ${error}`, "ERROR", globalConfig);
@@ -472,7 +479,8 @@ function getCmeGroupCorn(date, globalConfig) {
         result.data.lineInfo = [];
         result.data.lineTmp = [];
         result.data.resume = dataLineResume;
-        writeFile(__dirname + "\\tmp\\cmegroup-corn.json", JSON.stringify(result.data, null, 2), globalConfig);
+        writeFile(path.join(__dirname, "tmp", "cmegroup-corn.json"), JSON.stringify(result.data, null, 2), globalConfig);
+        //writeFile(__dirname + "\\tmp\\cmegroup-corn.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     }
 }
@@ -567,7 +575,8 @@ function getCmeGroupRbob(date, globalConfig) {
         result.data.lineInfo = dataLineInfo;
         result.data.lineTmp = dataLineTmp;
         result.data.resume = dataLineResume;
-        writeFile(__dirname + "\\tmp\\cmegroup-rbob.json", JSON.stringify(result.data, null, 2), globalConfig);
+        writeFile(path.join(__dirname, "tmp", "cmegroup-rbob.json"), JSON.stringify(result.data, null, 2), globalConfig);
+        //writeFile(__dirname + "\\tmp\\cmegroup-rbob.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     } catch (error) {
         writeLog(`Error on the CMEGroup-rbob request: ${error}`, "ERROR", globalConfig);
@@ -590,7 +599,8 @@ function getCmeGroupRbob(date, globalConfig) {
         result.data.lineInfo = [];
         result.data.lineTmp = [];
         result.data.resume = dataLineResume;
-        writeFile(__dirname + "\\tmp\\cmegroup-rbob.json", JSON.stringify(result.data, null, 2), globalConfig);
+        writeFile(path.join(__dirname, "tmp", "cmegroup-rbob.json"), JSON.stringify(result.data, null, 2), globalConfig);
+        //writeFile(__dirname + "\\tmp\\cmegroup-rbob.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     }
 }
@@ -685,7 +695,8 @@ function getCmeGroupSugar11(date, globalConfig) {
         result.data.lineInfo = dataLineInfo;
         result.data.lineTmp = dataLineTmp;
         result.data.resume = dataLineResume;
-        writeFile(__dirname + "\\tmp\\cmegroup-sugar-11.json", JSON.stringify(result.data, null, 2), globalConfig);
+        writeFile(path.join(__dirname, "tmp", "cmegroup-sugar-11.json"), JSON.stringify(result.data, null, 2), globalConfig);
+        //writeFile(__dirname + "\\tmp\\cmegroup-sugar-11.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     } catch (error) {
         writeLog(`Error on the CMEGroup-Sugar 11 request: ${error}`, "ERROR", globalConfig);
@@ -708,7 +719,8 @@ function getCmeGroupSugar11(date, globalConfig) {
         result.data.lineInfo = [];
         result.data.lineTmp = [];
         result.data.resume = dataLineResume;
-        writeFile(__dirname + "\\tmp\\cmegroup-sugar-11.json", JSON.stringify(result.data, null, 2), globalConfig);
+        writeFile(path.join(__dirname, "tmp", "cmegroup-sugar-11.json"), JSON.stringify(result.data, null, 2), globalConfig);
+        //writeFile(__dirname + "\\tmp\\cmegroup-sugar-11.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     }
 }
