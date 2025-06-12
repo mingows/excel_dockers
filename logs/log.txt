@@ -55268,3 +55268,2181 @@ PermissionError: [WinError 32] El proceso no tiene acceso al archivo porque est√
 2025-06-12T09:22:48.134Z[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"C:\\00_DATA\\excel_dockers"}
 2025-06-12T09:22:48.150Z[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
 2025-06-12T09:23:07.848Z[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-06-12 11:23:07
+2025-06-12T17:00:30.587Z[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\PROYECTOS\\067-Pruebas_Docker\\excel_dockers"}
+2025-06-12T17:00:30.602Z[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-06-12T17:00:50.670Z[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-06-12 19:00:50
+2025-06-12T17:00:52.982Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-06-12T17:00:52.984Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:00:52.985Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 3.773,
+        "month1": 1.6525,
+        "month2": 1.65,
+        "month3": 1.6525,
+        "month4": 1.645,
+        "month5": 1.6225,
+        "month6": 1.6,
+        "month7": 1.58,
+        "month8": 1.565,
+        "month9": 1.58,
+        "month10": 1.6,
+        "month11": 1.6225,
+        "month12": 1.6325,
+        "month13": 1.6375
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:00:52",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-06-12T17:00:53.558Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-06-12T17:00:53.560Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:00:53.561Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup New York resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 0,
+        "month1": 1.76,
+        "month2": 1.755,
+        "month3": 1.7575,
+        "month4": 1.75
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}",
+        "month4": "${table:NYH.month4}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:00:53",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup New York-NYH",
+        "amount": 4
+      }
+    ]
+  }
+}
+2025-06-12T17:00:54.146Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-t2.json
+2025-06-12T17:00:54.148Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:00:54.149Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup New York resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 230,
+        "month1": 595.667,
+        "month2": 597.333,
+        "month3": 602.667,
+        "month4": 603.667,
+        "month5": 599,
+        "month6": 596,
+        "month7": 592,
+        "month8": 586.667,
+        "month9": 585.667,
+        "month10": 585.667,
+        "month11": 594,
+        "month12": 598.333,
+        "month13": 603
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:00:54",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup T2",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-06-12T17:00:54.733Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-corn.json
+2025-06-12T17:00:54.734Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:00:54.735Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 376.889,
+        "month1": 437,
+        "month2": 425.2,
+        "month3": 439.6,
+        "month4": 455.2,
+        "month5": 465,
+        "month6": 471,
+        "month7": 463,
+        "month8": 469.4,
+        "month9": 481.4,
+        "month10": 488,
+        "month11": 490.6,
+        "month12": 466,
+        "month13": 467,
+        "month14": 486.2,
+        "month15": 464.2
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}",
+        "month14": "${table:CORN.month14}",
+        "month15": "${table:CORN.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:00:54",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Corn",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-06-12T17:00:55.309Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-rbob.json
+2025-06-12T17:00:55.311Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:00:55.312Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 229.401,
+        "month1": 2.1668,
+        "month2": 2.1496,
+        "month3": 2.1162,
+        "month4": 1.9625,
+        "month5": 1.9103,
+        "month6": 1.8735,
+        "month7": 1.8592,
+        "month8": 1.8631,
+        "month9": 1.8775,
+        "month10": 2.065,
+        "month11": 2.0683,
+        "month12": 2.0605,
+        "month13": 2.0431,
+        "month14": 2.0186,
+        "month15": 1.986,
+        "month16": 1.8525,
+        "month17": 1.819,
+        "month18": 1.799,
+        "month19": 1.7954,
+        "month20": 1.8058,
+        "month21": 1.8221,
+        "month22": 2.0143,
+        "month23": 2.0194,
+        "month24": 2.0197,
+        "month25": 2.0087,
+        "month26": 1.9934,
+        "month27": 1.964,
+        "month28": 1.8354,
+        "month29": 1.8078,
+        "month30": 1.7915,
+        "month31": 1.7902,
+        "month32": 1.8035,
+        "month33": 1.8232,
+        "month34": 2.0124,
+        "month35": 2.0292,
+        "month36": 2.0251,
+        "month37": 2.0152,
+        "month38": 1.9995,
+        "month39": 1.9685,
+        "month40": 1.8414,
+        "month41": 1.812,
+        "month42": 1.7975,
+        "month43": 1.7939
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}",
+        "month40": "${table:RBOB.month40}",
+        "month41": "${table:RBOB.month41}",
+        "month42": "${table:RBOB.month42}",
+        "month43": "${table:RBOB.month43}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:00:55",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup RBob",
+        "amount": 43
+      }
+    ]
+  }
+}
+2025-06-12T17:00:55.867Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-06-12T17:00:55.868Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:00:55.869Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 0,
+        "month1": 0.1642,
+        "month2": 0.1681,
+        "month3": 0.1734,
+        "month4": 0.1697,
+        "month5": 0.1684,
+        "month6": 0.1701,
+        "month7": 0.1743,
+        "month8": 0.1715
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:00:55",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-06-12T17:12:41.074Z[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\PROYECTOS\\067-Pruebas_Docker\\excel_dockers"}
+2025-06-12T17:12:41.084Z[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-06-12T17:13:04.211Z[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-06-12 19:13:04
+2025-06-12T17:13:06.497Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-06-12T17:13:06.498Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:13:06.499Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 3.773,
+        "month1": 1.6525,
+        "month2": 1.65,
+        "month3": 1.6525,
+        "month4": 1.645,
+        "month5": 1.6225,
+        "month6": 1.6,
+        "month7": 1.58,
+        "month8": 1.565,
+        "month9": 1.58,
+        "month10": 1.6,
+        "month11": 1.6225,
+        "month12": 1.6325,
+        "month13": 1.6375
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:13:06",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-06-12T17:13:07.084Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-06-12T17:13:07.085Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:13:07.086Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup New York resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 0,
+        "month1": 1.76,
+        "month2": 1.755,
+        "month3": 1.7575,
+        "month4": 1.75
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}",
+        "month4": "${table:NYH.month4}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:13:07",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup New York-NYH",
+        "amount": 4
+      }
+    ]
+  }
+}
+2025-06-12T17:13:07.627Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-t2.json
+2025-06-12T17:13:07.628Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:13:07.629Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup New York resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 230,
+        "month1": 595.667,
+        "month2": 597.333,
+        "month3": 602.667,
+        "month4": 603.667,
+        "month5": 599,
+        "month6": 596,
+        "month7": 592,
+        "month8": 586.667,
+        "month9": 585.667,
+        "month10": 585.667,
+        "month11": 594,
+        "month12": 598.333,
+        "month13": 603
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:13:07",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup T2",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-06-12T17:13:08.183Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-corn.json
+2025-06-12T17:13:08.184Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:13:08.185Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 376.889,
+        "month1": 437,
+        "month2": 425.2,
+        "month3": 439.6,
+        "month4": 455.2,
+        "month5": 465,
+        "month6": 471,
+        "month7": 463,
+        "month8": 469.4,
+        "month9": 481.4,
+        "month10": 488,
+        "month11": 490.6,
+        "month12": 466,
+        "month13": 467,
+        "month14": 486.2,
+        "month15": 464.2
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}",
+        "month14": "${table:CORN.month14}",
+        "month15": "${table:CORN.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:13:08",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Corn",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-06-12T17:13:08.744Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-rbob.json
+2025-06-12T17:13:08.745Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:13:08.746Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 229.401,
+        "month1": 2.1668,
+        "month2": 2.1496,
+        "month3": 2.1162,
+        "month4": 1.9625,
+        "month5": 1.9103,
+        "month6": 1.8735,
+        "month7": 1.8592,
+        "month8": 1.8631,
+        "month9": 1.8775,
+        "month10": 2.065,
+        "month11": 2.0683,
+        "month12": 2.0605,
+        "month13": 2.0431,
+        "month14": 2.0186,
+        "month15": 1.986,
+        "month16": 1.8525,
+        "month17": 1.819,
+        "month18": 1.799,
+        "month19": 1.7954,
+        "month20": 1.8058,
+        "month21": 1.8221,
+        "month22": 2.0143,
+        "month23": 2.0194,
+        "month24": 2.0197,
+        "month25": 2.0087,
+        "month26": 1.9934,
+        "month27": 1.964,
+        "month28": 1.8354,
+        "month29": 1.8078,
+        "month30": 1.7915,
+        "month31": 1.7902,
+        "month32": 1.8035,
+        "month33": 1.8232,
+        "month34": 2.0124,
+        "month35": 2.0292,
+        "month36": 2.0251,
+        "month37": 2.0152,
+        "month38": 1.9995,
+        "month39": 1.9685,
+        "month40": 1.8414,
+        "month41": 1.812,
+        "month42": 1.7975,
+        "month43": 1.7939
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}",
+        "month40": "${table:RBOB.month40}",
+        "month41": "${table:RBOB.month41}",
+        "month42": "${table:RBOB.month42}",
+        "month43": "${table:RBOB.month43}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:13:08",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup RBob",
+        "amount": 43
+      }
+    ]
+  }
+}
+2025-06-12T17:13:09.270Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-06-12T17:13:09.271Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:13:09.272Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 0,
+        "month1": 0.1642,
+        "month2": 0.1681,
+        "month3": 0.1734,
+        "month4": 0.1697,
+        "month5": 0.1684,
+        "month6": 0.1701,
+        "month7": 0.1743,
+        "month8": 0.1715
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:13:09",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-06-12T17:13:36.496Z[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\PROYECTOS\\067-Pruebas_Docker\\excel_dockers"}
+2025-06-12T17:13:36.503Z[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-06-12T17:13:56.864Z[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-06-12 19:13:56
+2025-06-12T17:13:59.082Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-06-12T17:13:59.083Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:13:59.084Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 3.773,
+        "month1": 1.6525,
+        "month2": 1.65,
+        "month3": 1.6525,
+        "month4": 1.645,
+        "month5": 1.6225,
+        "month6": 1.6,
+        "month7": 1.58,
+        "month8": 1.565,
+        "month9": 1.58,
+        "month10": 1.6,
+        "month11": 1.6225,
+        "month12": 1.6325,
+        "month13": 1.6375
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:13:59",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-06-12T17:13:59.602Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-06-12T17:13:59.604Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:13:59.605Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup New York resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 0,
+        "month1": 1.76,
+        "month2": 1.755,
+        "month3": 1.7575,
+        "month4": 1.75
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}",
+        "month4": "${table:NYH.month4}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:13:59",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup New York-NYH",
+        "amount": 4
+      }
+    ]
+  }
+}
+2025-06-12T17:14:00.128Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-t2.json
+2025-06-12T17:14:00.130Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:14:00.131Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup New York resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 230,
+        "month1": 595.667,
+        "month2": 597.333,
+        "month3": 602.667,
+        "month4": 603.667,
+        "month5": 599,
+        "month6": 596,
+        "month7": 592,
+        "month8": 586.667,
+        "month9": 585.667,
+        "month10": 585.667,
+        "month11": 594,
+        "month12": 598.333,
+        "month13": 603
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:14:00",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup T2",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-06-12T17:14:00.655Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-corn.json
+2025-06-12T17:14:00.657Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:14:00.658Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 376.889,
+        "month1": 437,
+        "month2": 425.2,
+        "month3": 439.6,
+        "month4": 455.2,
+        "month5": 465,
+        "month6": 471,
+        "month7": 463,
+        "month8": 469.4,
+        "month9": 481.4,
+        "month10": 488,
+        "month11": 490.6,
+        "month12": 466,
+        "month13": 467,
+        "month14": 486.2,
+        "month15": 464.2
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}",
+        "month14": "${table:CORN.month14}",
+        "month15": "${table:CORN.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:14:00",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Corn",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-06-12T17:14:01.424Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-rbob.json
+2025-06-12T17:14:01.426Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:14:01.427Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 229.401,
+        "month1": 2.1668,
+        "month2": 2.1496,
+        "month3": 2.1162,
+        "month4": 1.9625,
+        "month5": 1.9103,
+        "month6": 1.8735,
+        "month7": 1.8592,
+        "month8": 1.8631,
+        "month9": 1.8775,
+        "month10": 2.065,
+        "month11": 2.0683,
+        "month12": 2.0605,
+        "month13": 2.0431,
+        "month14": 2.0186,
+        "month15": 1.986,
+        "month16": 1.8525,
+        "month17": 1.819,
+        "month18": 1.799,
+        "month19": 1.7954,
+        "month20": 1.8058,
+        "month21": 1.8221,
+        "month22": 2.0143,
+        "month23": 2.0194,
+        "month24": 2.0197,
+        "month25": 2.0087,
+        "month26": 1.9934,
+        "month27": 1.964,
+        "month28": 1.8354,
+        "month29": 1.8078,
+        "month30": 1.7915,
+        "month31": 1.7902,
+        "month32": 1.8035,
+        "month33": 1.8232,
+        "month34": 2.0124,
+        "month35": 2.0292,
+        "month36": 2.0251,
+        "month37": 2.0152,
+        "month38": 1.9995,
+        "month39": 1.9685,
+        "month40": 1.8414,
+        "month41": 1.812,
+        "month42": 1.7975,
+        "month43": 1.7939
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}",
+        "month40": "${table:RBOB.month40}",
+        "month41": "${table:RBOB.month41}",
+        "month42": "${table:RBOB.month42}",
+        "month43": "${table:RBOB.month43}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:14:01",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup RBob",
+        "amount": 43
+      }
+    ]
+  }
+}
+2025-06-12T17:14:01.953Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-06-12T17:14:01.954Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:14:01.955Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 0,
+        "month1": 0.1642,
+        "month2": 0.1681,
+        "month3": 0.1734,
+        "month4": 0.1697,
+        "month5": 0.1684,
+        "month6": 0.1701,
+        "month7": 0.1743,
+        "month8": 0.1715
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:14:01",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-06-12T17:16:01.807Z[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\PROYECTOS\\067-Pruebas_Docker\\excel_dockers"}
+2025-06-12T17:16:01.817Z[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-06-12T17:16:06.147Z[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-06-12 19:16:06
+2025-06-12T17:16:08.389Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-06-12T17:16:08.390Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:16:08.391Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 3.773,
+        "month1": 1.6525,
+        "month2": 1.65,
+        "month3": 1.6525,
+        "month4": 1.645,
+        "month5": 1.6225,
+        "month6": 1.6,
+        "month7": 1.58,
+        "month8": 1.565,
+        "month9": 1.58,
+        "month10": 1.6,
+        "month11": 1.6225,
+        "month12": 1.6325,
+        "month13": 1.6375
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:16:08",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-06-12T17:16:08.917Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-06-12T17:16:08.919Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:16:08.920Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup New York resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 0,
+        "month1": 1.76,
+        "month2": 1.755,
+        "month3": 1.7575,
+        "month4": 1.75
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}",
+        "month4": "${table:NYH.month4}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:16:08",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup New York-NYH",
+        "amount": 4
+      }
+    ]
+  }
+}
+2025-06-12T17:16:09.447Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-t2.json
+2025-06-12T17:16:09.449Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:16:09.449Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup New York resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 230,
+        "month1": 595.667,
+        "month2": 597.333,
+        "month3": 602.667,
+        "month4": 603.667,
+        "month5": 599,
+        "month6": 596,
+        "month7": 592,
+        "month8": 586.667,
+        "month9": 585.667,
+        "month10": 585.667,
+        "month11": 594,
+        "month12": 598.333,
+        "month13": 603
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:16:09",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup T2",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-06-12T17:16:09.962Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-corn.json
+2025-06-12T17:16:09.964Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:16:09.964Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 376.889,
+        "month1": 437,
+        "month2": 425.2,
+        "month3": 439.6,
+        "month4": 455.2,
+        "month5": 465,
+        "month6": 471,
+        "month7": 463,
+        "month8": 469.4,
+        "month9": 481.4,
+        "month10": 488,
+        "month11": 490.6,
+        "month12": 466,
+        "month13": 467,
+        "month14": 486.2,
+        "month15": 464.2
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}",
+        "month14": "${table:CORN.month14}",
+        "month15": "${table:CORN.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:16:09",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Corn",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-06-12T17:16:10.478Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-rbob.json
+2025-06-12T17:16:10.480Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:16:10.480Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 229.401,
+        "month1": 2.1668,
+        "month2": 2.1496,
+        "month3": 2.1162,
+        "month4": 1.9625,
+        "month5": 1.9103,
+        "month6": 1.8735,
+        "month7": 1.8592,
+        "month8": 1.8631,
+        "month9": 1.8775,
+        "month10": 2.065,
+        "month11": 2.0683,
+        "month12": 2.0605,
+        "month13": 2.0431,
+        "month14": 2.0186,
+        "month15": 1.986,
+        "month16": 1.8525,
+        "month17": 1.819,
+        "month18": 1.799,
+        "month19": 1.7954,
+        "month20": 1.8058,
+        "month21": 1.8221,
+        "month22": 2.0143,
+        "month23": 2.0194,
+        "month24": 2.0197,
+        "month25": 2.0087,
+        "month26": 1.9934,
+        "month27": 1.964,
+        "month28": 1.8354,
+        "month29": 1.8078,
+        "month30": 1.7915,
+        "month31": 1.7902,
+        "month32": 1.8035,
+        "month33": 1.8232,
+        "month34": 2.0124,
+        "month35": 2.0292,
+        "month36": 2.0251,
+        "month37": 2.0152,
+        "month38": 1.9995,
+        "month39": 1.9685,
+        "month40": 1.8414,
+        "month41": 1.812,
+        "month42": 1.7975,
+        "month43": 1.7939
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}",
+        "month40": "${table:RBOB.month40}",
+        "month41": "${table:RBOB.month41}",
+        "month42": "${table:RBOB.month42}",
+        "month43": "${table:RBOB.month43}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:16:10",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup RBob",
+        "amount": 43
+      }
+    ]
+  }
+}
+2025-06-12T17:16:11.019Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-06-12T17:16:11.021Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:16:11.022Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 0,
+        "month1": 0.1642,
+        "month2": 0.1681,
+        "month3": 0.1734,
+        "month4": 0.1697,
+        "month5": 0.1684,
+        "month6": 0.1701,
+        "month7": 0.1743,
+        "month8": 0.1715
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:16:11",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-06-12T17:17:27.956Z[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\PROYECTOS\\067-Pruebas_Docker\\excel_dockers"}
+2025-06-12T17:17:27.967Z[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-06-12T17:17:32.750Z[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-06-12 19:17:32
+2025-06-12T17:17:34.947Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-06-12T17:17:34.948Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:17:34.949Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 3.773,
+        "month1": 1.6525,
+        "month2": 1.65,
+        "month3": 1.6525,
+        "month4": 1.645,
+        "month5": 1.6225,
+        "month6": 1.6,
+        "month7": 1.58,
+        "month8": 1.565,
+        "month9": 1.58,
+        "month10": 1.6,
+        "month11": 1.6225,
+        "month12": 1.6325,
+        "month13": 1.6375
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:17:34",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-06-12T17:17:35.491Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-06-12T17:17:35.493Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:17:35.493Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup New York resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 0,
+        "month1": 1.76,
+        "month2": 1.755,
+        "month3": 1.7575,
+        "month4": 1.75
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}",
+        "month4": "${table:NYH.month4}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:17:35",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup New York-NYH",
+        "amount": 4
+      }
+    ]
+  }
+}
+2025-06-12T17:17:36.033Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-t2.json
+2025-06-12T17:17:36.035Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:17:36.036Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup New York resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 230,
+        "month1": 595.667,
+        "month2": 597.333,
+        "month3": 602.667,
+        "month4": 603.667,
+        "month5": 599,
+        "month6": 596,
+        "month7": 592,
+        "month8": 586.667,
+        "month9": 585.667,
+        "month10": 585.667,
+        "month11": 594,
+        "month12": 598.333,
+        "month13": 603
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:17:36",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup T2",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-06-12T17:17:36.579Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-corn.json
+2025-06-12T17:17:36.581Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:17:36.581Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 376.889,
+        "month1": 437,
+        "month2": 425.2,
+        "month3": 439.6,
+        "month4": 455.2,
+        "month5": 465,
+        "month6": 471,
+        "month7": 463,
+        "month8": 469.4,
+        "month9": 481.4,
+        "month10": 488,
+        "month11": 490.6,
+        "month12": 466,
+        "month13": 467,
+        "month14": 486.2,
+        "month15": 464.2
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}",
+        "month14": "${table:CORN.month14}",
+        "month15": "${table:CORN.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:17:36",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Corn",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-06-12T17:17:37.120Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-rbob.json
+2025-06-12T17:17:37.121Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:17:37.122Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 229.401,
+        "month1": 2.1668,
+        "month2": 2.1496,
+        "month3": 2.1162,
+        "month4": 1.9625,
+        "month5": 1.9103,
+        "month6": 1.8735,
+        "month7": 1.8592,
+        "month8": 1.8631,
+        "month9": 1.8775,
+        "month10": 2.065,
+        "month11": 2.0683,
+        "month12": 2.0605,
+        "month13": 2.0431,
+        "month14": 2.0186,
+        "month15": 1.986,
+        "month16": 1.8525,
+        "month17": 1.819,
+        "month18": 1.799,
+        "month19": 1.7954,
+        "month20": 1.8058,
+        "month21": 1.8221,
+        "month22": 2.0143,
+        "month23": 2.0194,
+        "month24": 2.0197,
+        "month25": 2.0087,
+        "month26": 1.9934,
+        "month27": 1.964,
+        "month28": 1.8354,
+        "month29": 1.8078,
+        "month30": 1.7915,
+        "month31": 1.7902,
+        "month32": 1.8035,
+        "month33": 1.8232,
+        "month34": 2.0124,
+        "month35": 2.0292,
+        "month36": 2.0251,
+        "month37": 2.0152,
+        "month38": 1.9995,
+        "month39": 1.9685,
+        "month40": 1.8414,
+        "month41": 1.812,
+        "month42": 1.7975,
+        "month43": 1.7939
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}",
+        "month40": "${table:RBOB.month40}",
+        "month41": "${table:RBOB.month41}",
+        "month42": "${table:RBOB.month42}",
+        "month43": "${table:RBOB.month43}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:17:37",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup RBob",
+        "amount": 43
+      }
+    ]
+  }
+}
+2025-06-12T17:17:37.664Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-06-12T17:17:37.665Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:17:37.666Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 0,
+        "month1": 0.1642,
+        "month2": 0.1681,
+        "month3": 0.1734,
+        "month4": 0.1697,
+        "month5": 0.1684,
+        "month6": 0.1701,
+        "month7": 0.1743,
+        "month8": 0.1715
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:17:37",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-06-12T17:17:57.602Z[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-06-12 19:17:57
+2025-06-12T17:21:25.724Z[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-06-12 19:21:25
+2025-06-12T17:21:26.599Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-06-12T17:21:26.600Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:21:26.601Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 3.773,
+        "month1": 1.6525,
+        "month2": 1.65,
+        "month3": 1.6525,
+        "month4": 1.645,
+        "month5": 1.6225,
+        "month6": 1.6,
+        "month7": 1.58,
+        "month8": 1.565,
+        "month9": 1.58,
+        "month10": 1.6,
+        "month11": 1.6225,
+        "month12": 1.6325,
+        "month13": 1.6375
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:21:26",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-06-12T17:21:27.171Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-06-12T17:21:27.172Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:21:27.173Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup New York resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 0,
+        "month1": 1.76,
+        "month2": 1.755,
+        "month3": 1.7575,
+        "month4": 1.75
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}",
+        "month4": "${table:NYH.month4}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:21:27",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup New York-NYH",
+        "amount": 4
+      }
+    ]
+  }
+}
+2025-06-12T17:21:27.717Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-t2.json
+2025-06-12T17:21:27.718Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:21:27.719Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup New York resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 230,
+        "month1": 595.667,
+        "month2": 597.333,
+        "month3": 602.667,
+        "month4": 603.667,
+        "month5": 599,
+        "month6": 596,
+        "month7": 592,
+        "month8": 586.667,
+        "month9": 585.667,
+        "month10": 585.667,
+        "month11": 594,
+        "month12": 598.333,
+        "month13": 603
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:21:27",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup T2",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-06-12T17:21:28.275Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-corn.json
+2025-06-12T17:21:28.276Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:21:28.277Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 376.889,
+        "month1": 437,
+        "month2": 425.2,
+        "month3": 439.6,
+        "month4": 455.2,
+        "month5": 465,
+        "month6": 471,
+        "month7": 463,
+        "month8": 469.4,
+        "month9": 481.4,
+        "month10": 488,
+        "month11": 490.6,
+        "month12": 466,
+        "month13": 467,
+        "month14": 486.2,
+        "month15": 464.2
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}",
+        "month14": "${table:CORN.month14}",
+        "month15": "${table:CORN.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:21:28",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Corn",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-06-12T17:21:28.850Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-rbob.json
+2025-06-12T17:21:28.851Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:21:28.852Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 229.401,
+        "month1": 2.1668,
+        "month2": 2.1496,
+        "month3": 2.1162,
+        "month4": 1.9625,
+        "month5": 1.9103,
+        "month6": 1.8735,
+        "month7": 1.8592,
+        "month8": 1.8631,
+        "month9": 1.8775,
+        "month10": 2.065,
+        "month11": 2.0683,
+        "month12": 2.0605,
+        "month13": 2.0431,
+        "month14": 2.0186,
+        "month15": 1.986,
+        "month16": 1.8525,
+        "month17": 1.819,
+        "month18": 1.799,
+        "month19": 1.7954,
+        "month20": 1.8058,
+        "month21": 1.8221,
+        "month22": 2.0143,
+        "month23": 2.0194,
+        "month24": 2.0197,
+        "month25": 2.0087,
+        "month26": 1.9934,
+        "month27": 1.964,
+        "month28": 1.8354,
+        "month29": 1.8078,
+        "month30": 1.7915,
+        "month31": 1.7902,
+        "month32": 1.8035,
+        "month33": 1.8232,
+        "month34": 2.0124,
+        "month35": 2.0292,
+        "month36": 2.0251,
+        "month37": 2.0152,
+        "month38": 1.9995,
+        "month39": 1.9685,
+        "month40": 1.8414,
+        "month41": 1.812,
+        "month42": 1.7975,
+        "month43": 1.7939
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}",
+        "month40": "${table:RBOB.month40}",
+        "month41": "${table:RBOB.month41}",
+        "month42": "${table:RBOB.month42}",
+        "month43": "${table:RBOB.month43}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:21:28",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup RBob",
+        "amount": 43
+      }
+    ]
+  }
+}
+2025-06-12T17:21:29.424Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\PROYECTOS\067-Pruebas_Docker\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-06-12T17:21:29.426Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-06-12T17:21:29.427Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": "2025-06-11T22:00:00.000Z",
+        "volume": 0,
+        "month1": 0.1642,
+        "month2": 0.1681,
+        "month3": 0.1734,
+        "month4": 0.1697,
+        "month5": 0.1684,
+        "month6": 0.1701,
+        "month7": 0.1743,
+        "month8": 0.1715
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-06-12 19:21:29",
+        "tradeDate": "06/11/2025",
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-06-12T17:21:43.901Z[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-06-12 19:21:43

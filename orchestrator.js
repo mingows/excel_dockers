@@ -8,6 +8,7 @@ var path = require('path');
 const EXCEPTION_DAYS = ["01/01/2025", "04/20/2025", "12/25/2025", "05/21/2025"]; // Add any other exception days here
 const USE_API_DATA = false; // Set to false if you want to use local data instead of API calls
 
+// ERROR: Ver la fecha, que cuando se pasa creo que no funciona bien
 function globalOrchestrator(date,globalConfig) {
     // Take the current date-1 and ensure that is not a weekend
     let dateToProcess = new Date();

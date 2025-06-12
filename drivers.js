@@ -180,6 +180,7 @@ function excelSave(data, filePath, globalConfig) {
         var templateResumeTmp = new xlsxTemplate(templateResumeTmpContent);
 
         var resumeLine = [];
+        var resumeLine2 = [];
         var resumeLineTmp = [];
         for (const key in data) {
             if (Object.prototype.hasOwnProperty.call(data, key)) {
@@ -191,6 +192,7 @@ function excelSave(data, filePath, globalConfig) {
                 //Add info to the data template
                 templateData.substitute(keyName, { [keyName]: dataLine });
                 resumeLine.push(data[key].resume[0]);
+                resumeLine2.push(data[key].resume[0]);
                 dataLineTmp.push(dataLine[0]);
                 dataLineTmp.push(data[key].tmp[0]);
                 //Hay que meter dataLineTMP en un template para la excel
@@ -206,7 +208,7 @@ function excelSave(data, filePath, globalConfig) {
         resumeLineTmp=resumeLine;
         resumeLineTmp.push(markLine);
 
-        templateResume.substitute("resumeData", { resumeData: resumeLine });
+        templateResume.substitute("resumeData", { resumeData: resumeLine2 });
         templateResumeTmp.substitute("resumeData", { resumeData: resumeLineTmp });
 
         // Get binary data
