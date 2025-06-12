@@ -1,0 +1,52 @@
+{
+  "lineInfo": [
+    {
+      "date": "2025-06-01T22:00:00.000Z",
+      "volume": 308.326,
+      "month1": 444,
+      "month2": 423.2,
+      "month3": 438.4,
+      "month4": 454,
+      "month5": 463,
+      "month6": 468.4,
+      "month7": 455.6,
+      "month8": 460.4,
+      "month9": 472,
+      "month10": 478.2,
+      "month11": 481.2,
+      "month12": 460.4,
+      "month13": 463,
+      "month14": 482,
+      "month15": 465
+    }
+  ],
+  "lineTmp": [
+    {
+      "date": "${table:CORN.date}",
+      "volume": "${table:CORN.volume}",
+      "month1": "${table:CORN.month1}",
+      "month2": "${table:CORN.month2}",
+      "month3": "${table:CORN.month3}",
+      "month4": "${table:CORN.month4}",
+      "month5": "${table:CORN.month5}",
+      "month6": "${table:CORN.month6}",
+      "month7": "${table:CORN.month7}",
+      "month8": "${table:CORN.month8}",
+      "month9": "${table:CORN.month9}",
+      "month10": "${table:CORN.month10}",
+      "month11": "${table:CORN.month11}",
+      "month12": "${table:CORN.month12}",
+      "month13": "${table:CORN.month13}",
+      "month14": "${table:CORN.month14}",
+      "month15": "${table:CORN.month15}"
+    }
+  ],
+  "resume": [
+    {
+      "date": "2025-06-02 09:33:28",
+      "tradeDate": "05/30/2025",
+      "origin": "CMEGroup Corn",
+      "amount": 15
+    }
+  ]
+}

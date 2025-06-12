@@ -1,0 +1,32 @@
+{
+  "lineInfo": [
+    {
+      "date": "2025-05-29T22:00:00.000Z",
+      "volume": 0,
+      "month1": 1.8475,
+      "month2": 1.85,
+      "month3": 1.8575,
+      "month4": 1.8525,
+      "month5": 1.835
+    }
+  ],
+  "lineTmp": [
+    {
+      "date": "${table:NYH.date}",
+      "volume": "${table:NYH.volume}",
+      "month1": "${table:NYH.month1}",
+      "month2": "${table:NYH.month2}",
+      "month3": "${table:NYH.month3}",
+      "month4": "${table:NYH.month4}",
+      "month5": "${table:NYH.month5}"
+    }
+  ],
+  "resume": [
+    {
+      "date": "2025-05-30 12:09:41",
+      "tradeDate": "05/29/2025",
+      "origin": "CMEGroup New York-NYH",
+      "amount": 5
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "axios": "^1.9.0",
+    "prompt-sync": "^4.2.0",
+    "request": "^2.88.2",
+    "sync-request": "^6.1.0",
+    "xlsx-template": "^1.4.4"
+  }
+}
