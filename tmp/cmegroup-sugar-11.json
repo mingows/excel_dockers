@@ -1,0 +1,38 @@
+{
+  "lineInfo": [
+    {
+      "date": "2025-06-11T22:00:00.000Z",
+      "volume": 0,
+      "month1": 0.1642,
+      "month2": 0.1681,
+      "month3": 0.1734,
+      "month4": 0.1697,
+      "month5": 0.1684,
+      "month6": 0.1701,
+      "month7": 0.1743,
+      "month8": 0.1715
+    }
+  ],
+  "lineTmp": [
+    {
+      "date": "${table:Sugar 11.date}",
+      "volume": "${table:Sugar 11.volume}",
+      "month1": "${table:Sugar 11.month1}",
+      "month2": "${table:Sugar 11.month2}",
+      "month3": "${table:Sugar 11.month3}",
+      "month4": "${table:Sugar 11.month4}",
+      "month5": "${table:Sugar 11.month5}",
+      "month6": "${table:Sugar 11.month6}",
+      "month7": "${table:Sugar 11.month7}",
+      "month8": "${table:Sugar 11.month8}"
+    }
+  ],
+  "resume": [
+    {
+      "date": "2025-06-12 10:43:31",
+      "tradeDate": "06/11/2025",
+      "origin": "CMEGroup Sugar 11",
+      "amount": 8
+    }
+  ]
+}

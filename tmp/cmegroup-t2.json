@@ -1,0 +1,48 @@
+{
+  "lineInfo": [
+    {
+      "date": "2025-06-11T22:00:00.000Z",
+      "volume": 230,
+      "month1": 595.667,
+      "month2": 597.333,
+      "month3": 602.667,
+      "month4": 603.667,
+      "month5": 599,
+      "month6": 596,
+      "month7": 592,
+      "month8": 586.667,
+      "month9": 585.667,
+      "month10": 585.667,
+      "month11": 594,
+      "month12": 598.333,
+      "month13": 603
+    }
+  ],
+  "lineTmp": [
+    {
+      "date": "${table:T2.date}",
+      "volume": "${table:T2.volume}",
+      "month1": "${table:T2.month1}",
+      "month2": "${table:T2.month2}",
+      "month3": "${table:T2.month3}",
+      "month4": "${table:T2.month4}",
+      "month5": "${table:T2.month5}",
+      "month6": "${table:T2.month6}",
+      "month7": "${table:T2.month7}",
+      "month8": "${table:T2.month8}",
+      "month9": "${table:T2.month9}",
+      "month10": "${table:T2.month10}",
+      "month11": "${table:T2.month11}",
+      "month12": "${table:T2.month12}",
+      "month13": "${table:T2.month13}"
+    }
+  ],
+  "resume": [
+    {
+      "date": "2025-06-12 10:43:27",
+      "tradeDate": "06/11/2025",
+      "origin": "CMEGroup T2",
+      "amount": 13
+    }
+  ]
+}
