@@ -10,6 +10,7 @@ const LOG_FILE_SIZE_LIMIT = 5 * 1024 * 1000; // 5MB
 const MAX_LOG_FILES = 4;
 var CONSTANTS = {
     workingPath: __dirname,
+    excelName: "Master data_OCT22"
     // environment: 'DEV',
     // apiBasePath: 'https://api-manager.scib.dev.corp/api',
     // clientId: '09390a65-b121-4cd3-bbc4-bebe7a6500d0',

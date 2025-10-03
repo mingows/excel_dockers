@@ -1,12 +1,12 @@
 {
   "lineInfo": [
     {
-      "date": "2025-06-11T22:00:00.000Z",
+      "date": "2025-10-02T22:00:00.000Z",
       "volume": 0,
-      "month1": 1.76,
-      "month2": 1.755,
-      "month3": 1.7575,
-      "month4": 1.75
+      "month1": 2.1039,
+      "month2": 2.1325,
+      "month3": 2.04,
+      "month4": 1.885
     }
   ],
   "lineTmp": [
@@ -21,8 +21,8 @@
   ],
   "resume": [
     {
-      "date": "2025-06-12 10:43:26",
-      "tradeDate": "06/11/2025",
+      "date": "2025-10-03 18:03:39",
+      "tradeDate": "10/02/2025",
       "origin": "CMEGroup New York-NYH",
       "amount": 4
     }

@@ -2,7 +2,7 @@ var fs = require('fs');
 var xlsxTemplate = require('xlsx-template');
 var path = require('path');
 
-var { writeLog, writeFile, appendFile, formatDate, orderSettlementsByMonth, formatDateXslx } = require('./utils.js');
+var { writeLog, appendFile, formatDate, getConstants } = require('./utils.js');
 
 //All data shuold be in next format:
 // settlementsResult = 
@@ -154,8 +154,9 @@ function excelSaveResume(resumeData, filePath, globalConfig) {
 }
 
 function excelSave(data, filePath, globalConfig) {
-    const TEMPLATE_PATH = path.join(filePath, "Master data_JUL22_template.xlsx");
-    const OUTPUT_PATH = path.join(filePath, "data", "Master data_JUL22.xlsx");
+    var excelName=JSON.parse(getConstants()).excelName;
+    const TEMPLATE_PATH = path.join(filePath, excelName+"_template.xlsx");
+    const OUTPUT_PATH = path.join(filePath, "data", excelName+".xlsx");
     const TEMPLATE_RESUME_PATH = path.join(filePath, "resume_template.xlsx");
     const OUTPUT_RESUME_PATH = path.join(filePath, "data", "resume.xlsx");
     var result = {
@@ -180,7 +181,6 @@ function excelSave(data, filePath, globalConfig) {
         var templateResumeTmp = new xlsxTemplate(templateResumeTmpContent);
 
         var resumeLine = [];
-        var resumeLineTmp = [];
         for (const key in data) {
             if (Object.prototype.hasOwnProperty.call(data, key)) {
                 var keyName = key.replace('_', ' ');
@@ -203,11 +203,14 @@ function excelSave(data, filePath, globalConfig) {
             origin: "${table:resumeData.origin}",
             amount: "${table:resumeData.amount}"
         };
-        resumeLineTmp=resumeLine;
-        resumeLineTmp.push(markLine);
-
+        // var resumeLineTmp = [];
         templateResume.substitute("resumeData", { resumeData: resumeLine });
-        templateResumeTmp.substitute("resumeData", { resumeData: resumeLineTmp });
+        // resumeLineTmp=resumeLine;
+        // resumeLineTmp.push(markLine);
+        resumeLine.push(markLine);
+       
+        // templateResumeTmp.substitute("resumeData", { resumeData: resumeLineTmp });
+        templateResumeTmp.substitute("resumeData", { resumeData: resumeLine });
 
         // Get binary data
         var binaryData = templateData.generate({ type: 'nodebuffer' });
