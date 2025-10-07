@@ -3,7 +3,7 @@ var fs = require('fs');
 var path = require('path');
 
 // Definir las constantes del módulo
-const CONSOLE_LOG = true
+const CONSOLE_LOG = true;
 //const logLevel = ["INFO","ERROR","WARNING","DEBUG"];
 const logLevel = ["INFO", "ERROR", "DEBUG"];
 const LOG_FILE_SIZE_LIMIT = 5 * 1024 * 1000; // 5MB
@@ -45,6 +45,7 @@ function writeLog(message, level, globalConfig) {
         } else {
             logMessage = `${timestamp}[${callerModule}.${callerFunction}][${level}] ${message}`;
         }
+
         fs.appendFileSync(path.join(globalConfig.workingPath, "logs", "log.txt"), logMessage + '\n');
         //fs.appendFileSync(globalConfig.workingPath + '/logs/log.txt', logMessage + '\n');
         // Rotamos los logs si el archivo supera el límite de tamaño
@@ -150,6 +151,15 @@ function formatDate(date) {
         String(originalDate.getSeconds()).padStart(2, '0');
     return (formattedDate);
 }
+
+// Parse a date in "dd/mm/yyyy" format to a Date object
+function parseDateDDMMYYYY(dateStr) {
+    // Espera formato "dd/mm/aaaa"
+    const [day, month, year] = dateStr.split('/').map(Number);
+    // El mes en JS es 0-indexado
+    return new Date(year, month - 1, day);
+}
+
 function formatDateXslx(date) {
     const excelEpoch = new Date(Date.UTC(1899, 11, 30));
     const excelDate = (date - excelEpoch) / (24 * 60 * 60 * 1000);
@@ -291,6 +301,7 @@ module.exports = {
     englishDateValidation,
     appendFile,
     formatDate,
+    parseDateDDMMYYYY,
     formatDateXslx,
     getEnvironment,
     saveDataWithTemplateXlsx,

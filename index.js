@@ -44,6 +44,13 @@ APP.post('/marquis/book', (req, res) => {
     }
 });
 
+APP.get('/marquis/version', (req, res) => {
+    //const { date } = req.body;
+    //var result = "";
+    return res.status(200).json({ version: "1.0.0" });
+    });
+
+
 APP.listen(PORT, () => {
-    writeLog(`Listening on http://localhost:${PORT}/marquis/book`, "INFO", globalConfig);
+    writeLog(`Listening on http://localhost:${PORT}/marquis/*`, "INFO", globalConfig);
 });

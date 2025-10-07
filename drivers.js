@@ -184,7 +184,7 @@ function excelSave(data, filePath, globalConfig) {
         for (const key in data) {
             if (Object.prototype.hasOwnProperty.call(data, key)) {
                 var keyName = key.replace('_', ' ');
-                console.log(`- Nombre del campo: ${keyName}`);
+                //console.log(`- Nombre del campo: ${keyName}`);
                 var dataLine = [];
                 var dataLineTmp = [];
                 dataLine = data[key].data;
