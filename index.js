@@ -52,5 +52,6 @@ APP.get('/marquis/version', (req, res) => {
 
 
 APP.listen(PORT, () => {
-    writeLog(`Listening on http://localhost:${PORT}/marquis/*`, "INFO", globalConfig);
+    writeLog(`Listening on http://localhost:${PORT}/marquis/book`, "INFO", globalConfig);
+    writeLog(`Body formar {"date":"MM/DD/YYYY"}`, "INFO", globalConfig);
 });
