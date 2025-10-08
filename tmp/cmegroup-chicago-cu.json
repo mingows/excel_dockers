@@ -2,7 +2,7 @@
   "lineInfo": [
     {
       "date": 45933,
-      "volume": 9999,
+      "volume": 5.298,
       "month1": 1.9925,
       "month2": 1.9,
       "month3": 1.7525,
@@ -43,7 +43,7 @@
   ],
   "resume": [
     {
-      "date": "2025-10-08 16:56:22",
+      "date": "2025-10-08 22:31:42",
       "tradeDate": 45933,
       "origin": "CMEGroup Chicago-CU",
       "amount": 15
