@@ -14077,3 +14077,68 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
 2025-10-08T14:56:22.357Z[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelBaseName":""}
 2025-10-08T14:56:22.359Z[drivers.js.excelSave ][ERROR] Error in excelSaveCmeGroup: Error: ENOENT: no such file or directory, open 'D:\Trabajo\14-MarquisBook\excel_dockers\undefined_template.xlsx'. Hora fin: 2025-08-10 16:56:22
 2025-10-08T14:56:22.361Z[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-08 16:56:22
+2025-10-08T20:17:04.887Z[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-08T20:17:04.893Z[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-08T20:17:04.894Z[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-08T20:17:16.749Z[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-08 22:17:16
+2025-10-08T20:17:16.751Z[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-08T20:17:17.410Z[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-08T20:17:17.412Z[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-08T20:17:17.414Z[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45937,
+        "volume": 3.946,
+        "month1": 1.94,
+        "month2": 1.8575,
+        "month3": 1.7275,
+        "month4": 1.6375,
+        "month5": 1.635,
+        "month6": 1.6575,
+        "month7": 1.6775,
+        "month8": 1.6975,
+        "month9": 1.71,
+        "month10": 1.7125,
+        "month11": 1.7075,
+        "month12": 1.7025,
+        "month13": 1.6775,
+        "month14": 1.6425,
+        "month15": 1.62
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-08 22:17:17",
+        "tradeDate": 45937,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-08T20:17:17.416Z[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-08T20:17:18.440Z[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-08 22:17:18
