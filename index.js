@@ -46,4 +46,5 @@ APP.post('/marquis/book', (req, res) => {
 
 APP.listen(PORT, () => {
     writeLog(`Listening on http://localhost:${PORT}/marquis/book`, "INFO", globalConfig);
+    writeLog(`Body formar {"date":"MM/DD/YYYY"}`, "INFO", globalConfig);
 });

@@ -4,12 +4,14 @@ var path = require('path');
 
 // Definir las constantes del módulo
 const CONSOLE_LOG = true
-//const logLevel = ["INFO","ERROR","WARNING","DEBUG"];
-const logLevel = ["INFO", "ERROR", "DEBUG"];
+//const logLevel = ["INFO","ERROR","WARN","DEBUG"];
+const logLevel = ["INFO", "ERROR","WARN", "DEBUG"];
 const LOG_FILE_SIZE_LIMIT = 5 * 1024 * 1000; // 5MB
 const MAX_LOG_FILES = 4;
 var CONSTANTS = {
     workingPath: __dirname,
+    exceptionDays : ["01/01/2025", "04/20/2025", "12/25/2025", "05/21/2025"],
+    excelBaseName: ""
     // environment: 'DEV',
     // apiBasePath: 'https://api-manager.scib.dev.corp/api',
     // clientId: '09390a65-b121-4cd3-bbc4-bebe7a6500d0',
@@ -149,6 +151,7 @@ function formatDate(date) {
         String(originalDate.getSeconds()).padStart(2, '0');
     return (formattedDate);
 }
+
 function formatDateXslx(date) {
     const excelEpoch = new Date(Date.UTC(1899, 11, 30));
     const excelDate = (date - excelEpoch) / (24 * 60 * 60 * 1000);
@@ -206,7 +209,7 @@ function getEnvironment(env) {
         clientId: '09390a65-b121-4cd3-bbc4-bebe7a6500d0',
         clientSecret: '8c85d438-9d8c-43da-95d5-eaa6da74be65'
     };
-    writeLog(`ENV: ${env}`, "DEBUG2", CONST);
+    //writeLog(`ENV: ${env}`, "DEBUG2", CONST);
     var environment = "";
     if (env) {
         environment = env.toLowerCase();;

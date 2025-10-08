@@ -82,9 +82,9 @@ function fileSave(data, resumeData, filePath, globalConfig) {
 }
 
 function excelSaveResume(resumeData, filePath, globalConfig) {
-    const TEMPLATE_PATH = path.join(__dirname, "resume_template.xlsx");
-    const TEMPLATE_TMP_PATH = path.join(__dirname, "tmp", resume_template.xlsx);
-    const OUTPUT_PATH = path.join(__dirname, resume.xlsx);
+    const TEMPLATE_PATH = path.join(filePath, "resume_template.xlsx");
+    const TEMPLATE_TMP_PATH = path.join(filePath, "tmp", resume_template.xlsx);
+    const OUTPUT_PATH = path.join(filePath, resume.xlsx);
     // const TEMPLATE_PATH = __dirname + "\\resume_template.xlsx";
     // const TEMPLATE_TMP_PATH = __dirname + "\\tmp\\resume_template.xlsx";
     // const OUTPUT_PATH = filePath + "resume.xlsx";
@@ -182,50 +182,46 @@ function excelSave(data, filePath, globalConfig) {
         var resumeLine = [];
         var resumeLine2 = [];
         var resumeLineTmp = [];
+        var dataLineNumbers = 0;
         for (const key in data) {
             if (Object.prototype.hasOwnProperty.call(data, key)) {
                 var keyName = key.replace('_', ' ');
-                console.log(`- Nombre del campo: ${keyName}`);
+                //console.log(`- Nombre del campo: ${keyName}`);
+                //Format resume Excel info
                 var dataLine = [];
                 var dataLineTmp = [];
-                dataLine = data[key].data;
-                //Add info to the data template
-                templateData.substitute(keyName, { [keyName]: dataLine });
                 resumeLine.push(data[key].resume[0]);
                 resumeLine2.push(data[key].resume[0]);
-                dataLineTmp.push(dataLine[0]);
-                dataLineTmp.push(data[key].tmp[0]);
-                //Hay que meter dataLineTMP en un template para la excel
-                templateDataTmp.substitute(keyName, { [keyName]: dataLineTmp }); 
+                var markLine = {
+                    date: "${table:resumeData.date}",
+                    tradeDate: "${table:resumeData.tradeDate}",
+                    origin: "${table:resumeData.origin}",
+                    amount: "${table:resumeData.amount}"
+                };
+                resumeLineTmp = resumeLine;
+                resumeLineTmp.push(markLine);
+
+
+                dataLine = data[key].data;
+                //Ensure that there is data to write
+                if (!dataLine || dataLine.length === 0) {
+                    writeLog(`No data to write for key: ${keyName} in the Excel file: ${OUTPUT_PATH}`, "WARN", globalConfig);
+                } else {
+                    dataLineNumbers ++;
+                    //Add info to the data template
+                    templateData.substitute(keyName, { [keyName]: dataLine });
+                    dataLineTmp.push(dataLine[0]);
+                    dataLineTmp.push(data[key].tmp[0]);
+                    //Hay que meter dataLineTMP en un template para la excel
+                    templateDataTmp.substitute(keyName, { [keyName]: dataLineTmp });
+                }
             }
         }
-        var markLine = {
-            date: "${table:resumeData.date}",
-            tradeDate: "${table:resumeData.tradeDate}",
-            origin: "${table:resumeData.origin}",
-            amount: "${table:resumeData.amount}"
-        };
-        resumeLineTmp=resumeLine;
-        resumeLineTmp.push(markLine);
-
+        //Resume excel info
         templateResume.substitute("resumeData", { resumeData: resumeLine2 });
         templateResumeTmp.substitute("resumeData", { resumeData: resumeLineTmp });
-
-        // Get binary data
-        var binaryData = templateData.generate({ type: 'nodebuffer' });
         var binaryResume = templateResume.generate({ type: 'nodebuffer' });
-        var binaryDataTmp = templateDataTmp.generate({ type: 'nodebuffer' });
         var binaryResumeTmp = templateResumeTmp.generate({ type: 'nodebuffer' });
-        // Delete the data file if exits and save the new
-        if (fs.existsSync(OUTPUT_PATH)) {
-            fs.unlinkSync(OUTPUT_PATH);
-        }
-        fs.writeFileSync(OUTPUT_PATH, binaryData);
-        // Delete the template data file if exits and save the new
-        if (fs.existsSync(TEMPLATE_PATH)) {
-            fs.unlinkSync(TEMPLATE_PATH);
-        }
-        fs.writeFileSync(TEMPLATE_PATH, binaryDataTmp);
         // Delete the resume file if exits nd save the new
         if (fs.existsSync(OUTPUT_RESUME_PATH)) {
             fs.unlinkSync(OUTPUT_RESUME_PATH);
@@ -236,6 +232,25 @@ function excelSave(data, filePath, globalConfig) {
             fs.unlinkSync(TEMPLATE_RESUME_PATH);
         }
         fs.writeFileSync(TEMPLATE_RESUME_PATH, binaryResumeTmp);
+
+        //Data book info if exists data to write
+        if (dataLineNumbers === 0) {
+            writeLog(`No data to write in the Excel file: ${OUTPUT_PATH}`, "WARN", globalConfig);
+        } else {
+            // Get binary data
+            var binaryData = templateData.generate({ type: 'nodebuffer' });
+            var binaryDataTmp = templateDataTmp.generate({ type: 'nodebuffer' });
+            // Delete the data file if exits and save the new
+            if (fs.existsSync(OUTPUT_PATH)) {
+                fs.unlinkSync(OUTPUT_PATH);
+            }
+            fs.writeFileSync(OUTPUT_PATH, binaryData);
+            // Delete the template data file if exits and save the new
+            if (fs.existsSync(TEMPLATE_PATH)) {
+                fs.unlinkSync(TEMPLATE_PATH);
+            }
+            fs.writeFileSync(TEMPLATE_PATH, binaryDataTmp);
+        }
     } catch (error) {
         const nowErrorEnd = new Date();
         const formattedErrorDateEnd = formatDate(nowErrorEnd.toLocaleString());
