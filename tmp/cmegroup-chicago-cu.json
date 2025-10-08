@@ -1,24 +1,23 @@
 {
   "lineInfo": [
     {
-      "date": "2025-10-02T22:00:00.000Z",
-      "volume": 4.241,
-      "month1": 1.98583,
-      "month2": 2.005,
-      "month3": 1.9125,
-      "month4": 1.7575,
-      "month5": 1.665,
-      "month6": 1.66,
-      "month7": 1.68,
-      "month8": 1.7,
-      "month9": 1.72,
+      "date": 45933,
+      "volume": 9999,
+      "month1": 1.9925,
+      "month2": 1.9,
+      "month3": 1.7525,
+      "month4": 1.6625,
+      "month5": 1.6575,
+      "month6": 1.68,
+      "month7": 1.7,
+      "month8": 1.72,
+      "month9": 1.7325,
       "month10": 1.7325,
-      "month11": 1.7325,
-      "month12": 1.7275,
-      "month13": 1.7225,
-      "month14": 1.695,
-      "month15": 1.66,
-      "month16": 1.6375
+      "month11": 1.7275,
+      "month12": 1.7225,
+      "month13": 1.6975,
+      "month14": 1.6625,
+      "month15": 1.64
     }
   ],
   "lineTmp": [
@@ -39,16 +38,15 @@
       "month12": "${table:CU.month12}",
       "month13": "${table:CU.month13}",
       "month14": "${table:CU.month14}",
-      "month15": "${table:CU.month15}",
-      "month16": "${table:CU.month16}"
+      "month15": "${table:CU.month15}"
     }
   ],
   "resume": [
     {
-      "date": "2025-10-03 18:10:43",
-      "tradeDate": "10/02/2025",
+      "date": "2025-10-08 16:56:22",
+      "tradeDate": 45933,
       "origin": "CMEGroup Chicago-CU",
-      "amount": 16
+      "amount": 15
     }
   ]
 }

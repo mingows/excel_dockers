@@ -1,4 +1,14 @@
 {
+<<<<<<< HEAD
+  "lineInfo": [],
+  "lineTmp": [],
+  "resume": [
+    {
+      "date": "2025-10-07 09:29:35",
+      "tradeDate": "Unknown",
+      "origin": "CMEGroup RBob",
+      "amount": "ERROR"
+=======
   "lineInfo": [
     {
       "date": "2025-10-05T22:00:00.000Z",
@@ -95,6 +105,7 @@
       "tradeDate": "10/03/2025",
       "origin": "CMEGroup RBob",
       "amount": 39
+>>>>>>> 5d57d58c21d4695a7976792e83cc72ab7ac695e8
     }
   ]
 }
