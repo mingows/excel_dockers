@@ -1,20 +1,11 @@
 {
-<<<<<<< HEAD
-  "lineInfo": [],
-  "lineTmp": [],
-  "resume": [
-    {
-      "date": "2025-10-07 09:29:35",
-      "tradeDate": "Unknown",
-=======
   "lineInfo": [
     {
-      "date": "2025-10-02T22:00:00.000Z",
+      "date": 45938,
       "volume": 0,
-      "month1": 2.1039,
-      "month2": 2.1325,
-      "month3": 2.04,
-      "month4": 1.885
+      "month1": 1.9775,
+      "month2": 1.895,
+      "month3": 1.805
     }
   ],
   "lineTmp": [
@@ -23,17 +14,15 @@
       "volume": "${table:NYH.volume}",
       "month1": "${table:NYH.month1}",
       "month2": "${table:NYH.month2}",
-      "month3": "${table:NYH.month3}",
-      "month4": "${table:NYH.month4}"
+      "month3": "${table:NYH.month3}"
     }
   ],
   "resume": [
     {
-      "date": "2025-10-03 18:10:44",
-      "tradeDate": "10/02/2025",
->>>>>>> 5d57d58c21d4695a7976792e83cc72ab7ac695e8
+      "date": "2025-10-09 13:42:15",
+      "tradeDate": 45938,
       "origin": "CMEGroup New York-NYH",
-      "amount": "ERROR"
+      "amount": 3
     }
   ]
 }

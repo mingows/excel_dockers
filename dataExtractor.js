@@ -1,23 +1,16 @@
+const { Server } = require('http');
 var { writeFile, writeLog, englishDateValidation, orderSettlementsByMonth, formatDateXslx } = require('./utils.js');
-var request = require('request');
 var path = require('path');
-
-const prompt = require('prompt-sync')();
 
 
 //Gets CMEGroup data from Chicago
-// -date: in english format MM/DD/YYYY
+// -date (mandatory): in english format MM/DD/YYYY
 function getCmeGroupChicago(date, globalConfig) {
     if (!date) {
-        const nowEnd = new Date();
-        const formattedDateEnd = `${String(nowEnd.getMonth() + 1).padStart(2, '0')}/${String(nowEnd.getDate()).padStart(2, '0')}/${String(nowEnd.getFullYear())}`;
-    } else {
-        if (englishDateValidation(date) == false) {
-            writeLog(`Error: date format is not valid: ${date}`, "ERROR", globalConfig);
-            return {
-                "statusCode": 400,
-                "statusDescription": "Wrong date format. Expected format: MM/DD/YYYY"
-            }
+        return {
+            "statusCode": 500,
+            "statusDescription": "Internal Server Error",
+            "statusDetails": "No date provided"
         }
     }
     var result = {
@@ -45,11 +38,6 @@ function getCmeGroupChicago(date, globalConfig) {
         //If the result is empty, we must to request for the day before until there is a data
         if (responseBody.empty === true) {
             writeLog(`No data found for date: ${date}`, "WARN", globalConfig);
-            // let dateToProcess = new Date(date);
-            // dateToProcess.setDate(dateToProcess.getDate() - 1);
-            // const formattedDateToProcess = `${String(dateToProcess.getMonth() + 1).padStart(2, '0')}/${String(dateToProcess.getDate()).padStart(2, '0')}/${String(dateToProcess.getFullYear())}`;
-            // var newResult=getCmeGroupChicago(formattedDateToProcess, globalConfig);
-            // return newResult;
             result = {
                 "statusCode": 204,
                 "statusDescription": "No Content"
@@ -62,24 +50,21 @@ function getCmeGroupChicago(date, globalConfig) {
                 "date": formattedCurrentDate,
                 "tradeDate": responseBody.tradeDate,
                 "origin": "CMEGroup Chicago-CU",
-                "amount": 0 // Exclude the total settlement
+                "amount": 0
             };
             var dataLineResume = [];
             dataLineResume.push(settlementResume);
             result.data = {};
             result.data.resume = dataLineResume;
-
-
             return result;
         }
         //Manage the results
         var settlementsOrder = [];
         settlementsOrder = orderSettlementsByMonth(responseBody.settlements);
-        //const currentTDate = new Date();
         const currentTDate = new Date(responseBody.tradeDate);
         const currentTradeDate = `${String(currentTDate.getDate()).padStart(2, '0')}/${String(currentTDate.getMonth() + 1).padStart(2, '0')}/${String(currentTDate.getFullYear())}`;
         var lineInfo = {
-            date: currentTradeDate, // Format as dd/mm/yyyy for Excel compatibility
+            date: currentTradeDate,
             volume: 9999
         };
         var lineTmp = {
@@ -92,17 +77,9 @@ function getCmeGroupChicago(date, globalConfig) {
                 lineInfo[`month${index + 1}`] = parseFloat(settlement.settle);
                 lineTmp[`month${index + 1}`] = "${table:CU.month" + (index + 1) + "}";
             } else {
-                // const tradeDateParts = currentTradeDate.split('/'); // DD/MM/YYYY
-                // const tradeDateObj = new Date(parseInt(tradeDateParts[2]), parseInt(tradeDateParts[1]) - 1, parseInt(tradeDateParts[0]));
-                // lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
-                // lineInfo.date = tradeDateObj; // Format as dd/mm/yyyy for Excel compatibility
-
-                // lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
-                // lineInfo.date = currentTradeDate; // Format as dd/mm/yyyy for Excel compatibility
                 const [dd, mm, yyyy] = currentTradeDate.split('/');
                 const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
-
-                // Convertir al número de fecha de Excel
+                // Convert to Excel date number
                 lineInfo.date = formatDateXslx(jsDateUtc);
                 lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
             }
@@ -112,10 +89,8 @@ function getCmeGroupChicago(date, globalConfig) {
         var dataLineTmp = [];
         dataLineInfo.push(lineInfo);
         dataLineTmp.push(lineTmp);
-
         const currentDate = new Date();
         const formattedCurrentDate = `${String(currentDate.getFullYear())}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')} ${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
-
         //Settlement resume
         const [mm, dd, yyyy] = responseBody.tradeDate.split('/');
         const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
@@ -132,7 +107,6 @@ function getCmeGroupChicago(date, globalConfig) {
         result.data.lineTmp = dataLineTmp;
         result.data.resume = dataLineResume;
         writeFile(path.join(__dirname, "tmp", "cmegroup-chicago-cu.json"), JSON.stringify(result.data, null, 2), globalConfig);
-        //writeFile(__dirname + "\\tmp\\cmegroup-chicago-cu.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     } catch (error) {
         writeLog(`Error on the CMEGroup-Chicago request: ${error}`, "ERROR", globalConfig);
@@ -156,23 +130,18 @@ function getCmeGroupChicago(date, globalConfig) {
         result.data.lineTmp = [];
         result.data.resume = dataLineResume;
         writeFile(path.join(__dirname, "tmp", "cmegroup-chicago-cu.json"), JSON.stringify(result.data, null, 2), globalConfig);
-        //writeFile(__dirname + "\\tmp\\cmegroup-chicago-cu.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     }
 }
 
 //Gets CMEGroup data from NY
+// -date (mandatory): in english format MM/DD/YYYY
 function getCmeGroupNY(date, globalConfig) {
     if (!date) {
-        const nowEnd = new Date();
-        const formattedDateEnd = `${String(nowEnd.getMonth() + 1).padStart(2, '0')}/${String(nowEnd.getDate()).padStart(2, '0')}/${String(nowEnd.getFullYear())}`;
-    } else {
-        if (englishDateValidation(date) == false) {
-            writeLog(`Error: date format is not valid: ${date}`, "ERROR", globalConfig);
-            return {
-                "statusCode": 400,
-                "statusDescription": "Wrong date format. Expected format: MM/DD/YYYY"
-            }
+        return {
+            "statusCode": 500,
+            "statusDescription": "Internal Server Error",
+            "statusDetails": "No date provided"
         }
     }
     var result = {
@@ -200,19 +169,33 @@ function getCmeGroupNY(date, globalConfig) {
         //If the result is empty, we must to request for the day before until there is a data
         if (responseBody.empty === true) {
             writeLog(`No data found for date: ${date}`, "WARN", globalConfig);
-            let dateToProcess = new Date(date);
-            dateToProcess.setDate(dateToProcess.getDate() - 1);
-            const formattedDateToProcess = `${String(dateToProcess.getMonth() + 1).padStart(2, '0')}/${String(dateToProcess.getDate()).padStart(2, '0')}/${String(dateToProcess.getFullYear())}`;
-            var newResult = getCmeGroupNY(formattedDateToProcess, globalConfig);
-            return newResult;
+            result = {
+                "statusCode": 204,
+                "statusDescription": "No Content"
+            }
+            const currentDate = new Date();
+            const formattedCurrentDate = `${String(currentDate.getFullYear())}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')} ${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
+            const [dd, mm, yyyy] = responseBody.tradeDate.split('/');
+            const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
+            var settlementResume = {
+                "date": formattedCurrentDate,
+                "tradeDate": responseBody.tradeDate,
+                "origin": "CMEGroup New York-NYH",
+                "amount": 0
+            };
+            var dataLineResume = [];
+            dataLineResume.push(settlementResume);
+            result.data = {};
+            result.data.resume = dataLineResume;
+            return result;
         }
         //Manage the results
         var settlementsOrder = [];
         settlementsOrder = orderSettlementsByMonth(responseBody.settlements);
-        const currentTDate = new Date();
+        const currentTDate = new Date(responseBody.tradeDate);
         const currentTradeDate = `${String(currentTDate.getDate()).padStart(2, '0')}/${String(currentTDate.getMonth() + 1).padStart(2, '0')}/${String(currentTDate.getFullYear())}`;
         var lineInfo = {
-            date: currentTradeDate, // Format as dd/mm/yyyy for Excel compatibility
+            date: currentTradeDate,
             volume: 9999
         };
         var lineTmp = {
@@ -225,10 +208,11 @@ function getCmeGroupNY(date, globalConfig) {
                 lineInfo[`month${index + 1}`] = parseFloat(settlement.settle);
                 lineTmp[`month${index + 1}`] = "${table:NYH.month" + (index + 1) + "}";
             } else {
-                const tradeDateParts = currentTradeDate.split('/'); // DD/MM/YYYY
-                const tradeDateObj = new Date(parseInt(tradeDateParts[2]), parseInt(tradeDateParts[1]) - 1, parseInt(tradeDateParts[0]));
+                const [dd, mm, yyyy] = currentTradeDate.split('/');
+                const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
+                // Convert to Excel date number
+                lineInfo.date = formatDateXslx(jsDateUtc);
                 lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
-                lineInfo.date = tradeDateObj;
             }
             index++;
         }
@@ -236,12 +220,14 @@ function getCmeGroupNY(date, globalConfig) {
         var dataLineTmp = [];
         dataLineInfo.push(lineInfo);
         dataLineTmp.push(lineTmp);
-        //Settlement resume
         const currentDate = new Date();
         const formattedCurrentDate = `${String(currentDate.getFullYear())}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')} ${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
+        //Settlement resume
+        const [mm, dd, yyyy] = responseBody.tradeDate.split('/');
+        const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
         var settlementResume = {
             "date": formattedCurrentDate,
-            "tradeDate": responseBody.tradeDate,
+            "tradeDate": formatDateXslx(jsDateUtc), // Convert to Excel date number
             "origin": "CMEGroup New York-NYH",
             "amount": responseBody.settlements.length - 1 // Exclude the total settlement
         };
@@ -252,7 +238,6 @@ function getCmeGroupNY(date, globalConfig) {
         result.data.lineTmp = dataLineTmp;
         result.data.resume = dataLineResume;
         writeFile(path.join(__dirname, "tmp", "cmegroup-new-york-nyh.json"), JSON.stringify(result.data, null, 2), globalConfig);
-        //writeFile(__dirname + "\\tmp\\cmegroup-new-york-nyh.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     } catch (error) {
         writeLog(`Error on the CMEGroup-New York NYH request: ${error}`, "ERROR", globalConfig);
@@ -276,23 +261,18 @@ function getCmeGroupNY(date, globalConfig) {
         result.data.lineTmp = [];
         result.data.resume = dataLineResume;
         writeFile(path.join(__dirname, "tmp", "cmegroup-new-york-nyh.json"), JSON.stringify(result.data, null, 2), globalConfig);
-        //writeFile(__dirname + "\\tmp\\cmegroup-new-york-nyh.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     }
 }
 
-//Gets CMEGroup data from NY
+//Gets CMEGroup data from T2
+// -date (mandatory): in english format MM/DD/YYYY
 function getCmeGroupT2(date, globalConfig) {
     if (!date) {
-        const nowEnd = new Date();
-        const formattedDateEnd = `${String(nowEnd.getMonth() + 1).padStart(2, '0')}/${String(nowEnd.getDate()).padStart(2, '0')}/${String(nowEnd.getFullYear())}`;
-    } else {
-        if (englishDateValidation(date) == false) {
-            writeLog(`Error: date format is not valid: ${date}`, "ERROR", globalConfig);
-            return {
-                "statusCode": 400,
-                "statusDescription": "Wrong date format. Expected format: MM/DD/YYYY"
-            }
+        return {
+            "statusCode": 500,
+            "statusDescription": "Internal Server Error",
+            "statusDetails": "No date provided"
         }
     }
     var result = {
@@ -320,19 +300,33 @@ function getCmeGroupT2(date, globalConfig) {
         //If the result is empty, we must to request for the day before until there is a data
         if (responseBody.empty === true) {
             writeLog(`No data found for date: ${date}`, "WARN", globalConfig);
-            let dateToProcess = new Date(date);
-            dateToProcess.setDate(dateToProcess.getDate() - 1);
-            const formattedDateToProcess = `${String(dateToProcess.getMonth() + 1).padStart(2, '0')}/${String(dateToProcess.getDate()).padStart(2, '0')}/${String(dateToProcess.getFullYear())}`;
-            var newResult = getCmeGroupT2(formattedDateToProcess, globalConfig);
-            return newResult;
+            result = {
+                "statusCode": 204,
+                "statusDescription": "No Content"
+            }
+            const currentDate = new Date();
+            const formattedCurrentDate = `${String(currentDate.getFullYear())}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')} ${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
+            const [dd, mm, yyyy] = responseBody.tradeDate.split('/');
+            const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
+            var settlementResume = {
+                "date": formattedCurrentDate,
+                "tradeDate": responseBody.tradeDate,
+                "origin": "CMEGroup T2",
+                "amount": 0
+            };
+            var dataLineResume = [];
+            dataLineResume.push(settlementResume);
+            result.data = {};
+            result.data.resume = dataLineResume;
+            return result;
         }
         //Manage the results
         var settlementsOrder = [];
         settlementsOrder = orderSettlementsByMonth(responseBody.settlements);
-        const currentTDate = new Date();
+        const currentTDate = new Date(responseBody.tradeDate);
         const currentTradeDate = `${String(currentTDate.getDate()).padStart(2, '0')}/${String(currentTDate.getMonth() + 1).padStart(2, '0')}/${String(currentTDate.getFullYear())}`;
         var lineInfo = {
-            date: currentTradeDate, // Format as dd/mm/yyyy for Excel compatibility
+            date: currentTradeDate,
             volume: 9999
         };
         var lineTmp = {
@@ -345,10 +339,11 @@ function getCmeGroupT2(date, globalConfig) {
                 lineInfo[`month${index + 1}`] = parseFloat(settlement.settle);
                 lineTmp[`month${index + 1}`] = "${table:T2.month" + (index + 1) + "}";
             } else {
-                const tradeDateParts = currentTradeDate.split('/'); // DD/MM/YYYY
-                const tradeDateObj = new Date(parseInt(tradeDateParts[2]), parseInt(tradeDateParts[1]) - 1, parseInt(tradeDateParts[0]));
+                const [dd, mm, yyyy] = currentTradeDate.split('/');
+                const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
+                // Convert to Excel date number
+                lineInfo.date = formatDateXslx(jsDateUtc);
                 lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
-                lineInfo.date = tradeDateObj; // Format as dd/mm/yyyy for Excel compatibility
             }
             index++;
         }
@@ -356,12 +351,14 @@ function getCmeGroupT2(date, globalConfig) {
         var dataLineTmp = [];
         dataLineInfo.push(lineInfo);
         dataLineTmp.push(lineTmp);
-        //Settlement resume
         const currentDate = new Date();
         const formattedCurrentDate = `${String(currentDate.getFullYear())}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')} ${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
+        //Settlement resume
+        const [mm, dd, yyyy] = responseBody.tradeDate.split('/');
+        const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
         var settlementResume = {
             "date": formattedCurrentDate,
-            "tradeDate": responseBody.tradeDate,
+            "tradeDate": formatDateXslx(jsDateUtc), // Convert to Excel date number
             "origin": "CMEGroup T2",
             "amount": responseBody.settlements.length - 1 // Exclude the total settlement
         };
@@ -372,10 +369,9 @@ function getCmeGroupT2(date, globalConfig) {
         result.data.lineTmp = dataLineTmp;
         result.data.resume = dataLineResume;
         writeFile(path.join(__dirname, "tmp", "cmegroup-t2.json"), JSON.stringify(result.data, null, 2), globalConfig);
-        //writeFile(__dirname + "\\tmp\\cmegroup-t2.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     } catch (error) {
-        writeLog(`Error on the CMEGroup-t2 request: ${error}`, "ERROR", globalConfig);
+        writeLog(`Error on the CMEGroup-T2 request: ${error}`, "ERROR", globalConfig);
         const nowF = new Date();
         const formattedDateF = nowF.toLocaleString();
         writeLog(`Ends at: ${formattedDateF}`, "INFO", globalConfig);
@@ -396,23 +392,18 @@ function getCmeGroupT2(date, globalConfig) {
         result.data.lineTmp = [];
         result.data.resume = dataLineResume;
         writeFile(path.join(__dirname, "tmp", "cmegroup-t2.json"), JSON.stringify(result.data, null, 2), globalConfig);
-        //writeFile(__dirname + "\\tmp\\cmegroup-t2.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     }
 }
 
 //Gets CMEGroup data from Corn
+// -date (mandatory): in english format MM/DD/YYYY
 function getCmeGroupCorn(date, globalConfig) {
     if (!date) {
-        const nowEnd = new Date();
-        const formattedDateEnd = `${String(nowEnd.getMonth() + 1).padStart(2, '0')}/${String(nowEnd.getDate()).padStart(2, '0')}/${String(nowEnd.getFullYear())}`;
-    } else {
-        if (englishDateValidation(date) == false) {
-            writeLog(`Error: date format is not valid: ${date}`, "ERROR", globalConfig);
-            return {
-                "statusCode": 400,
-                "statusDescription": "Wrong date format. Expected format: MM/DD/YYYY"
-            }
+        return {
+            "statusCode": 500,
+            "statusDescription": "Internal Server Error",
+            "statusDetails": "No date provided"
         }
     }
     var result = {
@@ -440,19 +431,33 @@ function getCmeGroupCorn(date, globalConfig) {
         //If the result is empty, we must to request for the day before until there is a data
         if (responseBody.empty === true) {
             writeLog(`No data found for date: ${date}`, "WARN", globalConfig);
-            let dateToProcess = new Date(date);
-            dateToProcess.setDate(dateToProcess.getDate() - 1);
-            const formattedDateToProcess = `${String(dateToProcess.getMonth() + 1).padStart(2, '0')}/${String(dateToProcess.getDate()).padStart(2, '0')}/${String(dateToProcess.getFullYear())}`;
-            var newResult = getCmeGroupCorn(formattedDateToProcess, globalConfig);
-            return newResult;
+            result = {
+                "statusCode": 204,
+                "statusDescription": "No Content"
+            }
+            const currentDate = new Date();
+            const formattedCurrentDate = `${String(currentDate.getFullYear())}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')} ${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
+            const [dd, mm, yyyy] = responseBody.tradeDate.split('/');
+            const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
+            var settlementResume = {
+                "date": formattedCurrentDate,
+                "tradeDate": responseBody.tradeDate,
+                "origin": "CMEGroup Corn",
+                "amount": 0
+            };
+            var dataLineResume = [];
+            dataLineResume.push(settlementResume);
+            result.data = {};
+            result.data.resume = dataLineResume;
+            return result;
         }
         //Manage the results
         var settlementsOrder = [];
         settlementsOrder = orderSettlementsByMonth(responseBody.settlements);
-        const currentTDate = new Date();
+        const currentTDate = new Date(responseBody.tradeDate);
         const currentTradeDate = `${String(currentTDate.getDate()).padStart(2, '0')}/${String(currentTDate.getMonth() + 1).padStart(2, '0')}/${String(currentTDate.getFullYear())}`;
         var lineInfo = {
-            date: currentTradeDate, // Format as dd/mm/yyyy for Excel compatibility
+            date: currentTradeDate,
             volume: 9999
         };
         var lineTmp = {
@@ -462,13 +467,14 @@ function getCmeGroupCorn(date, globalConfig) {
         var index = 0;
         for (const settlement of settlementsOrder) {
             if (settlement.month.toUpperCase() != "TOTAL") {
-                lineInfo[`month${index + 1}`] = parseFloat(settlement.settle.replace("'", "."));
+                lineInfo[`month${index + 1}`] = parseFloat(settlement.settle);
                 lineTmp[`month${index + 1}`] = "${table:CORN.month" + (index + 1) + "}";
             } else {
-                const tradeDateParts = currentTradeDate.split('/'); // DD/MM/YYYY
-                const tradeDateObj = new Date(parseInt(tradeDateParts[2]), parseInt(tradeDateParts[1]) - 1, parseInt(tradeDateParts[0]));
-                lineInfo.volume = parseFloat(settlement.volume.replace(",", "."));
-                lineInfo.date = tradeDateObj; // Format as dd/mm/yyyy for Excel compatibility
+                const [dd, mm, yyyy] = currentTradeDate.split('/');
+                const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
+                // Convert to Excel date number
+                lineInfo.date = formatDateXslx(jsDateUtc);
+                lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
             }
             index++;
         }
@@ -476,12 +482,14 @@ function getCmeGroupCorn(date, globalConfig) {
         var dataLineTmp = [];
         dataLineInfo.push(lineInfo);
         dataLineTmp.push(lineTmp);
-        //Settlement resume
         const currentDate = new Date();
         const formattedCurrentDate = `${String(currentDate.getFullYear())}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')} ${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
+        //Settlement resume
+        const [mm, dd, yyyy] = responseBody.tradeDate.split('/');
+        const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
         var settlementResume = {
             "date": formattedCurrentDate,
-            "tradeDate": responseBody.tradeDate,
+            "tradeDate": formatDateXslx(jsDateUtc), // Convert to Excel date number
             "origin": "CMEGroup Corn",
             "amount": responseBody.settlements.length - 1 // Exclude the total settlement
         };
@@ -492,7 +500,6 @@ function getCmeGroupCorn(date, globalConfig) {
         result.data.lineTmp = dataLineTmp;
         result.data.resume = dataLineResume;
         writeFile(path.join(__dirname, "tmp", "cmegroup-corn.json"), JSON.stringify(result.data, null, 2), globalConfig);
-        //writeFile(__dirname + "\\tmp\\cmegroup-corn.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     } catch (error) {
         writeLog(`Error on the CMEGroup-Corn request: ${error}`, "ERROR", globalConfig);
@@ -516,23 +523,18 @@ function getCmeGroupCorn(date, globalConfig) {
         result.data.lineTmp = [];
         result.data.resume = dataLineResume;
         writeFile(path.join(__dirname, "tmp", "cmegroup-corn.json"), JSON.stringify(result.data, null, 2), globalConfig);
-        //writeFile(__dirname + "\\tmp\\cmegroup-corn.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     }
 }
 
 //Gets CMEGroup data from Rbob
+// -date (mandatory): in english format MM/DD/YYYY
 function getCmeGroupRbob(date, globalConfig) {
     if (!date) {
-        const nowEnd = new Date();
-        const formattedDateEnd = `${String(nowEnd.getMonth() + 1).padStart(2, '0')}/${String(nowEnd.getDate()).padStart(2, '0')}/${String(nowEnd.getFullYear())}`;
-    } else {
-        if (englishDateValidation(date) == false) {
-            writeLog(`Error: date format is not valid: ${date}`, "ERROR", globalConfig);
-            return {
-                "statusCode": 400,
-                "statusDescription": "Wrong date format. Expected format: MM/DD/YYYY"
-            }
+        return {
+            "statusCode": 500,
+            "statusDescription": "Internal Server Error",
+            "statusDetails": "No date provided"
         }
     }
     var result = {
@@ -560,19 +562,33 @@ function getCmeGroupRbob(date, globalConfig) {
         //If the result is empty, we must to request for the day before until there is a data
         if (responseBody.empty === true) {
             writeLog(`No data found for date: ${date}`, "WARN", globalConfig);
-            let dateToProcess = new Date(date);
-            dateToProcess.setDate(dateToProcess.getDate() - 1);
-            const formattedDateToProcess = `${String(dateToProcess.getMonth() + 1).padStart(2, '0')}/${String(dateToProcess.getDate()).padStart(2, '0')}/${String(dateToProcess.getFullYear())}`;
-            var newResult = getCmeGroupRbob(formattedDateToProcess, globalConfig);
-            return newResult;
+            result = {
+                "statusCode": 204,
+                "statusDescription": "No Content"
+            }
+            const currentDate = new Date();
+            const formattedCurrentDate = `${String(currentDate.getFullYear())}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')} ${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
+            const [dd, mm, yyyy] = responseBody.tradeDate.split('/');
+            const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
+            var settlementResume = {
+                "date": formattedCurrentDate,
+                "tradeDate": responseBody.tradeDate,
+                "origin": "CMEGroup RBob",
+                "amount": 0
+            };
+            var dataLineResume = [];
+            dataLineResume.push(settlementResume);
+            result.data = {};
+            result.data.resume = dataLineResume;
+            return result;
         }
         //Manage the results
         var settlementsOrder = [];
         settlementsOrder = orderSettlementsByMonth(responseBody.settlements);
-        const currentTDate = new Date();
+        const currentTDate = new Date(responseBody.tradeDate);
         const currentTradeDate = `${String(currentTDate.getDate()).padStart(2, '0')}/${String(currentTDate.getMonth() + 1).padStart(2, '0')}/${String(currentTDate.getFullYear())}`;
         var lineInfo = {
-            date: currentTradeDate, // Format as dd/mm/yyyy for Excel compatibility
+            date: currentTradeDate,
             volume: 9999
         };
         var lineTmp = {
@@ -585,10 +601,11 @@ function getCmeGroupRbob(date, globalConfig) {
                 lineInfo[`month${index + 1}`] = parseFloat(settlement.settle);
                 lineTmp[`month${index + 1}`] = "${table:RBOB.month" + (index + 1) + "}";
             } else {
-                const tradeDateParts = currentTradeDate.split('/'); // DD/MM/YYYY
-                const tradeDateObj = new Date(parseInt(tradeDateParts[2]), parseInt(tradeDateParts[1]) - 1, parseInt(tradeDateParts[0]));
+                const [dd, mm, yyyy] = currentTradeDate.split('/');
+                const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
+                // Convert to Excel date number
+                lineInfo.date = formatDateXslx(jsDateUtc);
                 lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
-                lineInfo.date = tradeDateObj; // Format as dd/mm/yyyy for Excel compatibility
             }
             index++;
         }
@@ -596,12 +613,14 @@ function getCmeGroupRbob(date, globalConfig) {
         var dataLineTmp = [];
         dataLineInfo.push(lineInfo);
         dataLineTmp.push(lineTmp);
-        //Settlement resume
         const currentDate = new Date();
         const formattedCurrentDate = `${String(currentDate.getFullYear())}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')} ${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
+        //Settlement resume
+        const [mm, dd, yyyy] = responseBody.tradeDate.split('/');
+        const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
         var settlementResume = {
             "date": formattedCurrentDate,
-            "tradeDate": responseBody.tradeDate,
+            "tradeDate": formatDateXslx(jsDateUtc), // Convert to Excel date number
             "origin": "CMEGroup RBob",
             "amount": responseBody.settlements.length - 1 // Exclude the total settlement
         };
@@ -612,10 +631,9 @@ function getCmeGroupRbob(date, globalConfig) {
         result.data.lineTmp = dataLineTmp;
         result.data.resume = dataLineResume;
         writeFile(path.join(__dirname, "tmp", "cmegroup-rbob.json"), JSON.stringify(result.data, null, 2), globalConfig);
-        //writeFile(__dirname + "\\tmp\\cmegroup-rbob.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     } catch (error) {
-        writeLog(`Error on the CMEGroup-rbob request: ${error}`, "ERROR", globalConfig);
+        writeLog(`Error on the CMEGroup-RBob request: ${error}`, "ERROR", globalConfig);
         const nowF = new Date();
         const formattedDateF = nowF.toLocaleString();
         writeLog(`Ends at: ${formattedDateF}`, "INFO", globalConfig);
@@ -636,23 +654,19 @@ function getCmeGroupRbob(date, globalConfig) {
         result.data.lineTmp = [];
         result.data.resume = dataLineResume;
         writeFile(path.join(__dirname, "tmp", "cmegroup-rbob.json"), JSON.stringify(result.data, null, 2), globalConfig);
-        //writeFile(__dirname + "\\tmp\\cmegroup-rbob.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     }
 }
 
+
 //Gets CMEGroup data from Sugar 11
+// -date (mandatory): in english format MM/DD/YYYY
 function getCmeGroupSugar11(date, globalConfig) {
     if (!date) {
-        const nowEnd = new Date();
-        const formattedDateEnd = `${String(nowEnd.getMonth() + 1).padStart(2, '0')}/${String(nowEnd.getDate()).padStart(2, '0')}/${String(nowEnd.getFullYear())}`;
-    } else {
-        if (englishDateValidation(date) == false) {
-            writeLog(`Error: date format is not valid: ${date}`, "ERROR", globalConfig);
-            return {
-                "statusCode": 400,
-                "statusDescription": "Wrong date format. Expected format: MM/DD/YYYY"
-            }
+        return {
+            "statusCode": 500,
+            "statusDescription": "Internal Server Error",
+            "statusDetails": "No date provided"
         }
     }
     var result = {
@@ -680,19 +694,33 @@ function getCmeGroupSugar11(date, globalConfig) {
         //If the result is empty, we must to request for the day before until there is a data
         if (responseBody.empty === true) {
             writeLog(`No data found for date: ${date}`, "WARN", globalConfig);
-            let dateToProcess = new Date(date);
-            dateToProcess.setDate(dateToProcess.getDate() - 1);
-            const formattedDateToProcess = `${String(dateToProcess.getMonth() + 1).padStart(2, '0')}/${String(dateToProcess.getDate()).padStart(2, '0')}/${String(dateToProcess.getFullYear())}`;
-            var newResult = getCmeGroupSugar11(formattedDateToProcess, globalConfig);
-            return newResult;
+            result = {
+                "statusCode": 204,
+                "statusDescription": "No Content"
+            }
+            const currentDate = new Date();
+            const formattedCurrentDate = `${String(currentDate.getFullYear())}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')} ${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
+            const [dd, mm, yyyy] = responseBody.tradeDate.split('/');
+            const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
+            var settlementResume = {
+                "date": formattedCurrentDate,
+                "tradeDate": responseBody.tradeDate,
+                "origin": "CMEGroup Sugar 11",
+                "amount": 0
+            };
+            var dataLineResume = [];
+            dataLineResume.push(settlementResume);
+            result.data = {};
+            result.data.resume = dataLineResume;
+            return result;
         }
         //Manage the results
         var settlementsOrder = [];
         settlementsOrder = orderSettlementsByMonth(responseBody.settlements);
-        const currentTDate = new Date();
+        const currentTDate = new Date(responseBody.tradeDate);
         const currentTradeDate = `${String(currentTDate.getDate()).padStart(2, '0')}/${String(currentTDate.getMonth() + 1).padStart(2, '0')}/${String(currentTDate.getFullYear())}`;
         var lineInfo = {
-            date: currentTradeDate, // Format as dd/mm/yyyy for Excel compatibility
+            date: currentTradeDate,
             volume: 9999
         };
         var lineTmp = {
@@ -705,10 +733,11 @@ function getCmeGroupSugar11(date, globalConfig) {
                 lineInfo[`month${index + 1}`] = parseFloat(settlement.settle);
                 lineTmp[`month${index + 1}`] = "${table:Sugar 11.month" + (index + 1) + "}";
             } else {
-                const tradeDateParts = currentTradeDate.split('/'); // DD/MM/YYYY
-                const tradeDateObj = new Date(parseInt(tradeDateParts[2]), parseInt(tradeDateParts[1]) - 1, parseInt(tradeDateParts[0]));
+                const [dd, mm, yyyy] = currentTradeDate.split('/');
+                const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
+                // Convert to Excel date number
+                lineInfo.date = formatDateXslx(jsDateUtc);
                 lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
-                lineInfo.date = tradeDateObj; // Format as dd/mm/yyyy for Excel compatibility
             }
             index++;
         }
@@ -716,12 +745,14 @@ function getCmeGroupSugar11(date, globalConfig) {
         var dataLineTmp = [];
         dataLineInfo.push(lineInfo);
         dataLineTmp.push(lineTmp);
-        //Settlement resume
         const currentDate = new Date();
         const formattedCurrentDate = `${String(currentDate.getFullYear())}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')} ${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
+        //Settlement resume
+        const [mm, dd, yyyy] = responseBody.tradeDate.split('/');
+        const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
         var settlementResume = {
             "date": formattedCurrentDate,
-            "tradeDate": responseBody.tradeDate,
+            "tradeDate": formatDateXslx(jsDateUtc), // Convert to Excel date number
             "origin": "CMEGroup Sugar 11",
             "amount": responseBody.settlements.length - 1 // Exclude the total settlement
         };
@@ -732,7 +763,6 @@ function getCmeGroupSugar11(date, globalConfig) {
         result.data.lineTmp = dataLineTmp;
         result.data.resume = dataLineResume;
         writeFile(path.join(__dirname, "tmp", "cmegroup-sugar-11.json"), JSON.stringify(result.data, null, 2), globalConfig);
-        //writeFile(__dirname + "\\tmp\\cmegroup-sugar-11.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     } catch (error) {
         writeLog(`Error on the CMEGroup-Sugar 11 request: ${error}`, "ERROR", globalConfig);
@@ -756,7 +786,6 @@ function getCmeGroupSugar11(date, globalConfig) {
         result.data.lineTmp = [];
         result.data.resume = dataLineResume;
         writeFile(path.join(__dirname, "tmp", "cmegroup-sugar-11.json"), JSON.stringify(result.data, null, 2), globalConfig);
-        //writeFile(__dirname + "\\tmp\\cmegroup-sugar-11.json", JSON.stringify(result.data, null, 2), globalConfig);
         return result;
     }
 }

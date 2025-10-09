@@ -1,31 +1,21 @@
 {
-<<<<<<< HEAD
-  "lineInfo": [],
-  "lineTmp": [],
-  "resume": [
-    {
-      "date": "2025-10-07 09:29:35",
-      "tradeDate": "Unknown",
-      "origin": "CMEGroup Corn",
-      "amount": "ERROR"
-=======
   "lineInfo": [
     {
-      "date": "2025-10-05T22:00:00.000Z",
-      "volume": 274.534,
-      "month1": 419,
-      "month2": 435.6,
-      "month3": 445.2,
-      "month4": 452.2,
-      "month5": 450.4,
-      "month6": 461.6,
-      "month7": 475,
-      "month8": 482.2,
-      "month9": 486,
-      "month10": 468.2,
-      "month11": 470.4,
-      "month12": 488.4,
-      "month13": 469
+      "date": 45938,
+      "volume": 276.477,
+      "month1": 422,
+      "month2": 437,
+      "month3": 446,
+      "month4": 452,
+      "month5": 448,
+      "month6": 458,
+      "month7": 471,
+      "month8": 478,
+      "month9": 482,
+      "month10": 465,
+      "month11": 467,
+      "month12": 485,
+      "month13": 467
     }
   ],
   "lineTmp": [
@@ -49,11 +39,10 @@
   ],
   "resume": [
     {
-      "date": "2025-10-06 20:21:20",
-      "tradeDate": "10/03/2025",
+      "date": "2025-10-09 13:42:16",
+      "tradeDate": 45938,
       "origin": "CMEGroup Corn",
       "amount": 13
->>>>>>> 5d57d58c21d4695a7976792e83cc72ab7ac695e8
     }
   ]
 }

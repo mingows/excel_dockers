@@ -14340,3 +14340,2696 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
 2025-10-09 09:30:15:568[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
 2025-10-09 09:30:15:572[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
 2025-10-09 09:30:15:573[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 09:58:32.741[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 09:58:32.746[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 09:58:32.747[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 09:58:38.915[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 09:58:38
+2025-10-09 09:58:38.916[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 09:58:39.557[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 09:58:39.558[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 09:58:39.559[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45933,
+        "volume": 5.298,
+        "month1": 1.9925,
+        "month2": 1.9,
+        "month3": 1.7525,
+        "month4": 1.6625,
+        "month5": 1.6575,
+        "month6": 1.68,
+        "month7": 1.7,
+        "month8": 1.72,
+        "month9": 1.7325,
+        "month10": 1.7325,
+        "month11": 1.7275,
+        "month12": 1.7225,
+        "month13": 1.6975,
+        "month14": 1.6625,
+        "month15": 1.64
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 09:58:39",
+        "tradeDate": 45933,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 09:58:39.561[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 09:58:40.344[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 09:58:40
+2025-10-09 09:59:27.962[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 09:59:27
+2025-10-09 09:59:27.965[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 09:59:28.292[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 09:59:28.294[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 09:59:28.296[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45933,
+        "volume": 5.298,
+        "month1": 1.9925,
+        "month2": 1.9,
+        "month3": 1.7525,
+        "month4": 1.6625,
+        "month5": 1.6575,
+        "month6": 1.68,
+        "month7": 1.7,
+        "month8": 1.72,
+        "month9": 1.7325,
+        "month10": 1.7325,
+        "month11": 1.7275,
+        "month12": 1.7225,
+        "month13": 1.6975,
+        "month14": 1.6625,
+        "month15": 1.64
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 09:59:28",
+        "tradeDate": 45933,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 09:59:28.299[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 09:59:29.383[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 09:59:29
+2025-10-09 09:59:40.321[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 09:59:40
+2025-10-09 09:59:40.322[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 09:59:40.636[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 09:59:40.636[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 09:59:40.637[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45933,
+        "volume": 5.298,
+        "month1": 1.9925,
+        "month2": 1.9,
+        "month3": 1.7525,
+        "month4": 1.6625,
+        "month5": 1.6575,
+        "month6": 1.68,
+        "month7": 1.7,
+        "month8": 1.72,
+        "month9": 1.7325,
+        "month10": 1.7325,
+        "month11": 1.7275,
+        "month12": 1.7225,
+        "month13": 1.6975,
+        "month14": 1.6625,
+        "month15": 1.64
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 09:59:40",
+        "tradeDate": 45933,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 09:59:40.638[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 09:59:41.431[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 09:59:41
+2025-10-09 10:01:11.444[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:01:18.034[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:01:18.039[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:01:18.039[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:01:21.059[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:01:21
+2025-10-09 10:01:21.061[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:01:22.758[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 10:01:22.759[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 10:01:22.760[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45933,
+        "volume": 5.298,
+        "month1": 1.9925,
+        "month2": 1.9,
+        "month3": 1.7525,
+        "month4": 1.6625,
+        "month5": 1.6575,
+        "month6": 1.68,
+        "month7": 1.7,
+        "month8": 1.72,
+        "month9": 1.7325,
+        "month10": 1.7325,
+        "month11": 1.7275,
+        "month12": 1.7225,
+        "month13": 1.6975,
+        "month14": 1.6625,
+        "month15": 1.64
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 10:01:22",
+        "tradeDate": 45933,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 10:01:22.760[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:01:23.558[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:01:23
+2025-10-09 10:02:32.200[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:02:32.205[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:02:32.205[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:02:34.044[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:02:34
+2025-10-09 10:02:34.045[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:02:35.669[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 10:02:35.670[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 10:02:35.670[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45933,
+        "volume": 5.298,
+        "month1": 1.9925,
+        "month2": 1.9,
+        "month3": 1.7525,
+        "month4": 1.6625,
+        "month5": 1.6575,
+        "month6": 1.68,
+        "month7": 1.7,
+        "month8": 1.72,
+        "month9": 1.7325,
+        "month10": 1.7325,
+        "month11": 1.7275,
+        "month12": 1.7225,
+        "month13": 1.6975,
+        "month14": 1.6625,
+        "month15": 1.64
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 10:02:35",
+        "tradeDate": 45933,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 10:02:35.671[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:02:36.506[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:02:36
+2025-10-09 10:03:12.265[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:03:12
+2025-10-09 10:03:12.266[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:03:12.266[orchestrator.js.globalOrchestrator ][INFO] Date 10/04/2025 is in exception list or is weekend.
+2025-10-09 10:03:12.267[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:03:12.738[drivers.js.excelSave ][WARN] No data to write in the Excel file: D:\Trabajo\14-MarquisBook\excel_dockers\data\Master data_OCT22.xlsx
+2025-10-09 10:03:12.739[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:03:12
+2025-10-09 10:03:38.483[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:03:38
+2025-10-09 10:03:38.483[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:03:38.484[orchestrator.js.globalOrchestrator ][INFO] Date 10/05/2025 is in exception list or is weekend.
+2025-10-09 10:03:38.484[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:03:38.900[drivers.js.excelSave ][WARN] No data to write in the Excel file: D:\Trabajo\14-MarquisBook\excel_dockers\data\Master data_OCT22.xlsx
+2025-10-09 10:03:38.901[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:03:38
+2025-10-09 10:04:28.625[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:04:27
+2025-10-09 10:04:29.071[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:04:39.388[orchestrator.js.globalOrchestrator ][INFO] Date 10/05/2025 is in exception list or is weekend.
+2025-10-09 10:07:49.478[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:07:49.484[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:07:49.485[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:15:33.443[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:15:33.448[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:15:33.449[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:15:59.008[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:15:59.013[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:15:59.014[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:16:08.307[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:16:08
+2025-10-09 10:16:08.308[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:16:08.308[orchestrator.js.globalOrchestrator ][INFO] Date 10/05/2025 is in exception list or is weekend.
+2025-10-09 10:16:20.695[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:16:08
+2025-10-09 10:16:36.163[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:16:36
+2025-10-09 10:16:36.164[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:16:36.165[orchestrator.js.globalOrchestrator ][INFO] Date 10/05/2025 is in exception list or is weekend.
+2025-10-09 10:16:47.370[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:16:36
+2025-10-09 10:16:51.265[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:16:51
+2025-10-09 10:16:51.266[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:16:51.267[orchestrator.js.globalOrchestrator ][INFO] Date 10/05/2025 is in exception list or is weekend.
+2025-10-09 10:16:53.204[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:16:51
+2025-10-09 10:27:27.274[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:27:27.280[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:27:27.280[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:27:33.759[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:27:33
+2025-10-09 10:27:33.761[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:27:33.761[orchestrator.js.globalOrchestrator ][INFO] Date 10/05/2025 is in exception list or is weekend.
+2025-10-09 10:29:00.125[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:27:33
+2025-10-09 10:30:09.489[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:30:09.494[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:30:09.495[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:30:14.118[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:30:14
+2025-10-09 10:30:14.120[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:30:14.121[orchestrator.js.globalOrchestrator ][INFO] Date 10/05/2025 is in exception list or is weekend.
+2025-10-09 10:30:18.176[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:30:14
+2025-10-09 10:30:26.413[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:30:26
+2025-10-09 10:30:26.415[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:30:26.417[orchestrator.js.globalOrchestrator ][INFO] Date 10/05/2025 is in exception list or is weekend.
+2025-10-09 10:30:31.206[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:30:26
+2025-10-09 10:31:21.375[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:31:21
+2025-10-09 10:31:21.376[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:31:23.859[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 10:31:23.860[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 10:31:23.860[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45932,
+        "volume": 4.241,
+        "month1": 1.98583,
+        "month2": 2.005,
+        "month3": 1.9125,
+        "month4": 1.7575,
+        "month5": 1.665,
+        "month6": 1.66,
+        "month7": 1.68,
+        "month8": 1.7,
+        "month9": 1.72,
+        "month10": 1.7325,
+        "month11": 1.7325,
+        "month12": 1.7275,
+        "month13": 1.7225,
+        "month14": 1.695,
+        "month15": 1.66,
+        "month16": 1.6375
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}",
+        "month16": "${table:CU.month16}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 10:31:23",
+        "tradeDate": 45932,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 16
+      }
+    ]
+  }
+}
+2025-10-09 10:31:24.696[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:31:25.557[orchestrator.js.globalOrchestrator ][WARN] Process finished with partial errors. Code: 206; Description: Partial Content - Errors in: ; Details: []
+2025-10-09 10:31:27.692[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:31:25
+2025-10-09 10:31:51.737[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:31:51
+2025-10-09 10:31:51.739[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:31:56.575[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 10:31:56.576[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 10:31:56.576[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45932,
+        "volume": 4.241,
+        "month1": 1.98583,
+        "month2": 2.005,
+        "month3": 1.9125,
+        "month4": 1.7575,
+        "month5": 1.665,
+        "month6": 1.66,
+        "month7": 1.68,
+        "month8": 1.7,
+        "month9": 1.72,
+        "month10": 1.7325,
+        "month11": 1.7325,
+        "month12": 1.7275,
+        "month13": 1.7225,
+        "month14": 1.695,
+        "month15": 1.66,
+        "month16": 1.6375
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}",
+        "month16": "${table:CU.month16}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 10:31:56",
+        "tradeDate": 45932,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 16
+      }
+    ]
+  }
+}
+2025-10-09 10:32:12.235[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:32:45.448[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:32:45.453[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:32:45.454[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:32:52.917[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:32:52
+2025-10-09 10:32:52.919[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:32:55.400[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 10:32:55.402[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 10:32:55.403[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45932,
+        "volume": 4.241,
+        "month1": 1.98583,
+        "month2": 2.005,
+        "month3": 1.9125,
+        "month4": 1.7575,
+        "month5": 1.665,
+        "month6": 1.66,
+        "month7": 1.68,
+        "month8": 1.7,
+        "month9": 1.72,
+        "month10": 1.7325,
+        "month11": 1.7325,
+        "month12": 1.7275,
+        "month13": 1.7225,
+        "month14": 1.695,
+        "month15": 1.66,
+        "month16": 1.6375
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}",
+        "month16": "${table:CU.month16}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 10:32:55",
+        "tradeDate": 45932,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 16
+      }
+    ]
+  }
+}
+2025-10-09 10:32:56.227[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:32:58.675[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:32:57
+2025-10-09 10:33:21.551[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:33:21
+2025-10-09 10:33:21.553[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:33:23.443[dataExtractor.js.getCmeGroupChicago ][WARN] No data found for date: 09/02/2025
+2025-10-09 10:33:23.444[orchestrator.js.globalOrchestrator ][ERROR] Error in CmeGroup Chicago: code: 204;description: No Content
+2025-10-09 10:33:24.334[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:33:24.764[drivers.js.excelSave ][WARN] No data to write for key: CU in the Excel file: D:\Trabajo\14-MarquisBook\excel_dockers\data\Master data_OCT22.xlsx
+2025-10-09 10:33:24.793[drivers.js.excelSave ][WARN] No data to write in the Excel file: D:\Trabajo\14-MarquisBook\excel_dockers\data\Master data_OCT22.xlsx
+2025-10-09 10:33:24.794[orchestrator.js.globalOrchestrator ][WARN] Process finished with partial errors. Code: 206; Description: Partial Content - Errors in: CMEGroup Chicago; Details: [
+  "CMEGroup Chicago"
+]
+2025-10-09 10:33:25.691[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:33:24
+2025-10-09 10:35:27.035[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:35:27.041[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:35:27.042[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:35:35.274[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:35:35
+2025-10-09 10:35:35.275[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:35:38.616[dataExtractor.js.getCmeGroupChicago ][WARN] No data found for date: 09/02/2025
+2025-10-09 10:35:38.617[orchestrator.js.globalOrchestrator ][ERROR] Error in CmeGroup Chicago: code: 204;description: No Content
+2025-10-09 10:35:46.607[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:35:47.058[drivers.js.excelSave ][WARN] No data to write for key: CU in the Excel file: D:\Trabajo\14-MarquisBook\excel_dockers\data\Master data_OCT22.xlsx
+2025-10-09 10:35:47.077[drivers.js.excelSave ][WARN] No data to write in the Excel file: D:\Trabajo\14-MarquisBook\excel_dockers\data\Master data_OCT22.xlsx
+2025-10-09 10:35:57.335[orchestrator.js.globalOrchestrator ][WARN] Process finished with partial errors. Code: 206; Description: Partial Content - Errors in: CMEGroup Chicago; Details: [
+  "CMEGroup Chicago"
+]
+2025-10-09 10:36:00.025[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:35:57
+2025-10-09 10:36:34.819[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:36:34.824[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:36:34.825[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:36:37.029[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:36:37
+2025-10-09 10:36:37.030[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:36:37.642[dataExtractor.js.getCmeGroupChicago ][WARN] No data found for date: 09/02/2025
+2025-10-09 10:36:37.642[orchestrator.js.globalOrchestrator ][ERROR] Error in CmeGroup Chicago: code: 204;description: No Content
+2025-10-09 10:36:37.643[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:36:38.047[drivers.js.excelSave ][WARN] No data to write for key: CU in the Excel file: D:\Trabajo\14-MarquisBook\excel_dockers\data\Master data_OCT22.xlsx
+2025-10-09 10:36:38.072[drivers.js.excelSave ][WARN] No data to write in the Excel file: D:\Trabajo\14-MarquisBook\excel_dockers\data\Master data_OCT22.xlsx
+2025-10-09 10:36:38.072[orchestrator.js.globalOrchestrator ][WARN] Process finished with partial errors. Code: 206; Description: Partial Content - Errors in: CMEGroup Chicago; Details: [
+  "CMEGroup Chicago"
+]
+2025-10-09 10:36:38.073[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:36:38
+2025-10-09 10:36:56.663[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:36:56
+2025-10-09 10:36:56.665[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:36:56.666[orchestrator.js.globalOrchestrator ][INFO] Date 10/04/2025 is in exception list or is weekend.
+2025-10-09 10:36:56.667[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:36:56
+2025-10-09 10:37:01.825[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:37:01
+2025-10-09 10:37:01.826[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:37:02.139[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 10:37:02.140[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 10:37:02.141[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45932,
+        "volume": 4.241,
+        "month1": 1.98583,
+        "month2": 2.005,
+        "month3": 1.9125,
+        "month4": 1.7575,
+        "month5": 1.665,
+        "month6": 1.66,
+        "month7": 1.68,
+        "month8": 1.7,
+        "month9": 1.72,
+        "month10": 1.7325,
+        "month11": 1.7325,
+        "month12": 1.7275,
+        "month13": 1.7225,
+        "month14": 1.695,
+        "month15": 1.66,
+        "month16": 1.6375
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}",
+        "month16": "${table:CU.month16}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 10:37:02",
+        "tradeDate": 45932,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 16
+      }
+    ]
+  }
+}
+2025-10-09 10:37:02.142[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:37:03.005[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:37:03
+2025-10-09 10:39:55.642[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:39:55.648[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:39:55.648[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:40:00.001[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:40:00
+2025-10-09 10:40:00.002[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:40:00.631[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 10:40:00.632[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 10:40:00.632[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45932,
+        "volume": 4.241,
+        "month1": 1.98583,
+        "month2": 2.005,
+        "month3": 1.9125,
+        "month4": 1.7575,
+        "month5": 1.665,
+        "month6": 1.66,
+        "month7": 1.68,
+        "month8": 1.7,
+        "month9": 1.72,
+        "month10": 1.7325,
+        "month11": 1.7325,
+        "month12": 1.7275,
+        "month13": 1.7225,
+        "month14": 1.695,
+        "month15": 1.66,
+        "month16": 1.6375
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}",
+        "month16": "${table:CU.month16}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 10:40:00",
+        "tradeDate": 45932,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 16
+      }
+    ]
+  }
+}
+2025-10-09 10:40:00.633[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:40:01.386[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:40:01
+2025-10-09 10:40:59.510[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:40:59
+2025-10-09 10:40:59.511[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:40:59.825[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 10:40:59.828[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 10:40:59.829[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45932,
+        "volume": 4.241,
+        "month1": 1.98583,
+        "month2": 2.005,
+        "month3": 1.9125,
+        "month4": 1.7575,
+        "month5": 1.665,
+        "month6": 1.66,
+        "month7": 1.68,
+        "month8": 1.7,
+        "month9": 1.72,
+        "month10": 1.7325,
+        "month11": 1.7325,
+        "month12": 1.7275,
+        "month13": 1.7225,
+        "month14": 1.695,
+        "month15": 1.66,
+        "month16": 1.6375
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}",
+        "month16": "${table:CU.month16}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 10:40:59",
+        "tradeDate": 45932,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 16
+      }
+    ]
+  }
+}
+2025-10-09 10:40:59.831[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:41:00.691[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:41:00
+2025-10-09 10:52:16.086[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:52:16.091[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:52:16.091[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:53:07.289[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:53:07.296[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:53:07.297[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:53:45.454[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:53:45.459[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:53:45.460[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:53:48.568[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:53:48
+2025-10-09 10:53:48.569[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:53:49.192[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 10:53:49.193[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 10:53:49.194[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45932,
+        "volume": 4.241,
+        "month1": 1.98583,
+        "month2": 2.005,
+        "month3": 1.9125,
+        "month4": 1.7575,
+        "month5": 1.665,
+        "month6": 1.66,
+        "month7": 1.68,
+        "month8": 1.7,
+        "month9": 1.72,
+        "month10": 1.7325,
+        "month11": 1.7325,
+        "month12": 1.7275,
+        "month13": 1.7225,
+        "month14": 1.695,
+        "month15": 1.66,
+        "month16": 1.6375
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}",
+        "month16": "${table:CU.month16}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 10:53:49",
+        "tradeDate": 45932,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 16
+      }
+    ]
+  }
+}
+2025-10-09 10:53:49.195[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:53:49.964[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:53:49
+2025-10-09 10:54:00.577[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:54:00
+2025-10-09 10:54:00.577[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:54:00.578[orchestrator.js.globalOrchestrator ][INFO] Date 10/04/2025 is in exception list or is weekend.
+2025-10-09 10:54:00.579[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:54:00
+2025-10-09 10:54:07.426[orchestrator.js.globalOrchestrator ][ERROR] Error: date format is not valid: 10/53/2025
+2025-10-09 10:55:02.607[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:55:02
+2025-10-09 10:55:02.609[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:55:02.972[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 10:55:02.974[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 10:55:02.975[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 6.18,
+        "month1": 1.8675,
+        "month2": 1.78,
+        "month3": 1.69,
+        "month4": 1.615,
+        "month5": 1.6125,
+        "month6": 1.6375,
+        "month7": 1.6575,
+        "month8": 1.6775,
+        "month9": 1.69,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.6225,
+        "month15": 1.6
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 10:55:02",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 10:55:02.976[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:55:03.954[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:55:03
+2025-10-09 10:59:19.710[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:59:19.715[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:59:19.715[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:59:22.776[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:59:22
+2025-10-09 10:59:22.777[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:59:22.777[orchestrator.js.globalOrchestrator ][INFO] Date 10/04/2025 is in exception list or is weekend.
+2025-10-09 10:59:22.778[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:59:22
+2025-10-09 10:59:25.554[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:59:25
+2025-10-09 10:59:25.555[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:59:25.556[orchestrator.js.globalOrchestrator ][INFO] Date 10/04/2025 is in exception list or is weekend.
+2025-10-09 10:59:25.556[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:59:25
+2025-10-09 10:59:33.251[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:59:33
+2025-10-09 10:59:33.253[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:59:33.897[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 10:59:33.900[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 10:59:33.903[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45933,
+        "volume": 5.298,
+        "month1": 1.9925,
+        "month2": 1.9,
+        "month3": 1.7525,
+        "month4": 1.6625,
+        "month5": 1.6575,
+        "month6": 1.68,
+        "month7": 1.7,
+        "month8": 1.72,
+        "month9": 1.7325,
+        "month10": 1.7325,
+        "month11": 1.7275,
+        "month12": 1.7225,
+        "month13": 1.6975,
+        "month14": 1.6625,
+        "month15": 1.64
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 10:59:33",
+        "tradeDate": 45933,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 10:59:33.907[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:59:35.054[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:59:35
+2025-10-09 10:59:52.447[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:59:52.452[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 10:59:52.453[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 10:59:54.719[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 10:59:54
+2025-10-09 10:59:54.719[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:59:55.316[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 10:59:55.317[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 10:59:55.317[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45933,
+        "volume": 5.298,
+        "month1": 1.9925,
+        "month2": 1.9,
+        "month3": 1.7525,
+        "month4": 1.6625,
+        "month5": 1.6575,
+        "month6": 1.68,
+        "month7": 1.7,
+        "month8": 1.72,
+        "month9": 1.7325,
+        "month10": 1.7325,
+        "month11": 1.7275,
+        "month12": 1.7225,
+        "month13": 1.6975,
+        "month14": 1.6625,
+        "month15": 1.64
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 10:59:55",
+        "tradeDate": 45933,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 10:59:55.318[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 10:59:56.066[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 10:59:56
+2025-10-09 11:00:00.615[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 11:00:00
+2025-10-09 11:00:00.617[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:00:00.619[orchestrator.js.globalOrchestrator ][INFO] Date 10/04/2025 is in exception list or is weekend.
+2025-10-09 11:00:00.620[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 11:00:00
+2025-10-09 11:00:05.347[orchestrator.js.globalOrchestrator ][ERROR] Error: date format is not valid: 10/44/2025
+2025-10-09 11:00:10.648[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 11:00:10
+2025-10-09 11:00:10.649[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:00:10.999[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 11:00:11.001[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 11:00:11.002[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 6.18,
+        "month1": 1.8675,
+        "month2": 1.78,
+        "month3": 1.69,
+        "month4": 1.615,
+        "month5": 1.6125,
+        "month6": 1.6375,
+        "month7": 1.6575,
+        "month8": 1.6775,
+        "month9": 1.69,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.6225,
+        "month15": 1.6
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 11:00:10",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 11:00:11.003[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:00:12.021[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 11:00:12
+2025-10-09 11:50:54.940[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:50:54.945[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 11:50:54.946[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 11:51:05.493[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 11:51:05
+2025-10-09 11:51:05.495[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:51:06.174[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 11:51:06.176[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 11:51:06.178[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 6.18,
+        "month1": 1.8675,
+        "month2": 1.78,
+        "month3": 1.69,
+        "month4": 1.615,
+        "month5": 1.6125,
+        "month6": 1.6375,
+        "month7": 1.6575,
+        "month8": 1.6775,
+        "month9": 1.69,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.6225,
+        "month15": 1.6
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 11:51:06",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 11:51:06.438[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-09 11:51:06.440[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 11:51:06.441[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 0,
+        "month1": 1.9775,
+        "month2": 1.895,
+        "month3": 1.805
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 11:51:06",
+        "tradeDate": 45938,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-09 11:51:06.442[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:51:07.692[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 11:51:07
+2025-10-09 11:53:23.241[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:53:23.246[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 11:53:23.248[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 11:53:38.638[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 11:53:38
+2025-10-09 11:53:38.639[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:53:51.102[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 11:53:51.103[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 11:53:51.104[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 6.18,
+        "month1": 1.8675,
+        "month2": 1.78,
+        "month3": 1.69,
+        "month4": 1.615,
+        "month5": 1.6125,
+        "month6": 1.6375,
+        "month7": 1.6575,
+        "month8": 1.6775,
+        "month9": 1.69,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.6225,
+        "month15": 1.6
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 11:53:51",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 11:53:53.741[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-09 11:53:53.742[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 11:54:11.271[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 0,
+        "month1": 1.9775,
+        "month2": 1.895,
+        "month3": 1.805
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 11:53:53",
+        "tradeDate": 45938,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-09 11:54:48.979[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:55:45.918[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 11:55:45
+2025-10-09 11:57:56.702[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:57:56.706[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 11:57:56.706[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 11:58:00.359[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 11:58:00
+2025-10-09 11:58:00.360[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:58:01.068[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 11:58:01.069[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 11:58:01.069[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 6.18,
+        "month1": 1.8675,
+        "month2": 1.78,
+        "month3": 1.69,
+        "month4": 1.615,
+        "month5": 1.6125,
+        "month6": 1.6375,
+        "month7": 1.6575,
+        "month8": 1.6775,
+        "month9": 1.69,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.6225,
+        "month15": 1.6
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 11:58:01",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 11:58:01.335[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-09 11:58:01.336[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 11:58:01.336[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 0,
+        "month1": 1.9775,
+        "month2": 1.895,
+        "month3": 1.805
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 11:58:01",
+        "tradeDate": 45938,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-09 11:58:01.337[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:58:02.177[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 11:58:02
+2025-10-09 11:58:59.043[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:59:02.937[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:59:02.942[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 11:59:02.943[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 11:59:08.310[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 11:59:08
+2025-10-09 11:59:08.311[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 11:59:10.191[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 11:59:10.192[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 11:59:10.192[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 6.18,
+        "month1": 1.8675,
+        "month2": 1.78,
+        "month3": 1.69,
+        "month4": 1.615,
+        "month5": 1.6125,
+        "month6": 1.6375,
+        "month7": 1.6575,
+        "month8": 1.6775,
+        "month9": 1.69,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.6225,
+        "month15": 1.6
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 11:59:10",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 11:59:12.009[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-09 11:59:12.011[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 11:59:12.011[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 0,
+        "month1": 1.9775,
+        "month2": 1.895,
+        "month3": 1.805
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 11:59:12",
+        "tradeDate": 45938,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-09 11:59:14.729[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 12:23:58.681[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 12:23:58.687[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 12:23:58.688[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 12:24:22.640[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 12:24:22
+2025-10-09 12:24:22.642[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 12:24:23.267[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 12:24:23.268[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 12:24:23.269[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 6.18,
+        "month1": 1.8675,
+        "month2": 1.78,
+        "month3": 1.69,
+        "month4": 1.615,
+        "month5": 1.6125,
+        "month6": 1.6375,
+        "month7": 1.6575,
+        "month8": 1.6775,
+        "month9": 1.69,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.6225,
+        "month15": 1.6
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 12:24:23",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 12:24:23.513[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-09 12:24:23.514[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 12:24:23.514[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 0,
+        "month1": 1.9775,
+        "month2": 1.895,
+        "month3": 1.805
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 12:24:23",
+        "tradeDate": 45938,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-09 12:24:23.515[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 12:24:24.622[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 12:24:24
+2025-10-09 12:41:17.077[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 12:41:17.081[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 12:41:17.082[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 12:41:20.418[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 12:41:20
+2025-10-09 12:41:20.419[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 12:41:21.051[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 12:41:21.052[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 12:41:21.053[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 6.18,
+        "month1": 1.8675,
+        "month2": 1.78,
+        "month3": 1.69,
+        "month4": 1.615,
+        "month5": 1.6125,
+        "month6": 1.6375,
+        "month7": 1.6575,
+        "month8": 1.6775,
+        "month9": 1.69,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.6225,
+        "month15": 1.6
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 12:41:21",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 12:41:21.307[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-09 12:41:21.309[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 12:41:21.310[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 0,
+        "month1": 1.9775,
+        "month2": 1.895,
+        "month3": 1.805
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 12:41:21",
+        "tradeDate": 45938,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-09 12:41:21.547[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-t2.json
+2025-10-09 12:41:21.548[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 12:41:21.548[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup T2 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 70,
+        "month1": 755,
+        "month2": 675,
+        "month3": 625,
+        "month4": 608,
+        "month5": 617,
+        "month6": 627,
+        "month7": 635,
+        "month8": 635,
+        "month9": 635,
+        "month10": 625,
+        "month11": 625,
+        "month12": 625,
+        "month13": 603,
+        "month14": 603,
+        "month15": 603
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}",
+        "month14": "${table:T2.month14}",
+        "month15": "${table:T2.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 12:41:21",
+        "tradeDate": 45938,
+        "origin": "CMEGroup T2",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 12:41:21.549[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 12:41:22.604[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 12:41:22
+2025-10-09 12:50:20.614[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 12:50:20.620[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 12:50:20.621[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 12:50:24.930[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 12:50:24
+2025-10-09 12:50:24.930[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 12:50:25.497[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 12:50:25.497[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 12:50:25.498[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 6.18,
+        "month1": 1.8675,
+        "month2": 1.78,
+        "month3": 1.69,
+        "month4": 1.615,
+        "month5": 1.6125,
+        "month6": 1.6375,
+        "month7": 1.6575,
+        "month8": 1.6775,
+        "month9": 1.69,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.6225,
+        "month15": 1.6
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 12:50:25",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 12:50:25.770[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-09 12:50:25.772[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 12:50:25.772[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 0,
+        "month1": 1.9775,
+        "month2": 1.895,
+        "month3": 1.805
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 12:50:25",
+        "tradeDate": 45938,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-09 12:50:26.007[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-t2.json
+2025-10-09 12:50:26.008[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 12:50:26.009[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup T2 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 70,
+        "month1": 755,
+        "month2": 675,
+        "month3": 625,
+        "month4": 608,
+        "month5": 617,
+        "month6": 627,
+        "month7": 635,
+        "month8": 635,
+        "month9": 635,
+        "month10": 625,
+        "month11": 625,
+        "month12": 625,
+        "month13": 603,
+        "month14": 603,
+        "month15": 603
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}",
+        "month14": "${table:T2.month14}",
+        "month15": "${table:T2.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 12:50:26",
+        "tradeDate": 45938,
+        "origin": "CMEGroup T2",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 12:50:26.305[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-corn.json
+2025-10-09 12:50:26.305[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 12:50:26.306[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 276.477,
+        "month1": 422,
+        "month2": 437,
+        "month3": 446,
+        "month4": 452,
+        "month5": 448,
+        "month6": 458,
+        "month7": 471,
+        "month8": 478,
+        "month9": 482,
+        "month10": 465,
+        "month11": 467,
+        "month12": 485,
+        "month13": 467
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 12:50:26",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Corn",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-10-09 12:50:26.307[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 12:50:27.529[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 12:50:27
+2025-10-09 13:31:24.226[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 13:31:24.230[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 13:31:24.231[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 13:31:29.140[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 13:31:29
+2025-10-09 13:31:29.141[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 13:31:29.749[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 13:31:29.751[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 13:31:29.752[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 6.18,
+        "month1": 1.8675,
+        "month2": 1.78,
+        "month3": 1.69,
+        "month4": 1.615,
+        "month5": 1.6125,
+        "month6": 1.6375,
+        "month7": 1.6575,
+        "month8": 1.6775,
+        "month9": 1.69,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.6225,
+        "month15": 1.6
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 13:31:29",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 13:31:30.285[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-09 13:31:30.289[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 13:31:30.295[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 0,
+        "month1": 1.9775,
+        "month2": 1.895,
+        "month3": 1.805
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 13:31:30",
+        "tradeDate": 45938,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-09 13:31:30.611[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-t2.json
+2025-10-09 13:31:30.616[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 13:31:30.619[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup T2 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 70,
+        "month1": 755,
+        "month2": 675,
+        "month3": 625,
+        "month4": 608,
+        "month5": 617,
+        "month6": 627,
+        "month7": 635,
+        "month8": 635,
+        "month9": 635,
+        "month10": 625,
+        "month11": 625,
+        "month12": 625,
+        "month13": 603,
+        "month14": 603,
+        "month15": 603
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}",
+        "month14": "${table:T2.month14}",
+        "month15": "${table:T2.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 13:31:30",
+        "tradeDate": 45938,
+        "origin": "CMEGroup T2",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 13:31:30.917[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-corn.json
+2025-10-09 13:31:30.917[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 13:31:30.918[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 276.477,
+        "month1": 422,
+        "month2": 437,
+        "month3": 446,
+        "month4": 452,
+        "month5": 448,
+        "month6": 458,
+        "month7": 471,
+        "month8": 478,
+        "month9": 482,
+        "month10": 465,
+        "month11": 467,
+        "month12": 485,
+        "month13": 467
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 13:31:30",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Corn",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-10-09 13:31:31.170[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-rbob.json
+2025-10-09 13:31:31.171[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 13:31:31.172[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 152.276,
+        "month1": 1.9095,
+        "month2": 1.8614,
+        "month3": 1.8408,
+        "month4": 1.8449,
+        "month5": 1.8628,
+        "month6": 2.0594,
+        "month7": 2.0617,
+        "month8": 2.0518,
+        "month9": 2.0332,
+        "month10": 2.009,
+        "month11": 1.9772,
+        "month12": 1.8417,
+        "month13": 1.8086,
+        "month14": 1.7872,
+        "month15": 1.7796,
+        "month16": 1.7843,
+        "month17": 1.7986,
+        "month18": 1.9929,
+        "month19": 1.9989,
+        "month20": 1.9966,
+        "month21": 1.9843,
+        "month22": 1.9684,
+        "month23": 1.9384,
+        "month24": 1.8095,
+        "month25": 1.7815,
+        "month26": 1.7628,
+        "month27": 1.7613,
+        "month28": 1.7739,
+        "month29": 1.793,
+        "month30": 1.9817,
+        "month31": 1.9977,
+        "month32": 1.9932,
+        "month33": 1.983,
+        "month34": 1.9671,
+        "month35": 1.9364,
+        "month36": 1.8091,
+        "month37": 1.7793,
+        "month38": 1.7633,
+        "month39": 1.7597
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 13:31:31",
+        "tradeDate": 45938,
+        "origin": "CMEGroup RBob",
+        "amount": 39
+      }
+    ]
+  }
+}
+2025-10-09 13:31:31.174[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 13:31:33.015[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 13:31:33
+2025-10-09 13:42:03.688[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 13:42:03.693[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-09 13:42:03.694[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-09 13:42:14.323[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-09 13:42:14
+2025-10-09 13:42:14.324[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 13:42:15.215[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-09 13:42:15.218[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 13:42:15.218[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 6.18,
+        "month1": 1.8675,
+        "month2": 1.78,
+        "month3": 1.69,
+        "month4": 1.615,
+        "month5": 1.6125,
+        "month6": 1.6375,
+        "month7": 1.6575,
+        "month8": 1.6775,
+        "month9": 1.69,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.6225,
+        "month15": 1.6
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 13:42:15",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 13:42:15.574[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-09 13:42:15.575[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 13:42:15.575[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 0,
+        "month1": 1.9775,
+        "month2": 1.895,
+        "month3": 1.805
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 13:42:15",
+        "tradeDate": 45938,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-09 13:42:15.843[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-t2.json
+2025-10-09 13:42:15.843[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 13:42:15.844[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup T2 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 70,
+        "month1": 755,
+        "month2": 675,
+        "month3": 625,
+        "month4": 608,
+        "month5": 617,
+        "month6": 627,
+        "month7": 635,
+        "month8": 635,
+        "month9": 635,
+        "month10": 625,
+        "month11": 625,
+        "month12": 625,
+        "month13": 603,
+        "month14": 603,
+        "month15": 603
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}",
+        "month14": "${table:T2.month14}",
+        "month15": "${table:T2.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 13:42:15",
+        "tradeDate": 45938,
+        "origin": "CMEGroup T2",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-09 13:42:16.131[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-corn.json
+2025-10-09 13:42:16.133[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 13:42:16.134[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 276.477,
+        "month1": 422,
+        "month2": 437,
+        "month3": 446,
+        "month4": 452,
+        "month5": 448,
+        "month6": 458,
+        "month7": 471,
+        "month8": 478,
+        "month9": 482,
+        "month10": 465,
+        "month11": 467,
+        "month12": 485,
+        "month13": 467
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 13:42:16",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Corn",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-10-09 13:42:16.450[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-rbob.json
+2025-10-09 13:42:16.453[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 13:42:16.457[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 152.276,
+        "month1": 1.9095,
+        "month2": 1.8614,
+        "month3": 1.8408,
+        "month4": 1.8449,
+        "month5": 1.8628,
+        "month6": 2.0594,
+        "month7": 2.0617,
+        "month8": 2.0518,
+        "month9": 2.0332,
+        "month10": 2.009,
+        "month11": 1.9772,
+        "month12": 1.8417,
+        "month13": 1.8086,
+        "month14": 1.7872,
+        "month15": 1.7796,
+        "month16": 1.7843,
+        "month17": 1.7986,
+        "month18": 1.9929,
+        "month19": 1.9989,
+        "month20": 1.9966,
+        "month21": 1.9843,
+        "month22": 1.9684,
+        "month23": 1.9384,
+        "month24": 1.8095,
+        "month25": 1.7815,
+        "month26": 1.7628,
+        "month27": 1.7613,
+        "month28": 1.7739,
+        "month29": 1.793,
+        "month30": 1.9817,
+        "month31": 1.9977,
+        "month32": 1.9932,
+        "month33": 1.983,
+        "month34": 1.9671,
+        "month35": 1.9364,
+        "month36": 1.8091,
+        "month37": 1.7793,
+        "month38": 1.7633,
+        "month39": 1.7597
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 13:42:16",
+        "tradeDate": 45938,
+        "origin": "CMEGroup RBob",
+        "amount": 39
+      }
+    ]
+  }
+}
+2025-10-09 13:42:16.777[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-10-09 13:42:16.779[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-09 13:42:16.780[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 0,
+        "month1": 0.1629,
+        "month2": 0.1583,
+        "month3": 0.1569,
+        "month4": 0.159,
+        "month5": 0.1641,
+        "month6": 0.1608,
+        "month7": 0.1594,
+        "month8": 0.1607
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-09 13:42:16",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-10-09 13:42:16.782[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-09 13:42:18.883[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-09 13:42:18

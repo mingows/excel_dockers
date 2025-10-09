@@ -1,24 +1,16 @@
 {
-<<<<<<< HEAD
-  "lineInfo": [],
-  "lineTmp": [],
-  "resume": [
-    {
-      "date": "2025-10-07 09:29:35",
-      "tradeDate": "Unknown",
-=======
   "lineInfo": [
     {
-      "date": "2025-10-05T22:00:00.000Z",
+      "date": 45938,
       "volume": 0,
-      "month1": 0.1647,
-      "month2": 0.1599,
-      "month3": 0.1584,
-      "month4": 0.1607,
-      "month5": 0.1657,
-      "month6": 0.1622,
-      "month7": 0.1604,
-      "month8": 0.1615
+      "month1": 0.1629,
+      "month2": 0.1583,
+      "month3": 0.1569,
+      "month4": 0.159,
+      "month5": 0.1641,
+      "month6": 0.1608,
+      "month7": 0.1594,
+      "month8": 0.1607
     }
   ],
   "lineTmp": [
@@ -37,11 +29,10 @@
   ],
   "resume": [
     {
-      "date": "2025-10-06 20:21:22",
-      "tradeDate": "10/03/2025",
->>>>>>> 5d57d58c21d4695a7976792e83cc72ab7ac695e8
+      "date": "2025-10-09 13:42:16",
+      "tradeDate": 45938,
       "origin": "CMEGroup Sugar 11",
-      "amount": "ERROR"
+      "amount": 8
     }
   ]
 }

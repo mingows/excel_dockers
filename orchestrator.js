@@ -1,23 +1,34 @@
-var { writeLog, getConstants } = require('./utils.js');
+var { writeLog, getConstants, englishDateValidation } = require('./utils.js');
 var { getCmeGroupChicago, getCmeGroupNY, getCmeGroupT2, getCmeGroupCorn, getCmeGroupRbob, getCmeGroupSugar11 } = require('./dataExtractor.js');
-var { excelSave, excelSaveResume } = require('./drivers.js');
+var { excelSave } = require('./drivers.js');
 
 var request = require('request');
-var path = require('path');
 
-//const EXCEPTION_DAYS = ["01/01/2025", "04/20/2025", "12/25/2025", "05/21/2025"]; // Add any other exception days here
 const USE_API_DATA = false; // Set to false if you want to use local data instead of API calls
 
-// ERROR: Ver la fecha, que cuando se pasa creo que no funciona bien
+
 function globalOrchestrator(date, globalConfig) {
     var queryDate = "";
+
+    var result = { statusCode: 500, statusDescription: "Internal Server Error" };
+    var extractionErrors = [];
     //If not day given in the body, take current date -1 (yesterday)
     if (!date) {
         const nowEnd = new Date();
         const formattedDateEnd = `${String(nowEnd.getMonth() + 1).padStart(2, '0')}/${String(nowEnd.getDate() - 1).padStart(2, '0')}/${String(nowEnd.getFullYear())}`;
         queryDate = formattedDateEnd;
     } else {
+        //Validate date format (MM/DD/YYYY)
         queryDate = date;
+        if (englishDateValidation(queryDate) == false) {
+            writeLog(`Error: date format is not valid: ${queryDate}`, "ERROR", globalConfig);
+            return {
+                "statusCode": 400,
+                "statusDescription": "Bad Request",
+                "statusDetail": "Wrong date format: " + queryDate + ". Expected format: MM/DD/YYYY"
+
+            }
+        }
     }
 
     // Ensure that is not a weekend or exception day
@@ -35,87 +46,98 @@ function globalOrchestrator(date, globalConfig) {
     // Log the start time
     const nowInit = new Date();
     const formattedDateInit = `${String(nowInit.getFullYear())}-${String(nowInit.getMonth() + 1).padStart(2, '0')}-${String(nowInit.getDate()).padStart(2, '0')} ${String(nowInit.getHours()).padStart(2, '0')}:${String(nowInit.getMinutes()).padStart(2, '0')}:${String(nowInit.getSeconds()).padStart(2, '0')}`;
-    // var globalConfig = JSON.parse(getConstants());
     var excelData = {};
     writeLog(`Start at: ${formattedDateInit}`, "INFO", globalConfig);
     const EXCEPTION_DAYS = JSON.parse(getConstants()).exceptionDays;
     if (EXCEPTION_DAYS.includes(formattedDateToProcess) || isWeekend) {
         writeLog(`Date ${formattedDateToProcess} is in exception list or is weekend.`, "INFO", globalConfig);
+        result = { statusCode: 204, statusDescription: "No content" };
     } else {
         //Getting CU info
         excelData.CU = {};
         var cmeGruopResultCu = getCmeGroupChicago(formattedDateToProcess, globalConfig);
         if (cmeGruopResultCu.statusCode != 200) {
             writeLog(`Error in CmeGroup Chicago: code: ${cmeGruopResultCu.statusCode};description: ${cmeGruopResultCu.statusDescription}`, "ERROR", globalConfig);
+            extractionErrors.push("CMEGroup Chicago");
         } else {
             writeLog(`CmeGroup Chicago resume: ${JSON.stringify(cmeGruopResultCu, null, 2)}`, "DEBUG", globalConfig);
             excelData.CU.data = cmeGruopResultCu.data.lineInfo;
             excelData.CU.tmp = cmeGruopResultCu.data.lineTmp;
         }
         excelData.CU.resume = cmeGruopResultCu.data.resume;
+        //Getting NYH info
+        excelData.NYH = {};
+        var cmeGruopResultNyh = getCmeGroupNY(formattedDateToProcess, globalConfig);
+        if (cmeGruopResultNyh.statusCode != 200) {
+            writeLog(`Error in CmeGroup Chicago: code: ${cmeGruopResultNyh.statusCode};description: ${cmeGruopResultCu.statusDescription}`, "ERROR", globalConfig);
+            extractionErrors.push("CMEGroup Chicago");
+        } else {
+            writeLog(`CmeGroup Chicago resume: ${JSON.stringify(cmeGruopResultNyh, null, 2)}`, "DEBUG", globalConfig);
+            excelData.NYH.data = cmeGruopResultNyh.data.lineInfo;
+            excelData.NYH.tmp = cmeGruopResultNyh.data.lineTmp;
+        }
+        excelData.NYH.resume = cmeGruopResultNyh.data.resume;
 
-        // //Getting NYH info
-        // var cmeGruopResultNyh = getCmeGroupNY(formattedDateToProcess, globalConfig);
-        // if (cmeGruopResultNyh.statusCode != 200) {
-        //     writeLog(`Error in CmeGroup New York: code: ${cmeGruopResultNyh.statusCode};description: ${cmeGruopResultNyh.statusDescription}`, "ERROR", globalConfig);
-        // } else {
-        //     writeLog(`CmeGroup New York resume: ${JSON.stringify(cmeGruopResultNyh, null, 2)}`, "DEBUG", globalConfig);
-        // }
-        // excelData.NYH = {};
-        // excelData.NYH.data = cmeGruopResultNyh.data.lineInfo;
-        // excelData.NYH.tmp = cmeGruopResultNyh.data.lineTmp;
-        // excelData.NYH.resume = cmeGruopResultNyh.data.resume;
+        //Getting T2 info
+        excelData.T2 = {};
+        var cmeGruopResultT2 = getCmeGroupT2(formattedDateToProcess, globalConfig);
+        if (cmeGruopResultT2.statusCode != 200) {
+            writeLog(`Error in CmeGroup T2: code: ${cmeGruopResultT2.statusCode};description: ${cmeGruopResultT2.statusDescription}`, "ERROR", globalConfig);
+            extractionErrors.push("CMEGroup T2");
+        } else {
+            writeLog(`CmeGroup T2 resume: ${JSON.stringify(cmeGruopResultT2, null, 2)}`, "DEBUG", globalConfig);
+            excelData.T2.data = cmeGruopResultT2.data.lineInfo;
+            excelData.T2.tmp = cmeGruopResultT2.data.lineTmp;
+        }
+        excelData.T2.resume = cmeGruopResultT2.data.resume;
 
+        //Getting CORN info
+        excelData.CORN = {};
+        var cmeGruopResultCorn = getCmeGroupCorn(formattedDateToProcess, globalConfig);
+        if (cmeGruopResultCorn.statusCode != 200) {
+            writeLog(`Error in CmeGroup Corn: code: ${cmeGruopResultCorn.statusCode};description: ${cmeGruopResultCorn.statusDescription}`, "ERROR", globalConfig);
+            extractionErrors.push("CMEGroup Corn");
+        } else {
+            writeLog(`CmeGroup Corn resume: ${JSON.stringify(cmeGruopResultCorn, null, 2)}`, "DEBUG", globalConfig);
+            excelData.CORN.data = cmeGruopResultCorn.data.lineInfo;
+            excelData.CORN.tmp = cmeGruopResultCorn.data.lineTmp;
+        }
+        excelData.CORN.resume = cmeGruopResultCorn.data.resume;
 
-        // //Getting T2 info
-        // var cmeGruopResultT2 = getCmeGroupT2(formattedDateToProcess, globalConfig);
-        // if (cmeGruopResultT2.statusCode != 200) {
-        //     writeLog(`Error in CmeGroup New York: code: ${cmeGruopResultT2.statusCode};description: ${cmeGruopResultT2.statusDescription}`, "ERROR", globalConfig);
-        // } else {
-        //     writeLog(`CmeGroup New York resume: ${JSON.stringify(cmeGruopResultT2, null, 2)}`, "DEBUG", globalConfig);
-        // }
-        // excelData.T2 = {};
-        // excelData.T2.data = cmeGruopResultT2.data.lineInfo;
-        // excelData.T2.tmp = cmeGruopResultT2.data.lineTmp;
-        // excelData.T2.resume = cmeGruopResultT2.data.resume;
+        //Getting RBOB info
+        excelData.RBOB = {};
+        var cmeGruopResultRbob = getCmeGroupRbob(formattedDateToProcess, globalConfig);
+        if (cmeGruopResultRbob.statusCode != 200) {
+            writeLog(`Error in CmeGroup RBob: code: ${cmeGruopResultRbob.statusCode};description: ${cmeGruopResultRbob.statusDescription}`, "ERROR", globalConfig);
+            extractionErrors.push("CMEGroup RBob");
+        } else {
+            writeLog(`CmeGroup RBob resume: ${JSON.stringify(cmeGruopResultRbob, null, 2)}`, "DEBUG", globalConfig);
+            excelData.RBOB.data = cmeGruopResultRbob.data.lineInfo;
+            excelData.RBOB.tmp = cmeGruopResultRbob.data.lineTmp;
+        }
+        excelData.RBOB.resume = cmeGruopResultRbob.data.resume;
 
-        // //Getting CORN info
-        // var cmeGruopResultCorn = getCmeGroupCorn(formattedDateToProcess, globalConfig);
-        // if (cmeGruopResultCorn.statusCode != 200) {
-        //     writeLog(`Error in CmeGroup Corn: code: ${cmeGruopResultCorn.statusCode};description: ${cmeGruopResultCorn.statusDescription}`, "ERROR", globalConfig);
-        // } else {
-        //     writeLog(`CmeGroup Corn resume: ${JSON.stringify(cmeGruopResultCorn, null, 2)}`, "DEBUG", globalConfig);
-        // }
-        // excelData.CORN = {};
-        // excelData.CORN.data = cmeGruopResultCorn.data.lineInfo;
-        // excelData.CORN.tmp = cmeGruopResultCorn.data.lineTmp;
-        // excelData.CORN.resume = cmeGruopResultCorn.data.resume;
+        //Getting SUGAR 11 info
+        excelData.Sugar_11 = {};
+        var cmeGruopResultSugar11 = getCmeGroupSugar11(formattedDateToProcess, globalConfig);
+        if (cmeGruopResultSugar11.statusCode != 200) {
+            writeLog(`Error in CmeGroup Sugar 11: code: ${cmeGruopResultSugar11.statusCode};description: ${cmeGruopResultSugar11.statusDescription}`, "ERROR", globalConfig);
+            extractionErrors.push("CMEGroup Sugar 11");
+        } else {
+            writeLog(`CmeGroup Sugar 11 resume: ${JSON.stringify(cmeGruopResultSugar11, null, 2)}`, "DEBUG", globalConfig);
+            excelData.Sugar_11.data = cmeGruopResultSugar11.data.lineInfo;
+            excelData.Sugar_11.tmp = cmeGruopResultSugar11.data.lineTmp;
+        }
+        excelData.Sugar_11.resume = cmeGruopResultSugar11.data.resume;
 
-        // //Getting RBOB info
-        // var cmeGruopResultCorn = getCmeGroupRbob(formattedDateToProcess, globalConfig);
-        // if (cmeGruopResultCorn.statusCode != 200) {
-        //     writeLog(`Error in CmeGroup RBob: code: ${cmeGruopResultCorn.statusCode};description: ${cmeGruopResultCorn.statusDescription}`, "ERROR", globalConfig);
-        // } else {
-        //     writeLog(`CmeGroup RBob resume: ${JSON.stringify(cmeGruopResultCorn, null, 2)}`, "DEBUG", globalConfig);
-        // }
-        // excelData.RBOB = {};
-        // excelData.RBOB.data = cmeGruopResultCorn.data.lineInfo;
-        // excelData.RBOB.tmp = cmeGruopResultCorn.data.lineTmp;
-        // excelData.RBOB.resume = cmeGruopResultCorn.data.resume;
-
-        // //Getting SUGAR 11 info
-        // var cmeGruopResultCorn = getCmeGroupSugar11(formattedDateToProcess, globalConfig);
-        // if (cmeGruopResultCorn.statusCode != 200) {
-        //     writeLog(`Error in CmeGroup Sugar 11: code: ${cmeGruopResultCorn.statusCode};description: ${cmeGruopResultCorn.statusDescription}`, "ERROR", globalConfig);
-        // } else {
-        //     writeLog(`CmeGroup Sugar 11 resume: ${JSON.stringify(cmeGruopResultCorn, null, 2)}`, "DEBUG", globalConfig);
-        // }
-        // excelData.Sugar_11 = {};
-        // excelData.Sugar_11.data = cmeGruopResultCorn.data.lineInfo;
-        // excelData.Sugar_11.tmp = cmeGruopResultCorn.data.lineTmp;
-        // excelData.Sugar_11.resume = cmeGruopResultCorn.data.resume;
+        result = excelSave(excelData, __dirname, globalConfig);
+        if ((extractionErrors.length > 0) && ((result.statusCode === 200) || (result.statusCode === 201) || (result.statusCode === 204))) {
+            result.statusCode = 206;
+            result.statusDescription = "Partial Content - Errors in: " + extractionErrors.join(', ');
+            result.statusDetails = JSON.stringify(extractionErrors);
+            writeLog(`Process finished with partial errors. Code: ${result.statusCode}; Description: ${result.statusDescription}; Details: ${JSON.stringify(extractionErrors, null, 2)}`, "WARN", globalConfig);
+        }
     }
-
 
     if (USE_API_DATA) {
         var excelData = {
@@ -222,11 +244,10 @@ function globalOrchestrator(date, globalConfig) {
         };
     }
 
-    var result = excelSave(excelData, __dirname, globalConfig);
-
     const nowEnd = new Date();
     const formattedDateEnd = `${String(nowEnd.getFullYear())}-${String(nowEnd.getMonth() + 1).padStart(2, '0')}-${String(nowEnd.getDate()).padStart(2, '0')} ${String(nowEnd.getHours()).padStart(2, '0')}:${String(nowEnd.getMinutes()).padStart(2, '0')}:${String(nowEnd.getSeconds()).padStart(2, '0')}`;
     writeLog(`End at: ${formattedDateEnd}`, "INFO", globalConfig);
+    return result;
 }
 
 module.exports = {
