@@ -38,7 +38,15 @@ function writeLog(message, level, globalConfig) {
         const callerFunction = callerInfo[1];
         const callerFile = callerInfo[2];
         const callerModule = path.basename(callerFile);
-        const timestamp = new Date().toISOString();
+        // Formato YYYYMMDD HH:mm:ss:mmm
+        const now = new Date();
+        const timestamp = now.getFullYear().toString() + '-' +
+            String(now.getMonth() + 1).padStart(2, '0') + '-' +
+            String(now.getDate()).padStart(2, '0') + ' ' +
+            String(now.getHours()).padStart(2, '0') + ':' +
+            String(now.getMinutes()).padStart(2, '0') + ':' +
+            String(now.getSeconds()).padStart(2, '0') + ':' +
+            String(now.getMilliseconds()).padStart(3, '0');
         // Agregamos el nombre del módulo llamador y la función al mensaje
         let logMessage;
         if (callerFunction === "Object.<anonymous> ") {
