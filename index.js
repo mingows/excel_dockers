@@ -10,45 +10,29 @@ APP.use(express.json());
 
 APP.post('/marquis/book', (req, res) => {
     const { date } = req.body;
-    var result = "";
-
-    if (!date) {
-        //writeLog("No date, so getting the day before", "INFO", globalConfig);
-        try{
+    var result = "";   
+    try {
         result = globalOrchestrator(date, globalConfig);
-        }
-        catch (error) {
-            writeLog(`Error in globalOrchestrator: ${error.message}`, "ERROR", globalConfig);
-            return res.status(500).json({ error: "Internal server error" });
-        };
-        //return res.status(400).json({ error: "Se requiere una fecha en el formato {date: 'MM/DD/YYYY'}" });
-        res.status(201).json({
-            message: "Data in Excel files for the day before today.",
-            details: result
-        });
-    } else {
-        const fechaSolicitud = new Date(date);
-        const fechaCompleta = new Date().toLocaleString('es-ES', { timeZone: 'Europe/Madrid' });
-        try{
-        globalOrchestrator(date, globalConfig);
-        }
-        catch (error) {
-            writeLog(`Error in globalOrchestrator: ${error.message}`, "ERROR", globalConfig);
-            return res.status(500).json({ error: "Internal server error" });
-        };
-        //res.json({ mensaje: `Hola mundo en el día ${fechaSolicitud.toLocaleDateString('es-ES')}. Son las ${fechaCompleta}` });
-        res.status(201).json({
-            message: "Getting the given day " + fechaSolicitud.toLocaleDateString('es-ES'),
-            details: result
-        });
     }
+    catch (error) {
+        writeLog(`Error in globalOrchestrator: ${error.message}`, "ERROR", globalConfig);
+        return res.status(500).json({ error: "Internal server error" });
+    };
+    if (!date) {
+        fechaSolicitud = new Date();
+        fechaSolicitud.setDate(fechaSolicitud.getDate() - 1); // yesterday
+    } else {
+        fechaSolicitud = new Date(date);
+    }
+    res.status(result.statusCode).json({
+        message: "Getting the given day " + fechaSolicitud.toLocaleDateString('es-ES'),
+        details: result
+    });
 });
 
 APP.get('/marquis/version', (req, res) => {
-    //const { date } = req.body;
-    //var result = "";
     return res.status(200).json({ version: "1.0.0" });
-    });
+});
 
 
 APP.listen(PORT, () => {

@@ -154,14 +154,14 @@ function excelSaveResume(resumeData, filePath, globalConfig) {
 }
 
 function excelSave(data, filePath, globalConfig) {
-    var excelName=JSON.parse(getConstants()).excelName;
-    const TEMPLATE_PATH = path.join(filePath, excelName+"_template.xlsx");
-    const OUTPUT_PATH = path.join(filePath, "data", excelName+".xlsx");
+    var excelName = JSON.parse(getConstants()).excelName;
+    const TEMPLATE_PATH = path.join(filePath, excelName + "_template.xlsx");
+    const OUTPUT_PATH = path.join(filePath, "data", excelName + ".xlsx");
     const TEMPLATE_RESUME_PATH = path.join(filePath, "resume_template.xlsx");
     const OUTPUT_RESUME_PATH = path.join(filePath, "data", "resume.xlsx");
     var result = {
-        "statusCode": 200,
-        "statusDescription": "OK"
+        "statusCode": 201,
+        "statusDescription": "Created"
     };
     try {
         //Starting reading the excel template data file
@@ -193,14 +193,7 @@ function excelSave(data, filePath, globalConfig) {
                 var dataLineTmp = [];
                 resumeLine.push(data[key].resume[0]);
                 resumeLine2.push(data[key].resume[0]);
-                var markLine = {
-                    date: "${table:resumeData.date}",
-                    tradeDate: "${table:resumeData.tradeDate}",
-                    origin: "${table:resumeData.origin}",
-                    amount: "${table:resumeData.amount}"
-                };
                 resumeLineTmp = resumeLine;
-                resumeLineTmp.push(markLine);
 
 
                 dataLine = data[key].data;
@@ -208,7 +201,7 @@ function excelSave(data, filePath, globalConfig) {
                 if (!dataLine || dataLine.length === 0) {
                     writeLog(`No data to write for key: ${keyName} in the Excel file: ${OUTPUT_PATH}`, "WARN", globalConfig);
                 } else {
-                    dataLineNumbers ++;
+                    dataLineNumbers++;
                     //Add info to the data template
                     templateData.substitute(keyName, { [keyName]: dataLine });
                     dataLineTmp.push(dataLine[0]);
@@ -219,6 +212,13 @@ function excelSave(data, filePath, globalConfig) {
             }
         }
         //Resume excel info
+        var markLine = {
+            date: "${table:resumeData.date}",
+            tradeDate: "${table:resumeData.tradeDate}",
+            origin: "${table:resumeData.origin}",
+            amount: "${table:resumeData.amount}"
+        };
+        resumeLineTmp.push(markLine);
         templateResume.substitute("resumeData", { resumeData: resumeLine2 });
         templateResumeTmp.substitute("resumeData", { resumeData: resumeLineTmp });
         var binaryResume = templateResume.generate({ type: 'nodebuffer' });

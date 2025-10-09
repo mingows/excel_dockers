@@ -1,34 +1,23 @@
 {
-<<<<<<< HEAD
-  "lineInfo": [],
-  "lineTmp": [],
-  "resume": [
-    {
-      "date": "2025-10-07 09:29:35",
-      "tradeDate": "Unknown",
-      "origin": "CMEGroup T2",
-      "amount": "ERROR"
-=======
   "lineInfo": [
     {
-      "date": "2025-10-02T22:00:00.000Z",
+      "date": 45938,
       "volume": 70,
-      "month1": 658.352,
-      "month2": 750,
-      "month3": 682,
-      "month4": 629,
-      "month5": 609,
-      "month6": 614,
-      "month7": 615,
-      "month8": 622,
-      "month9": 623,
-      "month10": 624,
-      "month11": 616,
-      "month12": 616,
-      "month13": 616,
-      "month14": 596,
-      "month15": 596,
-      "month16": 595
+      "month1": 755,
+      "month2": 675,
+      "month3": 625,
+      "month4": 608,
+      "month5": 617,
+      "month6": 627,
+      "month7": 635,
+      "month8": 635,
+      "month9": 635,
+      "month10": 625,
+      "month11": 625,
+      "month12": 625,
+      "month13": 603,
+      "month14": 603,
+      "month15": 603
     }
   ],
   "lineTmp": [
@@ -49,17 +38,15 @@
       "month12": "${table:T2.month12}",
       "month13": "${table:T2.month13}",
       "month14": "${table:T2.month14}",
-      "month15": "${table:T2.month15}",
-      "month16": "${table:T2.month16}"
+      "month15": "${table:T2.month15}"
     }
   ],
   "resume": [
     {
-      "date": "2025-10-03 18:10:44",
-      "tradeDate": "10/02/2025",
+      "date": "2025-10-09 13:42:15",
+      "tradeDate": 45938,
       "origin": "CMEGroup T2",
-      "amount": 16
->>>>>>> 5d57d58c21d4695a7976792e83cc72ab7ac695e8
+      "amount": 15
     }
   ]
 }
