@@ -21,3 +21,7 @@ EXPOSE 8827
 
 # Comando para ejecutar tu aplicación (ajusta el archivo principal si es necesario)
 CMD ["node", "index.js"]
+
+# Establece la zona horaria
+ENV TZ=Europe/Madrid
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
