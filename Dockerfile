@@ -23,5 +23,6 @@ EXPOSE 8827
 CMD ["node", "index.js"]
 
 # Establece la zona horaria
+RUN apt-get update && apt-get install -y tzdata
 ENV TZ=Europe/Madrid
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
