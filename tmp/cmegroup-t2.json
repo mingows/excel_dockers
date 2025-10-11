@@ -1,23 +1,23 @@
 {
   "lineInfo": [
     {
-      "date": 45938,
-      "volume": 70,
-      "month1": 755,
-      "month2": 675,
-      "month3": 625,
-      "month4": 608,
-      "month5": 617,
-      "month6": 627,
-      "month7": 635,
-      "month8": 635,
-      "month9": 635,
-      "month10": 625,
-      "month11": 625,
-      "month12": 625,
-      "month13": 603,
-      "month14": 603,
-      "month15": 603
+      "date": 45940,
+      "volume": 200,
+      "month1": 715,
+      "month2": 665,
+      "month3": 620,
+      "month4": 605,
+      "month5": 615,
+      "month6": 625,
+      "month7": 640,
+      "month8": 640,
+      "month9": 640,
+      "month10": 630,
+      "month11": 630,
+      "month12": 630,
+      "month13": 608,
+      "month14": 608,
+      "month15": 608
     }
   ],
   "lineTmp": [
@@ -43,8 +43,8 @@
   ],
   "resume": [
     {
-      "date": "2025-10-09 13:42:15",
-      "tradeDate": 45938,
+      "date": "2025-10-11 19:27:20",
+      "tradeDate": 45940,
       "origin": "CMEGroup T2",
       "amount": 15
     }

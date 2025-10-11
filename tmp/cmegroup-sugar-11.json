@@ -1,16 +1,16 @@
 {
   "lineInfo": [
     {
-      "date": 45938,
+      "date": 45940,
       "volume": 0,
-      "month1": 0.1629,
-      "month2": 0.1583,
-      "month3": 0.1569,
-      "month4": 0.159,
-      "month5": 0.1641,
-      "month6": 0.1608,
-      "month7": 0.1594,
-      "month8": 0.1607
+      "month1": 0.161,
+      "month2": 0.1562,
+      "month3": 0.1549,
+      "month4": 0.1568,
+      "month5": 0.162,
+      "month6": 0.1587,
+      "month7": 0.1574,
+      "month8": 0.1587
     }
   ],
   "lineTmp": [
@@ -29,8 +29,8 @@
   ],
   "resume": [
     {
-      "date": "2025-10-09 13:42:16",
-      "tradeDate": 45938,
+      "date": "2025-10-11 19:27:21",
+      "tradeDate": 45940,
       "origin": "CMEGroup Sugar 11",
       "amount": 8
     }

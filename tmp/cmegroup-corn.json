@@ -1,20 +1,20 @@
 {
   "lineInfo": [
     {
-      "date": 45938,
-      "volume": 276.477,
-      "month1": 422,
-      "month2": 437,
-      "month3": 446,
-      "month4": 452,
-      "month5": 448,
-      "month6": 458,
-      "month7": 471,
-      "month8": 478,
-      "month9": 482,
-      "month10": 465,
-      "month11": 467,
-      "month12": 485,
+      "date": 45940,
+      "volume": 338.634,
+      "month1": 413,
+      "month2": 429,
+      "month3": 438,
+      "month4": 444,
+      "month5": 442,
+      "month6": 453,
+      "month7": 466,
+      "month8": 473,
+      "month9": 477,
+      "month10": 461,
+      "month11": 464,
+      "month12": 482,
       "month13": 467
     }
   ],
@@ -39,8 +39,8 @@
   ],
   "resume": [
     {
-      "date": "2025-10-09 13:42:16",
-      "tradeDate": 45938,
+      "date": "2025-10-11 19:27:20",
+      "tradeDate": 45940,
       "origin": "CMEGroup Corn",
       "amount": 13
     }
