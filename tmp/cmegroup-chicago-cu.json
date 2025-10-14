@@ -1,23 +1,23 @@
 {
   "lineInfo": [
     {
-      "date": 45940,
-      "volume": 4.895,
-      "month1": 1.86,
-      "month2": 1.77,
-      "month3": 1.685,
-      "month4": 1.6125,
-      "month5": 1.6125,
-      "month6": 1.6375,
-      "month7": 1.66,
-      "month8": 1.68,
-      "month9": 1.6925,
-      "month10": 1.6975,
-      "month11": 1.6925,
-      "month12": 1.6875,
-      "month13": 1.6625,
-      "month14": 1.63,
-      "month15": 1.6075
+      "date": 45943,
+      "volume": 2044,
+      "month1": 1.855,
+      "month2": 1.76,
+      "month3": 1.675,
+      "month4": 1.605,
+      "month5": 1.605,
+      "month6": 1.63,
+      "month7": 1.655,
+      "month8": 1.675,
+      "month9": 1.6875,
+      "month10": 1.6925,
+      "month11": 1.6875,
+      "month12": 1.6825,
+      "month13": 1.6575,
+      "month14": 1.625,
+      "month15": 1.6025
     }
   ],
   "lineTmp": [
@@ -43,8 +43,8 @@
   ],
   "resume": [
     {
-      "date": "2025-10-11 19:27:19",
-      "tradeDate": 45940,
+      "date": "2025-10-14 10:12:55",
+      "tradeDate": 45943,
       "origin": "CMEGroup Chicago-CU",
       "amount": 15
     }

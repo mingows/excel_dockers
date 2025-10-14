@@ -1,11 +1,11 @@
 {
   "lineInfo": [
     {
-      "date": 45940,
+      "date": 45943,
       "volume": 0,
-      "month1": 1.96,
-      "month2": 1.88,
-      "month3": 1.795
+      "month1": 1.955,
+      "month2": 1.865,
+      "month3": 1.78
     }
   ],
   "lineTmp": [
@@ -19,8 +19,8 @@
   ],
   "resume": [
     {
-      "date": "2025-10-11 19:27:20",
-      "tradeDate": 45940,
+      "date": "2025-10-14 10:12:55",
+      "tradeDate": 45943,
       "origin": "CMEGroup New York-NYH",
       "amount": 3
     }

@@ -81,7 +81,7 @@ function getCmeGroupChicago(date, globalConfig) {
                 const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
                 // Convert to Excel date number
                 lineInfo.date = formatDateXslx(jsDateUtc);
-                lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
+                lineInfo.volume = parseFloat(settlement.volume.replace(/[.,\s]/g, ''));
             }
             index++;
         }
@@ -212,7 +212,7 @@ function getCmeGroupNY(date, globalConfig) {
                 const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
                 // Convert to Excel date number
                 lineInfo.date = formatDateXslx(jsDateUtc);
-                lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
+                lineInfo.volume = parseFloat(settlement.volume.replace(/[.,\s]/g, ''));
             }
             index++;
         }
@@ -343,7 +343,7 @@ function getCmeGroupT2(date, globalConfig) {
                 const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
                 // Convert to Excel date number
                 lineInfo.date = formatDateXslx(jsDateUtc);
-                lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
+                lineInfo.volume = parseFloat(settlement.volume.replace(/[.,\s]/g, ''));
             }
             index++;
         }
@@ -474,7 +474,7 @@ function getCmeGroupCorn(date, globalConfig) {
                 const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
                 // Convert to Excel date number
                 lineInfo.date = formatDateXslx(jsDateUtc);
-                lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
+                lineInfo.volume = parseFloat(settlement.volume.replace(/[.,\s]/g, ''));
             }
             index++;
         }
@@ -605,7 +605,7 @@ function getCmeGroupRbob(date, globalConfig) {
                 const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
                 // Convert to Excel date number
                 lineInfo.date = formatDateXslx(jsDateUtc);
-                lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
+                lineInfo.volume = parseFloat(settlement.volume.replace(/[.,\s]/g, ''));
             }
             index++;
         }
@@ -737,7 +737,7 @@ function getCmeGroupSugar11(date, globalConfig) {
                 const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
                 // Convert to Excel date number
                 lineInfo.date = formatDateXslx(jsDateUtc);
-                lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
+                lineInfo.volume = parseFloat(settlement.volume.replace(/[.,\s]/g, ''));
             }
             index++;
         }
