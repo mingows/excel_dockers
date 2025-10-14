@@ -19,8 +19,13 @@
   ],
   "resume": [
     {
+<<<<<<< HEAD
       "date": "2025-10-14 10:12:55",
       "tradeDate": 45943,
+=======
+      "date": "2025-10-11 19:59:14",
+      "tradeDate": 45940,
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
       "origin": "CMEGroup New York-NYH",
       "amount": 3
     }
