@@ -212,7 +212,7 @@ function getCmeGroupNY(date, globalConfig) {
                 const jsDateUtc = new Date(Date.UTC(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd)));
                 // Convert to Excel date number
                 lineInfo.date = formatDateXslx(jsDateUtc);
-                lineInfo.volume = parseFloat(settlement.volume.replace(',', '.'));
+                lineInfo.volume = parseFloat(settlement.volume.replace(/[.,\s]/g, ''));
             }
             index++;
         }
