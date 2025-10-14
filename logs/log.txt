@@ -17753,6 +17753,2210 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
 }
 2025-10-11 19:27:21.478[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
 2025-10-11 19:27:23.383[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-11 19:27:23
+<<<<<<< HEAD
+2025-10-14 09:51:46.551[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-14 09:51:46.558[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-14 09:51:46.559[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-14 09:51:54.107[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-14 09:51:54
+2025-10-14 09:51:54.108[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-14 09:51:54.845[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-14 09:51:54.848[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 09:51:54.849[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 2044,
+        "month1": 1.855,
+        "month2": 1.76,
+        "month3": 1.675,
+        "month4": 1.605,
+        "month5": 1.605,
+        "month6": 1.63,
+        "month7": 1.655,
+        "month8": 1.675,
+        "month9": 1.6875,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.625,
+        "month15": 1.6025
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 09:51:54",
+        "tradeDate": 45943,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 09:51:55.109[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-14 09:51:55.110[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 09:51:55.111[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 0,
+        "month1": 1.955,
+        "month2": 1.865,
+        "month3": 1.78
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 09:51:55",
+        "tradeDate": 45943,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-14 09:51:55.360[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-t2.json
+2025-10-14 09:51:55.361[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 09:51:55.361[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup T2 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 10,
+        "month1": 730,
+        "month2": 665,
+        "month3": 620,
+        "month4": 605,
+        "month5": 615,
+        "month6": 627,
+        "month7": 640,
+        "month8": 640,
+        "month9": 640,
+        "month10": 630,
+        "month11": 630,
+        "month12": 630,
+        "month13": 608,
+        "month14": 608,
+        "month15": 605
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}",
+        "month14": "${table:T2.month14}",
+        "month15": "${table:T2.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 09:51:55",
+        "tradeDate": 45943,
+        "origin": "CMEGroup T2",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 09:51:55.627[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-corn.json
+2025-10-14 09:51:55.628[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 09:51:55.628[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 266115,
+        "month1": 410,
+        "month2": 427,
+        "month3": 436,
+        "month4": 443,
+        "month5": 440,
+        "month6": 452,
+        "month7": 465,
+        "month8": 473,
+        "month9": 476,
+        "month10": 460,
+        "month11": 463,
+        "month12": 481,
+        "month13": 467
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 09:51:55",
+        "tradeDate": 45943,
+        "origin": "CMEGroup Corn",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-10-14 09:51:55.880[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-rbob.json
+2025-10-14 09:51:55.882[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 09:51:55.883[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 141700,
+        "month1": 1.8438,
+        "month2": 1.7976,
+        "month3": 1.7771,
+        "month4": 1.7819,
+        "month5": 1.7998,
+        "month6": 1.9993,
+        "month7": 2.0035,
+        "month8": 1.9953,
+        "month9": 1.9773,
+        "month10": 1.9539,
+        "month11": 1.9229,
+        "month12": 1.7886,
+        "month13": 1.7564,
+        "month14": 1.7351,
+        "month15": 1.7272,
+        "month16": 1.7324,
+        "month17": 1.7464,
+        "month18": 1.9407,
+        "month19": 1.9468,
+        "month20": 1.9445,
+        "month21": 1.9325,
+        "month22": 1.9167,
+        "month23": 1.8868,
+        "month24": 1.758,
+        "month25": 1.7302,
+        "month26": 1.7116,
+        "month27": 1.7101,
+        "month28": 1.7227,
+        "month29": 1.7418,
+        "month30": 1.9305,
+        "month31": 1.9465,
+        "month32": 1.942,
+        "month33": 1.9318,
+        "month34": 1.9159,
+        "month35": 1.8852,
+        "month36": 1.7579,
+        "month37": 1.7281,
+        "month38": 1.7121,
+        "month39": 1.7085
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 09:51:55",
+        "tradeDate": 45943,
+        "origin": "CMEGroup RBob",
+        "amount": 39
+      }
+    ]
+  }
+}
+2025-10-14 09:51:56.126[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-10-14 09:51:56.127[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 09:51:56.128[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 0,
+        "month1": 0.1561,
+        "month2": 0.1516,
+        "month3": 0.1506,
+        "month4": 0.1528,
+        "month5": 0.1581,
+        "month6": 0.1551,
+        "month7": 0.154,
+        "month8": 0.1554
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 09:51:56",
+        "tradeDate": 45943,
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-10-14 09:51:56.129[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-14 09:51:56.491[drivers.js.excelSave ][ERROR] Error in excelSaveCmeGroup: Error: ENOENT: no such file or directory, open 'I:\14-MarquisBook\excel_dockers\resume_template.xlsx'. Hora fin: NaN-NaN-NaN NaN:NaN:NaN
+2025-10-14 09:51:56.492[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-14 09:51:56
+2025-10-14 09:52:58.292[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-14 09:52:58
+2025-10-14 09:52:58.294[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-14 09:52:58.577[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-14 09:52:58.579[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 09:52:58.580[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 2044,
+        "month1": 1.855,
+        "month2": 1.76,
+        "month3": 1.675,
+        "month4": 1.605,
+        "month5": 1.605,
+        "month6": 1.63,
+        "month7": 1.655,
+        "month8": 1.675,
+        "month9": 1.6875,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.625,
+        "month15": 1.6025
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 09:52:58",
+        "tradeDate": 45943,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 09:52:58.825[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-14 09:52:58.825[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 09:52:58.826[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 0,
+        "month1": 1.955,
+        "month2": 1.865,
+        "month3": 1.78
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 09:52:58",
+        "tradeDate": 45943,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-14 09:52:59.079[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-t2.json
+2025-10-14 09:52:59.080[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 09:52:59.081[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup T2 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 10,
+        "month1": 730,
+        "month2": 665,
+        "month3": 620,
+        "month4": 605,
+        "month5": 615,
+        "month6": 627,
+        "month7": 640,
+        "month8": 640,
+        "month9": 640,
+        "month10": 630,
+        "month11": 630,
+        "month12": 630,
+        "month13": 608,
+        "month14": 608,
+        "month15": 605
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}",
+        "month14": "${table:T2.month14}",
+        "month15": "${table:T2.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 09:52:59",
+        "tradeDate": 45943,
+        "origin": "CMEGroup T2",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 09:52:59.315[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-corn.json
+2025-10-14 09:52:59.316[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 09:52:59.317[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 266115,
+        "month1": 410,
+        "month2": 427,
+        "month3": 436,
+        "month4": 443,
+        "month5": 440,
+        "month6": 452,
+        "month7": 465,
+        "month8": 473,
+        "month9": 476,
+        "month10": 460,
+        "month11": 463,
+        "month12": 481,
+        "month13": 467
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 09:52:59",
+        "tradeDate": 45943,
+        "origin": "CMEGroup Corn",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-10-14 09:52:59.557[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-rbob.json
+2025-10-14 09:52:59.558[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 09:52:59.559[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 141700,
+        "month1": 1.8438,
+        "month2": 1.7976,
+        "month3": 1.7771,
+        "month4": 1.7819,
+        "month5": 1.7998,
+        "month6": 1.9993,
+        "month7": 2.0035,
+        "month8": 1.9953,
+        "month9": 1.9773,
+        "month10": 1.9539,
+        "month11": 1.9229,
+        "month12": 1.7886,
+        "month13": 1.7564,
+        "month14": 1.7351,
+        "month15": 1.7272,
+        "month16": 1.7324,
+        "month17": 1.7464,
+        "month18": 1.9407,
+        "month19": 1.9468,
+        "month20": 1.9445,
+        "month21": 1.9325,
+        "month22": 1.9167,
+        "month23": 1.8868,
+        "month24": 1.758,
+        "month25": 1.7302,
+        "month26": 1.7116,
+        "month27": 1.7101,
+        "month28": 1.7227,
+        "month29": 1.7418,
+        "month30": 1.9305,
+        "month31": 1.9465,
+        "month32": 1.942,
+        "month33": 1.9318,
+        "month34": 1.9159,
+        "month35": 1.8852,
+        "month36": 1.7579,
+        "month37": 1.7281,
+        "month38": 1.7121,
+        "month39": 1.7085
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 09:52:59",
+        "tradeDate": 45943,
+        "origin": "CMEGroup RBob",
+        "amount": 39
+      }
+    ]
+  }
+}
+2025-10-14 09:52:59.810[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-10-14 09:52:59.811[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 09:52:59.813[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 0,
+        "month1": 0.1561,
+        "month2": 0.1516,
+        "month3": 0.1506,
+        "month4": 0.1528,
+        "month5": 0.1581,
+        "month6": 0.1551,
+        "month7": 0.154,
+        "month8": 0.1554
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 09:52:59",
+        "tradeDate": 45943,
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-10-14 09:52:59.814[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
+2025-10-14 09:53:02.975[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-14 09:53:02
+2025-10-14 10:04:23.203[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:04:23.209[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-14 10:04:23.210[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-14 10:04:32.087[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-14 10:04:32
+2025-10-14 10:04:32.088[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:04:32.795[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-14 10:04:32.796[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:04:32.796[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 2044,
+        "month1": 1.855,
+        "month2": 1.76,
+        "month3": 1.675,
+        "month4": 1.605,
+        "month5": 1.605,
+        "month6": 1.63,
+        "month7": 1.655,
+        "month8": 1.675,
+        "month9": 1.6875,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.625,
+        "month15": 1.6025
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:04:32",
+        "tradeDate": 45943,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 10:04:33.035[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-14 10:04:33.036[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:04:33.037[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 0,
+        "month1": 1.955,
+        "month2": 1.865,
+        "month3": 1.78
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:04:33",
+        "tradeDate": 45943,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-14 10:04:33.288[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-t2.json
+2025-10-14 10:04:33.289[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:04:33.289[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup T2 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 10,
+        "month1": 730,
+        "month2": 665,
+        "month3": 620,
+        "month4": 605,
+        "month5": 615,
+        "month6": 627,
+        "month7": 640,
+        "month8": 640,
+        "month9": 640,
+        "month10": 630,
+        "month11": 630,
+        "month12": 630,
+        "month13": 608,
+        "month14": 608,
+        "month15": 605
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}",
+        "month14": "${table:T2.month14}",
+        "month15": "${table:T2.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:04:33",
+        "tradeDate": 45943,
+        "origin": "CMEGroup T2",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 10:04:33.527[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-corn.json
+2025-10-14 10:04:33.528[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:04:33.528[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 266115,
+        "month1": 410,
+        "month2": 427,
+        "month3": 436,
+        "month4": 443,
+        "month5": 440,
+        "month6": 452,
+        "month7": 465,
+        "month8": 473,
+        "month9": 476,
+        "month10": 460,
+        "month11": 463,
+        "month12": 481,
+        "month13": 467
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:04:33",
+        "tradeDate": 45943,
+        "origin": "CMEGroup Corn",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-10-14 10:04:33.784[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-rbob.json
+2025-10-14 10:04:33.785[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:04:33.785[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 141700,
+        "month1": 1.8438,
+        "month2": 1.7976,
+        "month3": 1.7771,
+        "month4": 1.7819,
+        "month5": 1.7998,
+        "month6": 1.9993,
+        "month7": 2.0035,
+        "month8": 1.9953,
+        "month9": 1.9773,
+        "month10": 1.9539,
+        "month11": 1.9229,
+        "month12": 1.7886,
+        "month13": 1.7564,
+        "month14": 1.7351,
+        "month15": 1.7272,
+        "month16": 1.7324,
+        "month17": 1.7464,
+        "month18": 1.9407,
+        "month19": 1.9468,
+        "month20": 1.9445,
+        "month21": 1.9325,
+        "month22": 1.9167,
+        "month23": 1.8868,
+        "month24": 1.758,
+        "month25": 1.7302,
+        "month26": 1.7116,
+        "month27": 1.7101,
+        "month28": 1.7227,
+        "month29": 1.7418,
+        "month30": 1.9305,
+        "month31": 1.9465,
+        "month32": 1.942,
+        "month33": 1.9318,
+        "month34": 1.9159,
+        "month35": 1.8852,
+        "month36": 1.7579,
+        "month37": 1.7281,
+        "month38": 1.7121,
+        "month39": 1.7085
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:04:33",
+        "tradeDate": 45943,
+        "origin": "CMEGroup RBob",
+        "amount": 39
+      }
+    ]
+  }
+}
+2025-10-14 10:04:34.029[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-10-14 10:04:34.030[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:04:34.031[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 0,
+        "month1": 0.1561,
+        "month2": 0.1516,
+        "month3": 0.1506,
+        "month4": 0.1528,
+        "month5": 0.1581,
+        "month6": 0.1551,
+        "month7": 0.154,
+        "month8": 0.1554
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:04:34",
+        "tradeDate": 45943,
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-10-14 10:04:34.032[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:04:37.388[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-14 10:04:37
+2025-10-14 10:07:57.243[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:07:57.250[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
+2025-10-14 10:07:57.251[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
+2025-10-14 10:11:14.770[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-14 10:11:14
+2025-10-14 10:11:14.772[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:11:14.773[orchestrator.js.globalOrchestrator ][INFO] Date 10/04/2025 is in exception list or is weekend.
+2025-10-14 10:11:14.773[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-14 10:11:14
+2025-10-14 10:11:35.701[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-14 10:11:35
+2025-10-14 10:11:35.702[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:11:35.703[orchestrator.js.globalOrchestrator ][INFO] Date 10/05/2025 is in exception list or is weekend.
+2025-10-14 10:11:35.704[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-14 10:11:35
+2025-10-14 10:11:47.109[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-14 10:11:47
+2025-10-14 10:11:47.110[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:11:47.797[dataExtractor.js.getCmeGroupChicago ][WARN] No data found for date: 10/06/2025
+2025-10-14 10:11:47.798[orchestrator.js.globalOrchestrator ][ERROR] Error in CmeGroup Chicago: code: 204;description: No Content
+2025-10-14 10:11:48.040[dataExtractor.js.getCmeGroupNY ][WARN] No data found for date: 10/06/2025
+2025-10-14 10:11:48.041[orchestrator.js.globalOrchestrator ][ERROR] Error in CmeGroup Chicago: code: 204;description: No Content
+2025-10-14 10:11:48.286[dataExtractor.js.getCmeGroupT2 ][WARN] No data found for date: 10/06/2025
+2025-10-14 10:11:48.287[orchestrator.js.globalOrchestrator ][ERROR] Error in CmeGroup T2: code: 204;description: No Content
+2025-10-14 10:11:48.532[dataExtractor.js.getCmeGroupCorn ][WARN] No data found for date: 10/06/2025
+2025-10-14 10:11:48.533[orchestrator.js.globalOrchestrator ][ERROR] Error in CmeGroup Corn: code: 204;description: No Content
+2025-10-14 10:11:48.767[dataExtractor.js.getCmeGroupRbob ][WARN] No data found for date: 10/06/2025
+2025-10-14 10:11:48.767[orchestrator.js.globalOrchestrator ][ERROR] Error in CmeGroup RBob: code: 204;description: No Content
+2025-10-14 10:11:49.009[dataExtractor.js.getCmeGroupSugar11 ][WARN] No data found for date: 10/06/2025
+2025-10-14 10:11:49.010[orchestrator.js.globalOrchestrator ][ERROR] Error in CmeGroup Sugar 11: code: 204;description: No Content
+2025-10-14 10:11:49.011[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:11:49.823[drivers.js.excelSave ][WARN] No data to write for key: CU in the Excel file: I:\14-MarquisBook\excel_dockers\data\Master data_JUL22_bot.xlsx
+2025-10-14 10:11:49.823[drivers.js.excelSave ][WARN] No data to write for key: NYH in the Excel file: I:\14-MarquisBook\excel_dockers\data\Master data_JUL22_bot.xlsx
+2025-10-14 10:11:49.824[drivers.js.excelSave ][WARN] No data to write for key: T2 in the Excel file: I:\14-MarquisBook\excel_dockers\data\Master data_JUL22_bot.xlsx
+2025-10-14 10:11:49.825[drivers.js.excelSave ][WARN] No data to write for key: CORN in the Excel file: I:\14-MarquisBook\excel_dockers\data\Master data_JUL22_bot.xlsx
+2025-10-14 10:11:49.825[drivers.js.excelSave ][WARN] No data to write for key: RBOB in the Excel file: I:\14-MarquisBook\excel_dockers\data\Master data_JUL22_bot.xlsx
+2025-10-14 10:11:49.826[drivers.js.excelSave ][WARN] No data to write for key: Sugar 11 in the Excel file: I:\14-MarquisBook\excel_dockers\data\Master data_JUL22_bot.xlsx
+2025-10-14 10:11:49.854[drivers.js.excelSave ][WARN] No data to write in the Excel file: I:\14-MarquisBook\excel_dockers\data\Master data_JUL22_bot.xlsx
+2025-10-14 10:11:49.855[orchestrator.js.globalOrchestrator ][WARN] Process finished with partial errors. Code: 206; Description: Partial Content - Errors in: CMEGroup Chicago, CMEGroup Chicago, CMEGroup T2, CMEGroup Corn, CMEGroup RBob, CMEGroup Sugar 11; Details: [
+  "CMEGroup Chicago",
+  "CMEGroup Chicago",
+  "CMEGroup T2",
+  "CMEGroup Corn",
+  "CMEGroup RBob",
+  "CMEGroup Sugar 11"
+]
+2025-10-14 10:11:49.856[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-14 10:11:49
+2025-10-14 10:12:07.086[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-14 10:12:07
+2025-10-14 10:12:07.087[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:12:07.399[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-14 10:12:07.400[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:07.401[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45937,
+        "volume": 3946,
+        "month1": 1.94,
+        "month2": 1.8575,
+        "month3": 1.7275,
+        "month4": 1.6375,
+        "month5": 1.635,
+        "month6": 1.6575,
+        "month7": 1.6775,
+        "month8": 1.6975,
+        "month9": 1.71,
+        "month10": 1.7125,
+        "month11": 1.7075,
+        "month12": 1.7025,
+        "month13": 1.6775,
+        "month14": 1.6425,
+        "month15": 1.62
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:07",
+        "tradeDate": 45937,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 10:12:07.648[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-14 10:12:07.648[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:07.649[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45937,
+        "volume": 25,
+        "month1": 2.055,
+        "month2": 1.9775,
+        "month3": 1.8475
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:07",
+        "tradeDate": 45937,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-14 10:12:07.899[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-t2.json
+2025-10-14 10:12:07.900[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:07.901[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup T2 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45937,
+        "volume": 185,
+        "month1": 800,
+        "month2": 700,
+        "month3": 640,
+        "month4": 615,
+        "month5": 625,
+        "month6": 635,
+        "month7": 642,
+        "month8": 645,
+        "month9": 642,
+        "month10": 630,
+        "month11": 630,
+        "month12": 630,
+        "month13": 608,
+        "month14": 608,
+        "month15": 608
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}",
+        "month14": "${table:T2.month14}",
+        "month15": "${table:T2.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:07",
+        "tradeDate": 45937,
+        "origin": "CMEGroup T2",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 10:12:08.155[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-corn.json
+2025-10-14 10:12:08.156[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:08.157[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45937,
+        "volume": 382482,
+        "month1": 419,
+        "month2": 436,
+        "month3": 445,
+        "month4": 451,
+        "month5": 447,
+        "month6": 458,
+        "month7": 471,
+        "month8": 478,
+        "month9": 482,
+        "month10": 465,
+        "month11": 467,
+        "month12": 485,
+        "month13": 466
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:08",
+        "tradeDate": 45937,
+        "origin": "CMEGroup Corn",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-10-14 10:12:08.422[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-rbob.json
+2025-10-14 10:12:08.423[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:08.424[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45937,
+        "volume": 160235,
+        "month1": 1.8939,
+        "month2": 1.8434,
+        "month3": 1.8219,
+        "month4": 1.8255,
+        "month5": 1.8436,
+        "month6": 2.0408,
+        "month7": 2.0435,
+        "month8": 2.0343,
+        "month9": 2.0163,
+        "month10": 1.9926,
+        "month11": 1.9612,
+        "month12": 1.8256,
+        "month13": 1.7927,
+        "month14": 1.7718,
+        "month15": 1.7647,
+        "month16": 1.7694,
+        "month17": 1.7837,
+        "month18": 1.978,
+        "month19": 1.984,
+        "month20": 1.9817,
+        "month21": 1.9694,
+        "month22": 1.9535,
+        "month23": 1.9235,
+        "month24": 1.7946,
+        "month25": 1.7666,
+        "month26": 1.7479,
+        "month27": 1.7464,
+        "month28": 1.759,
+        "month29": 1.7781,
+        "month30": 1.9668,
+        "month31": 1.9828,
+        "month32": 1.9783,
+        "month33": 1.9681,
+        "month34": 1.9522,
+        "month35": 1.9215,
+        "month36": 1.7942,
+        "month37": 1.7644,
+        "month38": 1.7484,
+        "month39": 1.7448
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:08",
+        "tradeDate": 45937,
+        "origin": "CMEGroup RBob",
+        "amount": 39
+      }
+    ]
+  }
+}
+2025-10-14 10:12:08.664[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-10-14 10:12:08.665[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:08.666[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45937,
+        "volume": 0,
+        "month1": 0.1663,
+        "month2": 0.1614,
+        "month3": 0.1599,
+        "month4": 0.162,
+        "month5": 0.1672,
+        "month6": 0.1636,
+        "month7": 0.1618,
+        "month8": 0.1628
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:08",
+        "tradeDate": 45937,
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-10-14 10:12:08.667[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:12:12.194[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-14 10:12:12
+2025-10-14 10:12:19.305[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-14 10:12:19
+2025-10-14 10:12:19.306[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:12:19.604[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-14 10:12:19.606[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:19.606[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 6180,
+        "month1": 1.8675,
+        "month2": 1.78,
+        "month3": 1.69,
+        "month4": 1.615,
+        "month5": 1.6125,
+        "month6": 1.6375,
+        "month7": 1.6575,
+        "month8": 1.6775,
+        "month9": 1.69,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.6225,
+        "month15": 1.6
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:19",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 10:12:19.853[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-14 10:12:19.854[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:19.854[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 0,
+        "month1": 1.9775,
+        "month2": 1.895,
+        "month3": 1.805
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:19",
+        "tradeDate": 45938,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-14 10:12:20.102[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-t2.json
+2025-10-14 10:12:20.103[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:20.104[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup T2 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 70,
+        "month1": 755,
+        "month2": 675,
+        "month3": 625,
+        "month4": 608,
+        "month5": 617,
+        "month6": 627,
+        "month7": 635,
+        "month8": 635,
+        "month9": 635,
+        "month10": 625,
+        "month11": 625,
+        "month12": 625,
+        "month13": 603,
+        "month14": 603,
+        "month15": 603
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}",
+        "month14": "${table:T2.month14}",
+        "month15": "${table:T2.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:20",
+        "tradeDate": 45938,
+        "origin": "CMEGroup T2",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 10:12:20.355[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-corn.json
+2025-10-14 10:12:20.356[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:20.356[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 276477,
+        "month1": 422,
+        "month2": 437,
+        "month3": 446,
+        "month4": 452,
+        "month5": 448,
+        "month6": 458,
+        "month7": 471,
+        "month8": 478,
+        "month9": 482,
+        "month10": 465,
+        "month11": 467,
+        "month12": 485,
+        "month13": 467
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:20",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Corn",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-10-14 10:12:20.611[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-rbob.json
+2025-10-14 10:12:20.612[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:20.612[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 152276,
+        "month1": 1.9095,
+        "month2": 1.8614,
+        "month3": 1.8408,
+        "month4": 1.8449,
+        "month5": 1.8628,
+        "month6": 2.0594,
+        "month7": 2.0617,
+        "month8": 2.0518,
+        "month9": 2.0332,
+        "month10": 2.009,
+        "month11": 1.9772,
+        "month12": 1.8417,
+        "month13": 1.8086,
+        "month14": 1.7872,
+        "month15": 1.7796,
+        "month16": 1.7843,
+        "month17": 1.7986,
+        "month18": 1.9929,
+        "month19": 1.9989,
+        "month20": 1.9966,
+        "month21": 1.9843,
+        "month22": 1.9684,
+        "month23": 1.9384,
+        "month24": 1.8095,
+        "month25": 1.7815,
+        "month26": 1.7628,
+        "month27": 1.7613,
+        "month28": 1.7739,
+        "month29": 1.793,
+        "month30": 1.9817,
+        "month31": 1.9977,
+        "month32": 1.9932,
+        "month33": 1.983,
+        "month34": 1.9671,
+        "month35": 1.9364,
+        "month36": 1.8091,
+        "month37": 1.7793,
+        "month38": 1.7633,
+        "month39": 1.7597
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:20",
+        "tradeDate": 45938,
+        "origin": "CMEGroup RBob",
+        "amount": 39
+      }
+    ]
+  }
+}
+2025-10-14 10:12:20.862[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-10-14 10:12:20.863[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:20.864[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45938,
+        "volume": 0,
+        "month1": 0.1629,
+        "month2": 0.1583,
+        "month3": 0.1569,
+        "month4": 0.159,
+        "month5": 0.1641,
+        "month6": 0.1608,
+        "month7": 0.1594,
+        "month8": 0.1607
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:20",
+        "tradeDate": 45938,
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-10-14 10:12:20.865[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:12:24.119[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-14 10:12:24
+2025-10-14 10:12:30.387[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-14 10:12:30
+2025-10-14 10:12:30.388[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:12:30.679[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-14 10:12:30.680[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:30.681[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45939,
+        "volume": 10026,
+        "month1": 1.8325,
+        "month2": 1.74,
+        "month3": 1.67,
+        "month4": 1.6025,
+        "month5": 1.6025,
+        "month6": 1.6275,
+        "month7": 1.65,
+        "month8": 1.67,
+        "month9": 1.6825,
+        "month10": 1.685,
+        "month11": 1.68,
+        "month12": 1.675,
+        "month13": 1.65,
+        "month14": 1.615,
+        "month15": 1.5925
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:30",
+        "tradeDate": 45939,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 10:12:30.930[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-14 10:12:30.931[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:30.932[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45939,
+        "volume": 0,
+        "month1": 1.9325,
+        "month2": 1.85,
+        "month3": 1.78
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:30",
+        "tradeDate": 45939,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-14 10:12:31.170[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-t2.json
+2025-10-14 10:12:31.171[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:31.172[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup T2 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45939,
+        "volume": 276,
+        "month1": 725,
+        "month2": 675,
+        "month3": 620,
+        "month4": 598,
+        "month5": 607,
+        "month6": 620,
+        "month7": 630,
+        "month8": 631,
+        "month9": 631,
+        "month10": 625,
+        "month11": 625,
+        "month12": 625,
+        "month13": 603,
+        "month14": 603,
+        "month15": 603
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}",
+        "month14": "${table:T2.month14}",
+        "month15": "${table:T2.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:31",
+        "tradeDate": 45939,
+        "origin": "CMEGroup T2",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 10:12:31.429[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-corn.json
+2025-10-14 10:12:31.431[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:31.431[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45939,
+        "volume": 364756,
+        "month1": 418,
+        "month2": 434,
+        "month3": 442,
+        "month4": 448,
+        "month5": 444,
+        "month6": 455,
+        "month7": 468,
+        "month8": 476,
+        "month9": 479,
+        "month10": 463,
+        "month11": 465,
+        "month12": 483,
+        "month13": 466
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:31",
+        "tradeDate": 45939,
+        "origin": "CMEGroup Corn",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-10-14 10:12:31.685[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-rbob.json
+2025-10-14 10:12:31.686[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:31.687[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45939,
+        "volume": 167809,
+        "month1": 1.8826,
+        "month2": 1.8375,
+        "month3": 1.8181,
+        "month4": 1.8229,
+        "month5": 1.8415,
+        "month6": 2.0396,
+        "month7": 2.0425,
+        "month8": 2.0329,
+        "month9": 2.0141,
+        "month10": 1.9899,
+        "month11": 1.9583,
+        "month12": 1.8234,
+        "month13": 1.7906,
+        "month14": 1.7693,
+        "month15": 1.7619,
+        "month16": 1.7666,
+        "month17": 1.7809,
+        "month18": 1.9752,
+        "month19": 1.9812,
+        "month20": 1.9789,
+        "month21": 1.9666,
+        "month22": 1.9507,
+        "month23": 1.9207,
+        "month24": 1.7918,
+        "month25": 1.7638,
+        "month26": 1.7451,
+        "month27": 1.7436,
+        "month28": 1.7562,
+        "month29": 1.7753,
+        "month30": 1.964,
+        "month31": 1.98,
+        "month32": 1.9755,
+        "month33": 1.9653,
+        "month34": 1.9494,
+        "month35": 1.9187,
+        "month36": 1.7914,
+        "month37": 1.7616,
+        "month38": 1.7456,
+        "month39": 1.742
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:31",
+        "tradeDate": 45939,
+        "origin": "CMEGroup RBob",
+        "amount": 39
+      }
+    ]
+  }
+}
+2025-10-14 10:12:31.931[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-10-14 10:12:31.932[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:31.933[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45939,
+        "volume": 0,
+        "month1": 0.1626,
+        "month2": 0.1578,
+        "month3": 0.1564,
+        "month4": 0.1583,
+        "month5": 0.1634,
+        "month6": 0.1601,
+        "month7": 0.1587,
+        "month8": 0.16
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:31",
+        "tradeDate": 45939,
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-10-14 10:12:31.933[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:12:35.166[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-14 10:12:35
+2025-10-14 10:12:37.755[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-14 10:12:37
+2025-10-14 10:12:37.756[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:12:38.040[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-14 10:12:38.041[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:38.041[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+=======
 2025-10-11 19:57:56.551[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
 2025-10-11 19:57:56.556[index.js.Server.<anonymous> ][INFO] Listening on http://localhost:8827/marquis/book
 2025-10-11 19:57:56.557[index.js.Server.<anonymous> ][INFO] Body formar {"date":"MM/DD/YYYY"}
@@ -17761,13 +19965,18 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
 2025-10-11 19:59:14.442[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
 2025-10-11 19:59:14.452[utils.js.writeFile ][DEBUG] Escritura finalizada
 2025-10-11 19:59:14.452[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
   "statusCode": 200,
   "statusDescription": "OK",
   "data": {
     "lineInfo": [
       {
         "date": 45940,
+<<<<<<< HEAD
+        "volume": 4895,
+=======
         "volume": 4.895,
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
         "month1": 1.86,
         "month2": 1.77,
         "month3": 1.685,
@@ -17808,7 +20017,11 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
     ],
     "resume": [
       {
+<<<<<<< HEAD
+        "date": "2025-10-14 10:12:38",
+=======
         "date": "2025-10-11 19:59:14",
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
         "tradeDate": 45940,
         "origin": "CMEGroup Chicago-CU",
         "amount": 15
@@ -17816,9 +20029,15 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
     ]
   }
 }
+<<<<<<< HEAD
+2025-10-14 10:12:38.277[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-14 10:12:38.278[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:38.279[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+=======
 2025-10-11 19:59:14.772[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
 2025-10-11 19:59:14.773[utils.js.writeFile ][DEBUG] Escritura finalizada
 2025-10-11 19:59:14.773[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
   "statusCode": 200,
   "statusDescription": "OK",
   "data": {
@@ -17842,7 +20061,11 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
     ],
     "resume": [
       {
+<<<<<<< HEAD
+        "date": "2025-10-14 10:12:38",
+=======
         "date": "2025-10-11 19:59:14",
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
         "tradeDate": 45940,
         "origin": "CMEGroup New York-NYH",
         "amount": 3
@@ -17850,9 +20073,15 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
     ]
   }
 }
+<<<<<<< HEAD
+2025-10-14 10:12:38.519[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-t2.json
+2025-10-14 10:12:38.519[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:38.520[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup T2 resume: {
+=======
 2025-10-11 19:59:15.049[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-t2.json
 2025-10-11 19:59:15.050[utils.js.writeFile ][DEBUG] Escritura finalizada
 2025-10-11 19:59:15.051[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup T2 resume: {
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
   "statusCode": 200,
   "statusDescription": "OK",
   "data": {
@@ -17900,7 +20129,11 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
     ],
     "resume": [
       {
+<<<<<<< HEAD
+        "date": "2025-10-14 10:12:38",
+=======
         "date": "2025-10-11 19:59:15",
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
         "tradeDate": 45940,
         "origin": "CMEGroup T2",
         "amount": 15
@@ -17908,16 +20141,26 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
     ]
   }
 }
+<<<<<<< HEAD
+2025-10-14 10:12:38.786[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-corn.json
+2025-10-14 10:12:38.787[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:38.788[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+=======
 2025-10-11 19:59:15.365[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-corn.json
 2025-10-11 19:59:15.367[utils.js.writeFile ][DEBUG] Escritura finalizada
 2025-10-11 19:59:15.370[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
   "statusCode": 200,
   "statusDescription": "OK",
   "data": {
     "lineInfo": [
       {
         "date": 45940,
+<<<<<<< HEAD
+        "volume": 338634,
+=======
         "volume": 338.634,
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
         "month1": 413,
         "month2": 429,
         "month3": 438,
@@ -17954,7 +20197,11 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
     ],
     "resume": [
       {
+<<<<<<< HEAD
+        "date": "2025-10-14 10:12:38",
+=======
         "date": "2025-10-11 19:59:15",
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
         "tradeDate": 45940,
         "origin": "CMEGroup Corn",
         "amount": 13
@@ -17962,16 +20209,26 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
     ]
   }
 }
+<<<<<<< HEAD
+2025-10-14 10:12:39.040[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-rbob.json
+2025-10-14 10:12:39.041[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:39.042[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+=======
 2025-10-11 19:59:15.679[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-rbob.json
 2025-10-11 19:59:15.683[utils.js.writeFile ][DEBUG] Escritura finalizada
 2025-10-11 19:59:15.683[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
   "statusCode": 200,
   "statusDescription": "OK",
   "data": {
     "lineInfo": [
       {
         "date": 45940,
+<<<<<<< HEAD
+        "volume": 182101,
+=======
         "volume": 182.101,
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
         "month1": 1.8204,
         "month2": 1.7759,
         "month3": 1.7574,
@@ -18060,7 +20317,11 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
     ],
     "resume": [
       {
+<<<<<<< HEAD
+        "date": "2025-10-14 10:12:39",
+=======
         "date": "2025-10-11 19:59:15",
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
         "tradeDate": 45940,
         "origin": "CMEGroup RBob",
         "amount": 39
@@ -18068,9 +20329,15 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
     ]
   }
 }
+<<<<<<< HEAD
+2025-10-14 10:12:39.286[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-10-14 10:12:39.287[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:39.288[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+=======
 2025-10-11 19:59:16.041[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: D:\Trabajo\14-MarquisBook\excel_dockers\tmp\cmegroup-sugar-11.json
 2025-10-11 19:59:16.042[utils.js.writeFile ][DEBUG] Escritura finalizada
 2025-10-11 19:59:16.042[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
   "statusCode": 200,
   "statusDescription": "OK",
   "data": {
@@ -18104,7 +20371,11 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
     ],
     "resume": [
       {
+<<<<<<< HEAD
+        "date": "2025-10-14 10:12:39",
+=======
         "date": "2025-10-11 19:59:16",
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
         "tradeDate": 45940,
         "origin": "CMEGroup Sugar 11",
         "amount": 8
@@ -18112,5 +20383,376 @@ Reference&#32;&#35;18&#46;17551060&#46;1759822175&#46;39b69587
     ]
   }
 }
+<<<<<<< HEAD
+2025-10-14 10:12:39.289[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:12:42.601[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-14 10:12:42
+2025-10-14 10:12:46.013[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-14 10:12:46
+2025-10-14 10:12:46.014[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:12:46.014[orchestrator.js.globalOrchestrator ][INFO] Date 10/11/2025 is in exception list or is weekend.
+2025-10-14 10:12:46.015[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-14 10:12:46
+2025-10-14 10:12:50.797[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-14 10:12:50
+2025-10-14 10:12:50.798[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:12:50.799[orchestrator.js.globalOrchestrator ][INFO] Date 10/12/2025 is in exception list or is weekend.
+2025-10-14 10:12:50.799[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-14 10:12:50
+2025-10-14 10:12:54.984[orchestrator.js.globalOrchestrator ][INFO] Start at: 2025-10-14 10:12:54
+2025-10-14 10:12:54.985[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:12:55.299[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-chicago-cu.json
+2025-10-14 10:12:55.301[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:55.301[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 2044,
+        "month1": 1.855,
+        "month2": 1.76,
+        "month3": 1.675,
+        "month4": 1.605,
+        "month5": 1.605,
+        "month6": 1.63,
+        "month7": 1.655,
+        "month8": 1.675,
+        "month9": 1.6875,
+        "month10": 1.6925,
+        "month11": 1.6875,
+        "month12": 1.6825,
+        "month13": 1.6575,
+        "month14": 1.625,
+        "month15": 1.6025
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CU.date}",
+        "volume": "${table:CU.volume}",
+        "month1": "${table:CU.month1}",
+        "month2": "${table:CU.month2}",
+        "month3": "${table:CU.month3}",
+        "month4": "${table:CU.month4}",
+        "month5": "${table:CU.month5}",
+        "month6": "${table:CU.month6}",
+        "month7": "${table:CU.month7}",
+        "month8": "${table:CU.month8}",
+        "month9": "${table:CU.month9}",
+        "month10": "${table:CU.month10}",
+        "month11": "${table:CU.month11}",
+        "month12": "${table:CU.month12}",
+        "month13": "${table:CU.month13}",
+        "month14": "${table:CU.month14}",
+        "month15": "${table:CU.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:55",
+        "tradeDate": 45943,
+        "origin": "CMEGroup Chicago-CU",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 10:12:55.543[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-new-york-nyh.json
+2025-10-14 10:12:55.545[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:55.545[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Chicago resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 0,
+        "month1": 1.955,
+        "month2": 1.865,
+        "month3": 1.78
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:NYH.date}",
+        "volume": "${table:NYH.volume}",
+        "month1": "${table:NYH.month1}",
+        "month2": "${table:NYH.month2}",
+        "month3": "${table:NYH.month3}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:55",
+        "tradeDate": 45943,
+        "origin": "CMEGroup New York-NYH",
+        "amount": 3
+      }
+    ]
+  }
+}
+2025-10-14 10:12:55.810[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-t2.json
+2025-10-14 10:12:55.812[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:55.813[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup T2 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 10,
+        "month1": 730,
+        "month2": 665,
+        "month3": 620,
+        "month4": 605,
+        "month5": 615,
+        "month6": 627,
+        "month7": 640,
+        "month8": 640,
+        "month9": 640,
+        "month10": 630,
+        "month11": 630,
+        "month12": 630,
+        "month13": 608,
+        "month14": 608,
+        "month15": 605
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:T2.date}",
+        "volume": "${table:T2.volume}",
+        "month1": "${table:T2.month1}",
+        "month2": "${table:T2.month2}",
+        "month3": "${table:T2.month3}",
+        "month4": "${table:T2.month4}",
+        "month5": "${table:T2.month5}",
+        "month6": "${table:T2.month6}",
+        "month7": "${table:T2.month7}",
+        "month8": "${table:T2.month8}",
+        "month9": "${table:T2.month9}",
+        "month10": "${table:T2.month10}",
+        "month11": "${table:T2.month11}",
+        "month12": "${table:T2.month12}",
+        "month13": "${table:T2.month13}",
+        "month14": "${table:T2.month14}",
+        "month15": "${table:T2.month15}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:55",
+        "tradeDate": 45943,
+        "origin": "CMEGroup T2",
+        "amount": 15
+      }
+    ]
+  }
+}
+2025-10-14 10:12:56.059[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-corn.json
+2025-10-14 10:12:56.060[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:56.061[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Corn resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 266115,
+        "month1": 410,
+        "month2": 427,
+        "month3": 436,
+        "month4": 443,
+        "month5": 440,
+        "month6": 452,
+        "month7": 465,
+        "month8": 473,
+        "month9": 476,
+        "month10": 460,
+        "month11": 463,
+        "month12": 481,
+        "month13": 467
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:CORN.date}",
+        "volume": "${table:CORN.volume}",
+        "month1": "${table:CORN.month1}",
+        "month2": "${table:CORN.month2}",
+        "month3": "${table:CORN.month3}",
+        "month4": "${table:CORN.month4}",
+        "month5": "${table:CORN.month5}",
+        "month6": "${table:CORN.month6}",
+        "month7": "${table:CORN.month7}",
+        "month8": "${table:CORN.month8}",
+        "month9": "${table:CORN.month9}",
+        "month10": "${table:CORN.month10}",
+        "month11": "${table:CORN.month11}",
+        "month12": "${table:CORN.month12}",
+        "month13": "${table:CORN.month13}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:56",
+        "tradeDate": 45943,
+        "origin": "CMEGroup Corn",
+        "amount": 13
+      }
+    ]
+  }
+}
+2025-10-14 10:12:56.314[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-rbob.json
+2025-10-14 10:12:56.315[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:56.315[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup RBob resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 141700,
+        "month1": 1.8438,
+        "month2": 1.7976,
+        "month3": 1.7771,
+        "month4": 1.7819,
+        "month5": 1.7998,
+        "month6": 1.9993,
+        "month7": 2.0035,
+        "month8": 1.9953,
+        "month9": 1.9773,
+        "month10": 1.9539,
+        "month11": 1.9229,
+        "month12": 1.7886,
+        "month13": 1.7564,
+        "month14": 1.7351,
+        "month15": 1.7272,
+        "month16": 1.7324,
+        "month17": 1.7464,
+        "month18": 1.9407,
+        "month19": 1.9468,
+        "month20": 1.9445,
+        "month21": 1.9325,
+        "month22": 1.9167,
+        "month23": 1.8868,
+        "month24": 1.758,
+        "month25": 1.7302,
+        "month26": 1.7116,
+        "month27": 1.7101,
+        "month28": 1.7227,
+        "month29": 1.7418,
+        "month30": 1.9305,
+        "month31": 1.9465,
+        "month32": 1.942,
+        "month33": 1.9318,
+        "month34": 1.9159,
+        "month35": 1.8852,
+        "month36": 1.7579,
+        "month37": 1.7281,
+        "month38": 1.7121,
+        "month39": 1.7085
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:RBOB.date}",
+        "volume": "${table:RBOB.volume}",
+        "month1": "${table:RBOB.month1}",
+        "month2": "${table:RBOB.month2}",
+        "month3": "${table:RBOB.month3}",
+        "month4": "${table:RBOB.month4}",
+        "month5": "${table:RBOB.month5}",
+        "month6": "${table:RBOB.month6}",
+        "month7": "${table:RBOB.month7}",
+        "month8": "${table:RBOB.month8}",
+        "month9": "${table:RBOB.month9}",
+        "month10": "${table:RBOB.month10}",
+        "month11": "${table:RBOB.month11}",
+        "month12": "${table:RBOB.month12}",
+        "month13": "${table:RBOB.month13}",
+        "month14": "${table:RBOB.month14}",
+        "month15": "${table:RBOB.month15}",
+        "month16": "${table:RBOB.month16}",
+        "month17": "${table:RBOB.month17}",
+        "month18": "${table:RBOB.month18}",
+        "month19": "${table:RBOB.month19}",
+        "month20": "${table:RBOB.month20}",
+        "month21": "${table:RBOB.month21}",
+        "month22": "${table:RBOB.month22}",
+        "month23": "${table:RBOB.month23}",
+        "month24": "${table:RBOB.month24}",
+        "month25": "${table:RBOB.month25}",
+        "month26": "${table:RBOB.month26}",
+        "month27": "${table:RBOB.month27}",
+        "month28": "${table:RBOB.month28}",
+        "month29": "${table:RBOB.month29}",
+        "month30": "${table:RBOB.month30}",
+        "month31": "${table:RBOB.month31}",
+        "month32": "${table:RBOB.month32}",
+        "month33": "${table:RBOB.month33}",
+        "month34": "${table:RBOB.month34}",
+        "month35": "${table:RBOB.month35}",
+        "month36": "${table:RBOB.month36}",
+        "month37": "${table:RBOB.month37}",
+        "month38": "${table:RBOB.month38}",
+        "month39": "${table:RBOB.month39}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:56",
+        "tradeDate": 45943,
+        "origin": "CMEGroup RBob",
+        "amount": 39
+      }
+    ]
+  }
+}
+2025-10-14 10:12:56.558[utils.js.writeFile ][DEBUG] Escribiendo en el archivo: I:\14-MarquisBook\excel_dockers\tmp\cmegroup-sugar-11.json
+2025-10-14 10:12:56.559[utils.js.writeFile ][DEBUG] Escritura finalizada
+2025-10-14 10:12:56.559[orchestrator.js.globalOrchestrator ][DEBUG] CmeGroup Sugar 11 resume: {
+  "statusCode": 200,
+  "statusDescription": "OK",
+  "data": {
+    "lineInfo": [
+      {
+        "date": 45943,
+        "volume": 0,
+        "month1": 0.1561,
+        "month2": 0.1516,
+        "month3": 0.1506,
+        "month4": 0.1528,
+        "month5": 0.1581,
+        "month6": 0.1551,
+        "month7": 0.154,
+        "month8": 0.1554
+      }
+    ],
+    "lineTmp": [
+      {
+        "date": "${table:Sugar 11.date}",
+        "volume": "${table:Sugar 11.volume}",
+        "month1": "${table:Sugar 11.month1}",
+        "month2": "${table:Sugar 11.month2}",
+        "month3": "${table:Sugar 11.month3}",
+        "month4": "${table:Sugar 11.month4}",
+        "month5": "${table:Sugar 11.month5}",
+        "month6": "${table:Sugar 11.month6}",
+        "month7": "${table:Sugar 11.month7}",
+        "month8": "${table:Sugar 11.month8}"
+      }
+    ],
+    "resume": [
+      {
+        "date": "2025-10-14 10:12:56",
+        "tradeDate": 45943,
+        "origin": "CMEGroup Sugar 11",
+        "amount": 8
+      }
+    ]
+  }
+}
+2025-10-14 10:12:56.560[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"I:\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_JUL22_bot"}
+2025-10-14 10:12:59.689[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-14 10:12:59
+=======
 2025-10-11 19:59:16.043[utils.js.getConstants ][DEBUG] Obtenemos las constantes{"workingPath":"D:\\Trabajo\\14-MarquisBook\\excel_dockers","exceptionDays":["01/01/2025","04/20/2025","12/25/2025","05/21/2025"],"excelName":"Master data_OCT22"}
 2025-10-11 19:59:17.857[orchestrator.js.globalOrchestrator ][INFO] End at: 2025-10-11 19:59:17
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d

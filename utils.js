@@ -11,7 +11,7 @@ const MAX_LOG_FILES = 4;
 var CONSTANTS = {
     workingPath: __dirname,
     exceptionDays : ["01/01/2025", "04/20/2025", "12/25/2025", "05/21/2025"],
-    excelName: "Master data_OCT22",
+    excelName: "Master data_JUL22_bot",
     // environment: 'DEV',
     // apiBasePath: 'https://api-manager.scib.dev.corp/api',
     // clientId: '09390a65-b121-4cd3-bbc4-bebe7a6500d0',

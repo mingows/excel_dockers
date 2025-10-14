@@ -1,14 +1,14 @@
 {
   "lineInfo": [
     {
-      "date": 45940,
-      "volume": 200,
-      "month1": 715,
+      "date": 45943,
+      "volume": 10,
+      "month1": 730,
       "month2": 665,
       "month3": 620,
       "month4": 605,
       "month5": 615,
-      "month6": 625,
+      "month6": 627,
       "month7": 640,
       "month8": 640,
       "month9": 640,
@@ -17,7 +17,7 @@
       "month12": 630,
       "month13": 608,
       "month14": 608,
-      "month15": 608
+      "month15": 605
     }
   ],
   "lineTmp": [
@@ -43,8 +43,13 @@
   ],
   "resume": [
     {
+<<<<<<< HEAD
+      "date": "2025-10-14 10:12:55",
+      "tradeDate": 45943,
+=======
       "date": "2025-10-11 19:59:15",
       "tradeDate": 45940,
+>>>>>>> f25cf6a7971ee183baae270583ee1a4cc1850e9d
       "origin": "CMEGroup T2",
       "amount": 15
     }
