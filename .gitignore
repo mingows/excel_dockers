@@ -1,6 +1,10 @@
-Master data_OCT22_template.xlsx
-resume_template.xlsx
-data/Master data_OCT22.xlsx
-data/resume.xlsx
-logs/log.txt
 tmp/cmegroup-chicago-cu.json
+tmp/cmegroup-corn.json
+tmp/cmegroup-new-york-nyh.json
+tmp/cmegroup-rbob.json
+logs/log.txt
+data/resume.xlsx
+data/Master data_JUL22_bot.xlsx
+tmp/cmegroup-sugar-11.json
+tmp/cmegroup-t2.json
+tmp/resume_template.xlsx

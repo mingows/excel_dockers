@@ -1,4 +1,3 @@
-//const prompt = require('prompt-sync')();
 var fs = require('fs');
 var path = require('path');
 
@@ -11,11 +10,7 @@ const MAX_LOG_FILES = 4;
 var CONSTANTS = {
     workingPath: __dirname,
     exceptionDays : ["01/01/2025", "04/20/2025", "12/25/2025", "05/21/2025"],
-    excelName: "Master data_JUL22_bot",
-    // environment: 'DEV',
-    // apiBasePath: 'https://api-manager.scib.dev.corp/api',
-    // clientId: '09390a65-b121-4cd3-bbc4-bebe7a6500d0',
-    // clientSecret: '8c85d438-9d8c-43da-95d5-eaa6da74be65'
+    excelName: "Master data_JUL22_bot"
 };
 
 function getConstants() {
@@ -56,10 +51,8 @@ function writeLog(message, level, globalConfig) {
         }
 
         fs.appendFileSync(path.join(globalConfig.workingPath, "logs", "log.txt"), logMessage + '\n');
-        //fs.appendFileSync(globalConfig.workingPath + '/logs/log.txt', logMessage + '\n');
         // Rotamos los logs si el archivo supera el límite de tamaño
         if (fs.existsSync(path.join(globalConfig.workingPath, "logs", "log.txt")) && fs.statSync(path.join(globalConfig.workingPath, "logs", "log.txt")).size >= LOG_FILE_SIZE_LIMIT) {
-        //if (fs.existsSync(globalConfig.workingPath + '/logs/log.txt') && fs.statSync(globalConfig.workingPath + '/logs/log.txt').size >= LOG_FILE_SIZE_LIMIT) {
             rotateFile(path.join(globalConfig.workingPath, "logs"), "log", "txt");
         }
         if (CONSOLE_LOG) {
@@ -73,16 +66,12 @@ function rotateFile(logPath,fileName,fileExtenesion) {
     for (let i = MAX_LOG_FILES - 1; i > 0; i--) {
         const currentLog = path.join(logPath, fileName)+fileExtenesion;
         const nextLog = path.join(logPath, fileName+(i+1))+fileExtenesion;
-        // const currentLog = `${logPath}/${fileName}${i}.${fileExtenesion}`;
-        // const nextLog = `${logPath}/${fileName}${i + 1}.${fileExtenesion}`;
         if (fs.existsSync(currentLog)) {
             fs.renameSync(currentLog, nextLog);
         }
     }
     const firstLog = path.join(logPath, fileName)+fileExtenesion;
     const secondLog = path.join(logPath, fileName+"1")+fileExtenesion;
-    // const firstLog = `${logPath}/${fileName}.${fileExtenesion}`;
-    // const secondLog = `${logPath}/${fileName}1.${fileExtenesion}`;
     if (fs.existsSync(firstLog)) {
         fs.renameSync(firstLog, secondLog);
     }
@@ -226,7 +215,6 @@ function getEnvironment(env) {
         clientId: '09390a65-b121-4cd3-bbc4-bebe7a6500d0',
         clientSecret: '8c85d438-9d8c-43da-95d5-eaa6da74be65'
     };
-    //writeLog(`ENV: ${env}`, "DEBUG2", CONST);
     var environment = "";
     if (env) {
         environment = env.toLowerCase();;
