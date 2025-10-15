@@ -1,0 +1,11 @@
+# Archivos y directorios a ignorar al construir la imagen Docker
+
+node_modules
+npm-debug.log
+logs
+tmp
+data
+Dockerfile
+.dockerignore
+.git
+.gitignore
