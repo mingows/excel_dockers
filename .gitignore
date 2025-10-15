@@ -3,4 +3,11 @@ resume_template.xlsx
 data/Master data_OCT22.xlsx
 data/resume.xlsx
 logs/log.txt
+Master data_JUL22_bot_template.xlsx
+data/Master data_JUL22_bot.xlsx
 tmp/cmegroup-chicago-cu.json
+tmp/cmegroup-corn.json
+tmp/cmegroup-new-york-nyh.json
+tmp/cmegroup-rbob.json
+tmp/cmegroup-sugar-11.json
+tmp/cmegroup-t2.json
