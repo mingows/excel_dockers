@@ -467,7 +467,27 @@ function getCmeGroupCorn(date, globalConfig) {
         var index = 0;
         for (const settlement of settlementsOrder) {
             if (settlement.month.toUpperCase() != "TOTAL") {
-                lineInfo[`month${index + 1}`] = parseFloat(settlement.settle);
+                //lineInfo[`month${index + 1}`] = parseFloat(settlement.settle.replace("'", '.'));
+                var settleAmount=settlement.settle.replace("'", '.');
+                //lineInfo[`month${index + 1}`] = parseFloat(settlement.settle);
+
+                // // Normalize numeric string to JS decimal format and parse.
+                // // Examples handled: "432,3" -> 432.3, "1.234,56" -> 1234.56, "1'234,56" -> 1234.56
+                // var rawSettle = String(settlement.settle || '').trim();
+                // // Remove non-breaking spaces and plain spaces
+                // rawSettle = rawSettle.replace(/\u00A0/g, '').replace(/\s+/g, '');
+                // // If there's a comma, assume comma is decimal separator and remove common thousand separators (dot or apostrophe)
+                // if (rawSettle.indexOf(',') !== -1) {
+                //     rawSettle = rawSettle.replace(/[\.']/g, ''); // remove thousand separators
+                //     rawSettle = rawSettle.replace(/,/g, '.'); // convert decimal comma to dot
+                // } else {
+                //     // No comma present: just remove apostrophes and spaces used as thousand separators
+                //     rawSettle = rawSettle.replace(/[']/g, '');
+                // }
+                // var parsed = parseFloat(rawSettle);
+                // fallback to NaN-safe value (null) if parsing fails
+
+                lineInfo[`month${index + 1}`] = parseFloat(settleAmount);
                 lineTmp[`month${index + 1}`] = "${table:CORN.month" + (index + 1) + "}";
             } else {
                 const [dd, mm, yyyy] = currentTradeDate.split('/');
