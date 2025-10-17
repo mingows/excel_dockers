@@ -3,6 +3,7 @@ var xlsxTemplate = require('xlsx-template');
 var path = require('path');
 
 var { writeLog, appendFile, formatDate, getConstants } = require('./utils.js');
+//var { setActiveCell } = require('./utilExcel.js');
 
 //All data shuold be in next format:
 // settlementsResult = 
@@ -20,7 +21,6 @@ var { writeLog, appendFile, formatDate, getConstants } = require('./utils.js');
 //     "origin": "CMEGroup",
 //     "amount": count(settlements)             
 // };
-
 
 
 const SAVE_ON = "EXCEL"; //Should be FILE, EXCEL, DB
@@ -251,6 +251,8 @@ function excelSave(data, filePath, globalConfig) {
                 fs.unlinkSync(TEMPLATE_PATH);
             }
             fs.writeFileSync(TEMPLATE_PATH, binaryDataTmp);
+
+            //setActiveCell('i:/14-MarquisBook/excel_dockers/data/Master data_JUL22_bot.xlsx', 'CU', 'A');
         }
     } catch (error) {
         const nowErrorEnd = new Date();
