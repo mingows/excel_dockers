@@ -251,8 +251,6 @@ function excelSave(data, filePath, globalConfig) {
                 fs.unlinkSync(TEMPLATE_PATH);
             }
             fs.writeFileSync(TEMPLATE_PATH, binaryDataTmp);
-
-            //setActiveCell('i:/14-MarquisBook/excel_dockers/data/Master data_JUL22_bot.xlsx', 'CU', 'A');
         }
     } catch (error) {
         const nowErrorEnd = new Date();
