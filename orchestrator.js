@@ -15,7 +15,10 @@ function globalOrchestrator(date, globalConfig) {
     //If not day given in the body, take current date -1 (yesterday)
     if (!date) {
         const nowEnd = new Date();
-        const formattedDateEnd = `${String(nowEnd.getMonth() + 1).padStart(2, '0')}/${String(nowEnd.getDate() - 1).padStart(2, '0')}/${String(nowEnd.getFullYear())}`;
+        // Use a proper 'yesterday' calculation to handle month/year boundaries
+        const yesterday = new Date(nowEnd);
+        yesterday.setDate(yesterday.getDate() - 1);
+        const formattedDateEnd = `${String(yesterday.getMonth() + 1).padStart(2, '0')}/${String(yesterday.getDate()).padStart(2, '0')}/${String(yesterday.getFullYear())}`;
         queryDate = formattedDateEnd;
     } else {
         //Validate date format (MM/DD/YYYY)
